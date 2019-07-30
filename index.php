@@ -1,9 +1,5 @@
 <?php include_once("db/dbcon.php") ?>
 
-
-
-
-
 <?php
 $dbCon = dbCon($user, $pass);
 $query = $dbCon->prepare("SELECT * FROM `employee`");

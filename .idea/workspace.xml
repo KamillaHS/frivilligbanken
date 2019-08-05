@@ -13,10 +13,34 @@
       <executable />
     </execution>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1OjLIqiKXFUj2ke7gRR77ZEzaRL" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/view/frontend" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\MAMP\htdocs\frivilligbanken\view\frontend" />
+      <recent name="E:\MAMP\htdocs\frivilligbanken\view\backend\css" />
+      <recent name="E:\MAMP\htdocs\frivilligbanken" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\MAMP\htdocs\frivilligbanken\view\frontend" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -40,11 +64,30 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1564485981539</updated>
-      <workItem from="1564485983989" duration="2851000" />
+      <workItem from="1564485983989" duration="15231000" />
+      <workItem from="1564563958198" duration="15513000" />
+      <workItem from="1564660727969" duration="15366000" />
+      <workItem from="1564744891322" duration="13031000" />
+      <workItem from="1564831742851" duration="9061000" />
+      <workItem from="1564933616734" duration="1135000" />
+      <workItem from="1565029545640" duration="1620000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

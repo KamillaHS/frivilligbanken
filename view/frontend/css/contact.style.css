@@ -1,0 +1,118 @@
+#contact-section1-content, #contact-section2-content, #contact-section3-content {
+    max-width: 1250px;
+    margin: auto;
+}
+
+#contact-section2, #contact-section3 {
+    margin-bottom: 50px;
+}
+
+#contact-section2-content{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#contact-section1 {
+    padding-top: 50px;
+    text-align: center;
+}
+
+#contact-section1 #line {
+    width: 500px;
+    height: 2px;
+    background-color: #4C4C4C;
+    margin: 0 auto 50px auto;
+}
+
+#contact-map {
+    height: 300px;
+    width: 65%;
+    background-color: #E8EEF9;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+#contact-information {
+    height: 300px;
+    width: 30%;
+    background-color: #E8EEF9;
+    margin-right: 0;
+    margin-left: auto;
+    text-align: center;
+}
+
+#contact-information h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#contact-information p {
+    margin-top: 0;
+}
+
+#contact-form-box {
+    height: 500px;
+    width: 100%;
+    background-color: #E8EEF9;
+    padding: 30px;
+}
+
+#contact-form {
+    text-align: center;
+    width: 350px;
+    margin: auto;
+    /*background-color: rgba(199,199,199,0.5);*/
+    background-color: #C7C7C7;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+#contact-form h3 {
+    font-size: 20px;
+    margin: 10px 0 30px 0;
+}
+
+#contact-form #input {
+    background-color: white;
+    border: 1px solid #4C4C4C;
+    height: 30px;
+    border-radius: 2px;
+    margin-bottom: 20px;
+    text-indent: 10px;
+}
+
+#contact-form #input:focus {
+    box-shadow: 0 0 1px 0.5px #6495ED;
+}
+
+#contact-form textarea {
+    background-color: white;
+    border: 1px solid #4C4C4C;
+    border-radius: 2px;
+    height: 80px;
+    text-indent: 10px;
+    margin-bottom: 20px;
+}
+
+#contact-form textarea:focus {
+    box-shadow: 0px 0px 1px 0.5px #6495ED;
+}
+
+#submit-form {
+    height: 40px;
+    width: 100px;
+    border-radius: 10px;
+    background-color: #517BBE;
+    border: 1px solid #4C4C4C;
+    font-weight: bold;
+    color: white;
+}
+
+#submit-form:hover {
+    box-shadow: 1px 1px 2px #4C4C4C;
+    background-color: #6495ED;
+}

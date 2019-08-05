@@ -1,0 +1,222 @@
+h2 {
+    font-size: 40px;
+}
+
+#section1, #section2, #section3, #section4 {
+    /* Sizing */
+    width: 100%;
+    height: 100vh;
+
+    /*!* Flexbox stuff *!*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    /*!* Text styles *!*/
+    text-align: center;
+}
+
+#section1-content, #section2-content, #section3-content, #section4-content {
+    max-width: 1250px;
+}
+
+#section1 {
+    background-image: url("https://frivilligbanken.dk/wp-content/uploads/2017/08/1088.jpg");
+    background-attachment: fixed;
+}
+
+#section1 #frontpage-logo img {
+    width: 600px;
+}
+
+#section1 #frontpage-logo p {
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-size: 20px;
+    color: #4C4C4C;
+
+    /* placement */
+    position: absolute;
+    margin: -65px 0 0 220px;
+}
+
+#section1 #buttons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#section1 #buttonarea1, #section1 #buttonarea2, #section1 #buttonarea3 {
+    margin: 50px 15px;
+}
+
+#section1 #buttonarea1 button, #section1 #buttonarea2 button, #section1 #buttonarea3 button {
+    height: 50px;
+    width: 200px;
+    border-radius: 10px;
+    background-color: #517BBE;
+}
+
+#section1 #buttonarea1 a, #section1 #buttonarea2 a, #section1 #buttonarea3 a {
+    font-size: 12px;
+    color: black;
+}
+
+#section1 #buttonarea1 a:hover, #section1 #buttonarea2 a:hover, #section1 #buttonarea3 a:hover {
+    text-decoration: underline;
+}
+
+#section2 #line, #section3 #line, #section4 #line {
+    width: 500px;
+    height: 2px;
+    background-color: #4C4C4C;
+    margin: 0 auto 50px auto;
+}
+
+#section2 #live-data {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#section2 #ring1 {
+    height: 150px;
+    width: 150px;
+}
+
+#section2 #ring2 {
+    height: 115px;
+    width: 115px;
+    margin: 12px auto;
+}
+
+#section2 i {
+    font-size: 55px;
+    text-align: center;
+    padding: 28px 0;
+}
+
+#section2 #volunteers {
+    margin-left: 50px;
+    margin-right: 25px;
+}
+
+#section2 #unions {
+    margin-left: 25px;
+    margin-right: 50px;
+}
+
+/* text color */
+
+#users {
+    color: #517BBE;
+}
+
+#volunteers {
+    color: #E84335;
+}
+
+#unions {
+    color: #FBBC09;
+}
+
+#giftcards {
+    color: #31A853;
+}
+
+/* text color end */
+
+#user-number, #volunteer-number, #union-number, #giftcard-number {
+    font-weight: bold;
+    font-size: 40px;
+    margin: 0;
+    padding-top: 10px;
+}
+
+#user-text, #volunteer-text, #union-text, #giftcard-text {
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0;
+}
+
+/* ring colors */
+
+#section2 #users #ring1 {
+    border: 5px solid #517BBE;
+    border-radius: 100px;
+}
+
+#section2 #users #ring2 {
+    border: 2px solid #517BBE;
+    border-radius: 100px;
+}
+
+#section2 #users i {
+    color: #517BBE;
+}
+
+
+#section2 #volunteers #ring1 {
+    border: 5px solid #E84335;
+    border-radius: 100px;
+}
+
+#section2 #volunteers #ring2 {
+    border: 2px solid #E84335;
+    border-radius: 100px;
+}
+
+#section2 #volunteers i {
+    color: #E84335;
+}
+
+
+#section2 #unions #ring1 {
+    border: 5px solid #FBBC09;
+    border-radius: 100px;
+}
+
+#section2 #unions #ring2 {
+    border: 2px solid #FBBC09;
+    border-radius: 100px;
+}
+
+#section2 #unions i {
+    color: #FBBC09;
+}
+
+
+#section2 #giftcards #ring1 {
+    border: 5px solid #31A853;
+    border-radius: 100px;
+}
+
+#section2 #giftcards #ring2 {
+    border: 2px solid #31A853;
+    border-radius: 100px;
+}
+
+#section2 #giftcards i {
+    color: #31A853;
+}
+
+/* ring colors end */
+
+#section3 #line, #section4 #line {
+    margin-bottom: 20px;
+}
+
+#section3 {
+    background-color: #E8EEF9;
+}
+
+#section4-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#section4 img {
+    width: 400px;
+    margin-right: 50px;
+}

@@ -1,0 +1,82 @@
+#about-section1, #about-section2 {
+    /* Sizing */
+    width: 100%;
+    height: 100vh;
+
+    /*!* Flexbox stuff *!*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    /*!* Text styles *!*/
+    text-align: center;
+}
+
+#about-section2-content {
+    max-width: 1250px;
+}
+
+#about-section1 {
+    background-image: url("https://frivilligbanken.dk/wp-content/uploads/2017/09/business-executives-with-hand-stacked_1170-1901.jpg");
+    background-attachment: fixed;
+}
+
+#about-section-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.2)
+}
+
+#about-section2 #line {
+    width: 500px;
+    height: 2px;
+    background-color: #4C4C4C;
+    margin: 0 auto 50px auto;
+}
+
+#about-text {
+    margin: -25px 0 50px 0;
+}
+
+#employee-section {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 80%;
+    justify-content: center;
+    margin: auto;
+}
+
+#employee {
+    margin: 0 30px 30px 30px;
+}
+
+#employee-image {
+    height: 150px;
+    width: 150px;
+    border: 2px solid #4C4C4C;
+    border-radius: 100px;
+    background-color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#employee-name {
+    font-weight: bold;
+    font-size: 18px;
+    margin: 10px 0 5px 0;
+}
+
+#employee-jobtitle, #employee-email {
+    font-size: 14px;
+    margin: 5px;
+}
+
+#employee-social i {
+    font-size: 30px;
+    color: #4C4C4C;
+    margin: 5px;
+}

@@ -1,0 +1,15 @@
+.page-footer h1, .page-footer h2, .page-footer h3, .page-footer p {
+    color: white;
+}
+
+.page-footer {
+    background-color: #4C4C4C;
+    text-align: center;
+    padding-bottom: 15px;
+    /*z-index: 4;*/
+}
+
+#footer-content {
+    display: flex;
+    flex-wrap: wrap;
+}

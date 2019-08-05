@@ -1,0 +1,34 @@
+
+#dashboard {
+    display: flex;
+    height: 87.1vh;
+}
+
+#dashboard-content {
+    height: 100%;
+    width: 90%;
+    background-color: #E8EEF9;
+}
+
+#dashboard-content h1 {
+    font-size: 40px;
+    margin-left: 20px;
+}
+
+#dashboard-content h2 {
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+#dashboard-section1 {
+    width: 85%;
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid rgba(0,0,0,0.2)
+}
+
+#dashboard-section1 p {
+    margin: -8px 0;
+}

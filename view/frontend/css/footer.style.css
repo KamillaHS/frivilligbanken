@@ -1,0 +1,83 @@
+.page footer h1, .page-footer h2, .page-footer h3, .page-footer p {
+    color: white;
+}
+
+.page-footer {
+    background-color: #517BBE;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+#footer-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#footer-left, #footer-mid, #footer-right {
+    width: 30%;
+    margin: 0 1.6% 50px 1.6%;
+}
+
+#footer-left a {
+    color: white;
+}
+
+#footer-left a:hover {
+    text-decoration: underline;
+}
+
+#footer-left ul li, #footer-mid ul li {
+    margin-bottom: 8px;
+}
+
+#footer-mid i {
+    font-size: 30px;
+    color: white;
+    margin: 20px;
+}
+
+#sponsor-highlight-box {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#sponsor-highlighted {
+    background-color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100px;
+    width: 150px;
+    border-radius: 10px;
+    margin: 0 15px 30px 15px;
+}
+
+#sponsor-hover-box {
+    display: none;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(81,123,189,0.8);
+    border-radius: 10px;
+}
+
+#sponsor-highlighted:hover #sponsor-hover-box {
+    display: block;
+}
+
+#sponsor-hover-box p {
+    margin: 0;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    text-shadow: 0 0 5px black;
+    padding: 23% 0;
+}
+
+#link-to-sponsor-page p {
+    margin-top: -20px;
+    text-align: right;
+}
+
+#link-to-sponsor-page p:hover {
+    text-decoration: underline;
+}

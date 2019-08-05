@@ -1,0 +1,59 @@
+#sponsor-section1 {
+    padding-top: 50px;
+    text-align: center;
+}
+
+#sponsor-section1-content, #sponsor-section2-content {
+    max-width: 1250px;
+    margin: auto;
+}
+
+#sponsor-section1 #line {
+    width: 500px;
+    height: 2px;
+    background-color: #4C4C4C;
+    margin: 0 auto 20px auto;
+}
+
+#sponsor-text {
+
+}
+
+#sponsor-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+#sponsor-box #sponsor {
+    background-color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 160px;
+    width: 250px;
+    border-radius: 10px;
+    margin: 0 25px 50px 25px;
+}
+
+#sponsor-hover-box {
+    display: none;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(81,123,189,0.8);
+    border-radius: 10px;
+}
+
+#sponsor-box #sponsor:hover #sponsor-hover-box {
+    display: block;
+}
+
+#sponsor-hover-box p {
+    margin: 0;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    text-shadow: 0 0 5px black;
+    padding: 23% 0;
+}

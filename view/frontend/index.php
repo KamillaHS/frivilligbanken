@@ -88,7 +88,7 @@ $getfronttext2 = $query->fetch();
 
 <div id="section3">
     <div id="section3-content">
-        <h2>HVAD ER FRIVILLIGBANKEN?</h2>
+        <h2><?php echo $getfronttext1['FieldName'] ?></h2>
         <div id="line"></div>
         <p>
             <?php echo $getfronttext1['FieldContent'] ?>
@@ -102,7 +102,7 @@ $getfronttext2 = $query->fetch();
             <img src="../../logo/IphoneAndAndroid.png" alt="Iphone og Android billede">
         </div>
         <div id="section4-right">
-            <h2>KOMMER SNART</h2>
+            <h2><?php echo $getfronttext2['FieldName'] ?></h2>
             <div id="line"></div>
             <p>
                 <?php echo $getfronttext2['FieldContent'] ?>

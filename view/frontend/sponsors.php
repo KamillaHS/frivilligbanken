@@ -15,7 +15,7 @@ $getsponsors = $query->fetchAll();
 
     <div id="sponsor-section1">
         <div id="sponsor-section1-content">
-            <h2>SPONSORER</h2>
+            <h2><?php echo $getsponsortext['FieldName'] ?></h2>
             <div id="line"></div>
             <p id="sponsor-text">
                 <?php

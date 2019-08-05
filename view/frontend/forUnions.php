@@ -11,7 +11,7 @@ $getuniontext = $query->fetch();
 
     <div id="info-section1">
         <div id="info-section1-content">
-            <h2>FOR FORENINGER</h2>
+            <h2><?php echo $getuniontext['FieldName'] ?></h2>
             <div id="line"></div>
             <p id="info-text">
                 <?php

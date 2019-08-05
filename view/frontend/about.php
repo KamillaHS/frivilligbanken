@@ -2,6 +2,11 @@
 require_once("view/frontend/includes/header.php");
 
 $dbCon = dbCon($user, $pass);
+$query = $dbCon->prepare("SELECT * FROM `textField` WHERE TextFieldID = 6");
+$query->execute();
+$getabouttext1 = $query->fetch();
+
+$dbCon = dbCon($user, $pass);
 $query = $dbCon->prepare("SELECT * FROM `employee`");
 $query->execute();
 $getemployees = $query->fetchAll();
@@ -18,10 +23,10 @@ $getemployees = $query->fetchAll();
 
 <div id="about-section2">
     <div id="about-section2-content">
-        <h2>FRIVILLIGBANKEN</h2>
+        <h2><?php echo $getabouttext1['FieldName'] ?></h2>
         <div id="line"></div>
         <div id="about-text">
-            Tekst omkring Frivilligbanken kommer til at stå her.
+            <?php echo $getabouttext1['FieldContent'] ?>
         </div>
 
         <div id="employee-section">

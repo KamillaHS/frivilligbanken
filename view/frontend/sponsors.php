@@ -19,7 +19,7 @@ $getsponsors = $query->fetchAll();
             <div id="line"></div>
             <p id="sponsor-text">
                 <?php
-                    echo $getsponsortext['TextFieldContent']
+                    echo $getsponsortext['FieldContent']
                 ?>
             </p>
         </div>

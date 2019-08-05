@@ -15,7 +15,7 @@ $getvolunteertext = $query->fetch();
             <div id="line"></div>
             <p id="info-text">
                 <?php
-                echo $getvolunteertext['TextFieldContent']
+                echo $getvolunteertext['FieldContent']
                 ?>
             </p>
         </div>

@@ -91,7 +91,7 @@ $getfronttext2 = $query->fetch();
         <h2>HVAD ER FRIVILLIGBANKEN?</h2>
         <div id="line"></div>
         <p>
-            <?php echo $getfronttext1['TextFieldContent'] ?>
+            <?php echo $getfronttext1['FieldContent'] ?>
         </p>
     </div>
 </div>
@@ -105,7 +105,7 @@ $getfronttext2 = $query->fetch();
             <h2>KOMMER SNART</h2>
             <div id="line"></div>
             <p>
-                <?php echo $getfronttext2['TextFieldContent'] ?>
+                <?php echo $getfronttext2['FieldContent'] ?>
             </p>
         </div>
     </div>

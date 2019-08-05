@@ -15,7 +15,7 @@ $getsponsortext = $query->fetch();
             <div id="line"></div>
             <p id="info-text">
                 <?php
-                echo $getsponsortext['TextFieldContent']
+                echo $getsponsortext['FieldContent']
                 ?>
             </p>
         </div>

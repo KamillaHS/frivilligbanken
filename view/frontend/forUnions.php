@@ -15,7 +15,7 @@ $getuniontext = $query->fetch();
             <div id="line"></div>
             <p id="info-text">
                 <?php
-                    echo $getuniontext['TextFieldContent']
+                    echo $getuniontext['FieldContent']
                 ?>
             </p>
         </div>

@@ -26,7 +26,7 @@ $getemployees = $query->fetchAll();
         <h2><?php echo $getabouttext1['FieldName'] ?></h2>
         <div id="line"></div>
         <div id="about-text">
-            <?php echo $getabouttext1['FieldContent'] ?>
+            <p><?php echo $getabouttext1['FieldContent'] ?></p>
         </div>
 
         <div id="employee-section">

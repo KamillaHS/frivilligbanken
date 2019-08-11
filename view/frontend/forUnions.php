@@ -6,6 +6,21 @@ $query = $dbCon->prepare("SELECT * FROM `textField` WHERE TextFieldID = 3");
 $query->execute();
 $getuniontext = $query->fetch();
 
+$dbCon = dbCon($user, $pass);
+$query = $dbCon->prepare("SELECT * FROM `imageField` WHERE ImageID = 3");
+$query->execute();
+$getimage1 = $query->fetch();
+
+$dbCon = dbCon($user, $pass);
+$query = $dbCon->prepare("SELECT * FROM `imageField` WHERE ImageID = 4");
+$query->execute();
+$getimage2 = $query->fetch();
+
+$dbCon = dbCon($user, $pass);
+$query = $dbCon->prepare("SELECT * FROM `imageField` WHERE ImageID = 5");
+$query->execute();
+$getimage3 = $query->fetch();
+
 ?>
     <link rel="stylesheet" href="/view/frontend/css/threeInOne.style.css">
 
@@ -27,17 +42,17 @@ $getuniontext = $query->fetch();
             <div id="line"></div>
             <div id="info-section-info">
                 <div id="info1">
-                    <img src="https://picsum.photos/id/524/300/200" alt="">
+                    <img src="<?php echo $getimage1['Image'] ?>" alt="">
                     <h4>OVERSKRIFT HER</h4>
                     <p>Tekst boks mangler</p>
                 </div>
                 <div id="info2">
-                    <img src="https://picsum.photos/id/237/300/200" alt="">
+                    <img src="<?php echo $getimage2['Image'] ?>" alt="">
                     <h4>OVERSKRIFT HER</h4>
                     <p>Tekst boks mangler</p>
                 </div>
                 <div id="info3">
-                    <img src="https://picsum.photos/id/902/300/200" alt="">
+                    <img src="<?php echo $getimage3['Image'] ?>" alt="">
                     <h4>OVERSKRIFT HER</h4>
                     <p>Tekst boks mangler</p>
                 </div>

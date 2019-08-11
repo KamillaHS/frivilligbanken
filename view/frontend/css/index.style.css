@@ -24,12 +24,12 @@ h2 {
 }
 
 #section1 {
-    background-image: url("https://frivilligbanken.dk/wp-content/uploads/2017/08/1088.jpg");
+    /*background-image: url("https://frivilligbanken.dk/wp-content/uploads/2017/08/1088.jpg");*/
     background-attachment: fixed;
 }
 
 #section1 #frontpage-logo img {
-    width: 600px;
+    width: 700px;
 }
 
 #section1 #frontpage-logo p {
@@ -40,12 +40,13 @@ h2 {
 
     /* placement */
     position: absolute;
-    margin: -65px 0 0 220px;
+    margin: -70px 0 0 275px;
 }
 
 #section1 #buttons {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 70px;
 }
 
 #section1 #buttonarea1, #section1 #buttonarea2, #section1 #buttonarea3 {
@@ -53,15 +54,15 @@ h2 {
 }
 
 #section1 #buttonarea1 button, #section1 #buttonarea2 button, #section1 #buttonarea3 button {
-    height: 50px;
-    width: 200px;
+    height: 60px;
+    width: 250px;
     border-radius: 10px;
     background-color: #517BBE;
+    font-size: 18px;
 }
 
-#section1 #buttonarea1 a, #section1 #buttonarea2 a, #section1 #buttonarea3 a {
+#section1 #buttonarea1 p, #section1 #buttonarea2 p, #section1 #buttonarea3 p {
     font-size: 12px;
-    color: black;
 }
 
 #section1 #buttonarea1 a:hover, #section1 #buttonarea2 a:hover, #section1 #buttonarea3 a:hover {

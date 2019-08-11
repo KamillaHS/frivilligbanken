@@ -33,6 +33,12 @@ switch ($request) {
         require __DIR__ . '/view/frontend/comingSoon.php';
         break;
 
+    case '/adminLogin' :
+        require __DIR__ . '/view/backend/login.php';
+        break;
+    case '/adminLogOut' :
+        require __DIR__ . '/view/backend/includes/logout.php';
+        break;
     case '/admin' :
         require __DIR__ . '/view/backend/index.php';
         break;
@@ -60,11 +66,14 @@ switch ($request) {
     case '/side&kontakt' :
         require __DIR__ . '/view/backend/page_contact.php';
         break;
+    case '/medarbejdere' :
+        require __DIR__ . '/view/backend/employees.php';
+        break;
     case '/sponsorere' :
         require __DIR__ . '/view/backend/sponsors.php';
         break;
-    case '/medarbejdere' :
-        require __DIR__ . '/view/backend/employees.php';
+    case '/uploads' :
+        require __DIR__ . '/view/backend/uploads.php';
         break;
     case '/rediger_admins' :
         require __DIR__ . '/view/backend/editAdmins.php';

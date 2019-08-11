@@ -2,6 +2,16 @@
 require_once("view/frontend/includes/header.php");
 
 $dbCon = dbCon($user, $pass);
+$query = $dbCon->prepare("SELECT * FROM `imageField` WHERE ImageID = 1");
+$query->execute();
+$getheroimg = $query->fetch();
+
+$dbCon = dbCon($user, $pass);
+$query = $dbCon->prepare("SELECT * FROM `imageField` WHERE ImageID = 2");
+$query->execute();
+$getphoneimg = $query->fetch();
+
+$dbCon = dbCon($user, $pass);
 $query = $dbCon->prepare("SELECT * FROM `textField` WHERE TextFieldID = 1");
 $query->execute();
 $getfronttext1 = $query->fetch();
@@ -13,11 +23,11 @@ $getfronttext2 = $query->fetch();
 
 ?>
 
-<div id="section1">
+<div id="section1" style="background-image: url('<?php echo $getheroimg['Image'] ?>')">
     <div id="section1-content">
 
         <div id="frontpage-logo">
-            <img src="../../logo/logoEdit.png" alt="Frivilligbanken logo">
+            <img src="../../images/logo/logoEdit.png" alt="Frivilligbanken logo">
             <p>Vi gør det sjovere at være frivillig</p>
         </div>
 
@@ -99,7 +109,7 @@ $getfronttext2 = $query->fetch();
 <div id="section4">
     <div id="section4-content">
         <div id="section4-left">
-            <img src="../../logo/IphoneAndAndroid.png" alt="Iphone og Android billede">
+            <img src="<?php echo $getphoneimg['Image'] ?>" alt="Iphone og Android billede">
         </div>
         <div id="section4-right">
             <h2><?php echo $getfronttext2['FieldName'] ?></h2>

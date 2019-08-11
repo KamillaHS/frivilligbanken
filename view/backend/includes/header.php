@@ -1,4 +1,12 @@
-<?php require_once("db/dbcon.php"); ?>
+<?php
+require_once("db/dbcon.php");
+require_once("view/backend/includes/session.php");
+if (!logged_in()) {
+    // header("Location: index.php");
+    echo "<script>location.href = '/adminLogin'</script>";
+}
+?>
+
 
 <!DOCTYPE html>
 <html>

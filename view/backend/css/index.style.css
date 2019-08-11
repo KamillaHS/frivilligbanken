@@ -1,13 +1,14 @@
 
 #dashboard {
     display: flex;
-    height: 87.1vh;
+    /*height: 87.1vh;*/
 }
 
 #dashboard-content {
     height: 100%;
     width: 90%;
     background-color: #E8EEF9;
+    margin: 64px 0 0 190px;
 }
 
 #dashboard-content h1 {
@@ -32,3 +33,122 @@
 #dashboard-section1 p {
     margin: -8px 0;
 }
+
+/* page_frontpage */
+
+#current-image {
+    height: 150px;
+    width: 250px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 2px solid #4C4C4C;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.upload-btn-wrapper {
+    /*width: 300px;*/
+    margin: 30px 0 5px 0;
+    position: relative;
+    overflow: hidden;
+    display: inline-flex;
+    /*border: 2px solid rgba(184,39,39,0.5);*/
+    border-radius: 8px;
+    text-align: left;
+}
+
+#imgUpload {
+    width: 150px;
+    height: 35px;
+    color: white;
+    background-color: #517BBE;
+    /*margin: 5px;*/
+    padding: 7px;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 14px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+#upload-file-name {
+    font-size: 14px;
+    padding: 8px 5px;
+}
+
+.upload-btn-wrapper input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+
+#folder-images {
+    flex-wrap: wrap;
+    padding: 20px 0;
+    display: none;
+}
+
+#showImg {
+    height: 150px;
+    width: 250px;
+    /*background-size: cover;*/
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* */
+
+#show-folder-content {
+    display: flex;
+    padding: 20px 0;
+}
+
+#show-folder-content #showImg {
+    position: relative;
+    margin: 20px;
+    border: 2px solid #4C4C4C;
+    border-radius: 10px;
+}
+
+#logos-box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    padding: 10px;
+    border: 2px solid #4C4C4C;
+    border-radius: 10px;
+}
+
+#hover-buttons {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 5px;
+    display: none;
+}
+
+#logos-box:hover #hover-buttons, #showImg:hover #hover-buttons {
+    display: block;
+}
+
+#logos {
+    max-width: 300px;
+    max-height: 150px;
+}
+
+#hover-buttons #delete {
+    background-color: #E84335;
+    border-radius: 10px;
+    width: 40px;
+    padding: 0;
+}
+
+/*#upload {*/
+/*    display: none;*/
+/*}*/

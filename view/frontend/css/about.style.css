@@ -1,4 +1,4 @@
-#about-section1, #about-section2 {
+#about-section1 {
     /* Sizing */
     width: 100%;
     height: 100vh;
@@ -15,8 +15,15 @@
     text-align: center;
 }
 
+#about-section2 {
+    text-align: center;
+
+}
+
 #about-section2-content {
     max-width: 1250px;
+    margin: auto;
+    padding: 50px 0;
 }
 
 #about-section1 {
@@ -54,8 +61,8 @@
 }
 
 #employee-image {
-    height: 150px;
-    width: 150px;
+    height: 200px;
+    width: 200px;
     border: 2px solid #4C4C4C;
     border-radius: 100px;
     background-color: white;
@@ -66,12 +73,12 @@
 
 #employee-name {
     font-weight: bold;
-    font-size: 18px;
+    font-size: 25px;
     margin: 10px 0 5px 0;
 }
 
 #employee-jobtitle, #employee-email {
-    font-size: 14px;
+    font-size: 18px;
     margin: 5px;
 }
 

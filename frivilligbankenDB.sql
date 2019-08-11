@@ -21,6 +21,13 @@ CREATE TABLE textField (
     FieldContent VARCHAR(5000)
 );
 
+CREATE TABLE imageField (
+    ImageID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    Page VARCHAR(255),
+    FieldName VARCHAR(255),
+    Image VARCHAR(255)
+);
+
 /* Tables Backend */
 
 CREATE TABLE webadmin (
@@ -44,6 +51,13 @@ insert into textField (TextFieldID, Page, FieldName, FieldContent) values (4, 'V
 insert into textField (TextFieldID, Page, FieldName, FieldContent) values (5, 'Værd at Vide', 'For Frivillige', 'Tekst om frivillige her...');
 insert into textField (TextFieldID, Page, FieldName, FieldContent) values (6, 'Hvem er Vi', 'Frivilligbanken', 'Tekst om hvem folkene bag frivilligbanken er osv...');
 insert into textField (TextFieldID, Page, FieldName, FieldContent) values (7, 'Sponsorer', 'Sponsorere', 'Generel tekst om sponsorere her... (præsentation af nuværende sponsorer fx...)');
+
+insert into imageField (ImageID, Page, FieldName, Image) values (1, 'Forside', 'Hero Billede', 'https://frivilligbanken.dk/wp-content/uploads/2017/08/1088.jpg');
+insert into imageField (ImageID, Page, FieldName, Image) values (2, 'Forside', 'Kommer Snart', 'images/logo/IphoneAndAndroid.png');
+insert into imageField (ImageID, Page, FieldName, Image) values (3, 'Værd at Vide - For Foreninger', 'Fordel1', 'https://picsum.photos/id/524/300/200');
+insert into imageField (ImageID, Page, FieldName, Image) values (4, 'Værd at Vide - For Foreninger', 'Fordel2', 'https://picsum.photos/id/237/300/200');
+insert into imageField (ImageID, Page, FieldName, Image) values (5, 'Værd at Vide - For Foreninger', 'Fordel3', 'https://picsum.photos/id/902/300/200');
+# insert into imageField (ImageID, Page, FieldName, Image) values (1, '', '', '');
 
 insert into webadmin (WebAdminID, Username, Password) values (1, 'SuperAdmin', '1234');
 

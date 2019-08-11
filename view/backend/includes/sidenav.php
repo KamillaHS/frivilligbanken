@@ -3,6 +3,7 @@
     <li><a class="dropdown-button" data-target="dropdown2">Sider</a></li>
     <li><a href="/medarbejdere">Medarbejdere</a></li>
     <li><a href="/sponsorere">Sponsorere</a></li>
+    <li><a href="/uploads">Uploads</a></li>
     <li><a href="/rediger_admins">Administrer Admins</a></li>
 </ul>
 

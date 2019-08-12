@@ -82,6 +82,13 @@ insert into imageField (ImageID, Page, FieldName, Image) values (2, 'Forside', '
 insert into imageField (ImageID, Page, FieldName, Image) values (3, 'Værd at Vide - For Foreninger', 'Fordel1', 'https://picsum.photos/id/524/300/200');
 insert into imageField (ImageID, Page, FieldName, Image) values (4, 'Værd at Vide - For Foreninger', 'Fordel2', 'https://picsum.photos/id/237/300/200');
 insert into imageField (ImageID, Page, FieldName, Image) values (5, 'Værd at Vide - For Foreninger', 'Fordel3', 'https://picsum.photos/id/902/300/200');
+insert into imageField (ImageID, Page, FieldName, Image) values (6, 'Værd at Vide - For Sponsorere', 'Fordel1', 'https://picsum.photos/id/524/300/200');
+insert into imageField (ImageID, Page, FieldName, Image) values (7, 'Værd at Vide - For Sponsorere', 'Fordel2', 'https://picsum.photos/id/237/300/200');
+insert into imageField (ImageID, Page, FieldName, Image) values (8, 'Værd at Vide - For Sponsorere', 'Fordel3', 'https://picsum.photos/id/902/300/200');
+insert into imageField (ImageID, Page, FieldName, Image) values (9, 'Værd at Vide - For Frivillige', 'Fordel1', 'https://picsum.photos/id/524/300/200');
+insert into imageField (ImageID, Page, FieldName, Image) values (10, 'Værd at Vide - For Frivillige', 'Fordel2', 'https://picsum.photos/id/237/300/200');
+insert into imageField (ImageID, Page, FieldName, Image) values (11, 'Værd at Vide - For Frivillige', 'Fordel3', 'https://picsum.photos/id/902/300/200');
+insert into imageField (ImageID, Page, FieldName, Image) values (12, 'Hvem er Vi', 'Hero Billede', 'https://frivilligbanken.dk/wp-content/uploads/2017/09/business-executives-with-hand-stacked_1170-1901.jpg');
 # insert into imageField (ImageID, Page, FieldName, Image) values (1, '', '', '');
 
 insert into webadmin (WebAdminID, Username, Password) values (1, 'SuperAdmin', '1234');

@@ -41,6 +41,21 @@ $query = $dbCon->prepare("SELECT * FROM `textField` WHERE TextFieldID = 28");
 $query->execute();
 $getvolunteertext8 = $query->fetch();
 
+$dbCon = dbCon($user, $pass);
+$query = $dbCon->prepare("SELECT * FROM `imageField` WHERE ImageID = 9");
+$query->execute();
+$getimage1 = $query->fetch();
+
+$dbCon = dbCon($user, $pass);
+$query = $dbCon->prepare("SELECT * FROM `imageField` WHERE ImageID = 10");
+$query->execute();
+$getimage2 = $query->fetch();
+
+$dbCon = dbCon($user, $pass);
+$query = $dbCon->prepare("SELECT * FROM `imageField` WHERE ImageID = 11");
+$query->execute();
+$getimage3 = $query->fetch();
+
 ?>
 
     <link rel="stylesheet" href="/view/frontend/css/threeInOne.style.css">
@@ -63,17 +78,17 @@ $getvolunteertext8 = $query->fetch();
             <div id="line"></div>
             <div id="info-section-info">
                 <div id="info1">
-                    <img src="https://picsum.photos/id/524/300/200" alt="">
+                    <img src="<?php echo $getimage1['Image'] ?>" alt="">
                     <h4><?php echo $getvolunteertext2['FieldName'] ?></h4>
                     <p><?php echo $getvolunteertext2['FieldContent'] ?></p>
                 </div>
                 <div id="info2">
-                    <img src="https://picsum.photos/id/237/300/200" alt="">
+                    <img src="<?php echo $getimage2['Image'] ?>" alt="">
                     <h4><?php echo $getvolunteertext3['FieldName'] ?></h4>
                     <p><?php echo $getvolunteertext3['FieldContent'] ?></p>
                 </div>
                 <div id="info3">
-                    <img src="https://picsum.photos/id/902/300/200" alt="">
+                    <img src="<?php echo $getimage3['Image'] ?>" alt="">
                     <h4><?php echo $getvolunteertext4['FieldName'] ?></h4>
                     <p><?php echo $getvolunteertext4['FieldContent'] ?></p>
                 </div>

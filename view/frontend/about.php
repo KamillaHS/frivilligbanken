@@ -11,11 +11,15 @@ $query = $dbCon->prepare("SELECT * FROM `employee`");
 $query->execute();
 $getemployees = $query->fetchAll();
 
+$dbCon = dbCon($user, $pass);
+$query = $dbCon->prepare("SELECT * FROM `imageField` WHERE ImageID = 12");
+$query->execute();
+$gethero= $query->fetch();
 
 ?>
 <link rel="stylesheet" href="/view/frontend/css/about.style.css">
 
-<div id="about-section1">
+<div id="about-section1" style="background-image: url('<?php echo $gethero['Image'] ?>')">
     <div id="about-section-overlay">
 
     </div>

@@ -42,10 +42,9 @@
                                 ?>
                                 <div id="showImg" style="background-image: url('<?php echo $image ?>')">
                                     <div id="hover-buttons">
-<!--                                        <form action="controller/ImageController.php/deleteImage&image=--><?php //echo $image ?><!--">-->
-<!--                                            <button name="delete" id="delete" class="waves-effect waves-light btn"><i class="material-icons">delete_forever</i></button>-->
-<!--                                        </form>-->
-                                        <button id="delete" class="waves-effect waves-light btn"><i class="material-icons">delete_forever</i></button>
+                                        <form action="">
+                                            <button name="delete" id="delete" class="waves-effect waves-light btn"><i class="material-icons">delete_forever</i></button>
+                                        </form>
                                     </div>
                                 </div>
                                 <?php

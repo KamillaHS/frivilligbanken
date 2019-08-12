@@ -21,6 +21,26 @@ $query = $dbCon->prepare("SELECT * FROM `textField` WHERE TextFieldID = 2");
 $query->execute();
 $getfronttext2 = $query->fetch();
 
+$dbCon = dbCon($user, $pass);
+$query = $dbCon->prepare("SELECT COUNT(UserID) FROM `user`");
+$query->execute();
+$getnumusers = $query->fetch();
+
+$dbCon = dbCon($user, $pass);
+$query = $dbCon->prepare("SELECT COUNT(VolunteerID) FROM volunteer");
+$query->execute();
+$getnumvolunteers = $query->fetch();
+
+$dbCon = dbCon($user, $pass);
+$query = $dbCon->prepare("SELECT COUNT(UnionID) FROM `union`");
+$query->execute();
+$getnumunions = $query->fetch();
+
+$dbCon = dbCon($user, $pass);
+$query = $dbCon->prepare("SELECT COUNT(GiftcardID) FROM giftcard");
+$query->execute();
+$getnumgiftcards = $query->fetch();
+
 ?>
 
 <div id="section1" style="background-image: url('<?php echo $getheroimg['Image'] ?>')">
@@ -61,7 +81,7 @@ $getfronttext2 = $query->fetch();
                         <i class="material-icons">person</i>
                     </div>
                 </div>
-                <p id="user-number">0</p>
+                <p id="user-number"><?php echo $getnumusers[0] ?></p>
                 <p id="user-text">Brugere</p>
             </div>
             <div id="volunteers">
@@ -70,7 +90,7 @@ $getfronttext2 = $query->fetch();
                         <i class="material-icons">group</i>
                     </div>
                 </div>
-                <p id="volunteer-number">0</p>
+                <p id="volunteer-number"><?php echo $getnumvolunteers[0] ?></p>
                 <p id="volunteer-text">Frivillige</p>
             </div>
             <div id="unions">
@@ -79,7 +99,7 @@ $getfronttext2 = $query->fetch();
                         <i class="material-icons">account_balance</i>
                     </div>
                 </div>
-                <p id="union-number">0</p>
+                <p id="union-number"><?php echo $getnumunions[0] ?></p>
                 <p id="union-text">Foreninger</p>
             </div>
             <div id="giftcards">
@@ -88,7 +108,7 @@ $getfronttext2 = $query->fetch();
                         <i class="material-icons">loyalty</i>
                     </div>
                 </div>
-                <p id="giftcard-number">0</p>
+                <p id="giftcard-number"><?php echo $getnumgiftcards[0] ?></p>
                 <p id="giftcard-text">Gavekort</p>
             </div>
         </div>

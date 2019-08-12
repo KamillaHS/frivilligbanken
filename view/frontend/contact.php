@@ -1,5 +1,20 @@
 <?php
 require_once("view/frontend/includes/header.php");
+
+$dbCon = dbCon($user, $pass);
+$query = $dbCon->prepare("SELECT * FROM `textField` WHERE TextFieldID = 29");
+$query->execute();
+$getcontactnum = $query->fetch();
+
+$dbCon = dbCon($user, $pass);
+$query = $dbCon->prepare("SELECT * FROM `textField` WHERE TextFieldID = 30");
+$query->execute();
+$getcontactnumtimes = $query->fetch();
+
+$dbCon = dbCon($user, $pass);
+$query = $dbCon->prepare("SELECT * FROM `textField` WHERE TextFieldID = 31");
+$query->execute();
+$getcontactemail = $query->fetch();
 ?>
 <link rel="stylesheet" href="/view/frontend/css/contact.style.css">
 
@@ -16,19 +31,17 @@ require_once("view/frontend/includes/header.php");
 <!--            <div id="map"></div>-->
         </div>
         <div id="contact-information">
-            <h3>TELEFON</h3>
+            <h3><?php echo $getcontactnum['FieldName'] ?></h3>
             <p>
-                12 23 56 78
+                <?php echo $getcontactnum['FieldContent'] ?>
             </p>
-            <h3>TELEFONTIDER</h3>
+            <h3><?php echo $getcontactnumtimes['FieldName'] ?></h3>
             <p>
-                Mandag - Fredag: 00-00
-                <br>
-                Lørdag - Søndag: 00-00
+                <?php echo $getcontactnumtimes['FieldContent'] ?>
             </p>
-            <h3>EMAIL</h3>
+            <h3><?php echo $getcontactemail['FieldName'] ?></h3>
             <p>
-                mail@mail.dk
+                <?php echo $getcontactemail['FieldContent'] ?>
             </p>
         </div>
     </div>

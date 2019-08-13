@@ -11,7 +11,10 @@ CREATE TABLE employee (
     Picture VARCHAR(255),
     FullName VARCHAR (255),
     JobTitle VARCHAR(255),
-    Email VARCHAR(255)
+    Email VARCHAR(255),
+    SocialLink1 VARCHAR(255),
+    SocialLink2 VARCHAR(255),
+    SocialLink3 VARCHAR(255)
 );
 
 CREATE TABLE textfield (
@@ -38,11 +41,11 @@ CREATE TABLE webadmin (
 
 /* Initial Data */
 
-insert into employee (EmployeeID, Picture, FullName, JobTitle, Email) values (1, 'https://robohash.org/utpossimusautem.png?size=50x50&set=set1', 'Halli Housecroft', 'Physical Therapy Assistant', 'mail@mail.com');
-insert into employee (EmployeeID, Picture, FullName, JobTitle, Email) values (2, 'https://robohash.org/debitiseaquaerat.png?size=50x50&set=set1', 'Costa Nilges', 'Registered Nurse', 'mail@mail.com');
-insert into employee (EmployeeID, Picture, FullName, JobTitle, Email) values (3, 'https://robohash.org/consequaturvelitenim.png?size=50x50&set=set1', 'Fiona Cosslett', 'Pharmacist', 'mail@mail.com');
-insert into employee (EmployeeID, Picture, FullName, JobTitle, Email) values (4, 'https://robohash.org/exsimiliqueet.png?size=50x50&set=set1', 'Christiano Minto', 'Help Desk Operator', 'mail@mail.com');
-insert into employee (EmployeeID, Picture, FullName, JobTitle, Email) values (5, 'https://robohash.org/possimusinciduntnon.jpg?size=50x50&set=set1', 'Salomo Lothean', 'Senior Cost Accountant', 'mail@mail.com');
+insert into employee (EmployeeID, Picture, FullName, JobTitle, Email, SocialLink1, SocialLink2, SocialLink3) values (1, 'https://robohash.org/utpossimusautem.png?size=50x50&set=set1', 'Halli Housecroft', 'Physical Therapy Assistant', 'mail@mail.com', 'facebook', 'linkedin', null);
+insert into employee (EmployeeID, Picture, FullName, JobTitle, Email, SocialLink1, SocialLink2, SocialLink3) values (2, 'https://robohash.org/debitiseaquaerat.png?size=50x50&set=set1', 'Costa Nilges', 'Registered Nurse', 'mail@mail.com', 'facebook', 'linkedin', null);
+insert into employee (EmployeeID, Picture, FullName, JobTitle, Email, SocialLink1, SocialLink2, SocialLink3) values (3, 'https://robohash.org/consequaturvelitenim.png?size=50x50&set=set1', 'Fiona Cosslett', 'Pharmacist', 'mail@mail.com', 'facebook', 'linkedin', null);
+insert into employee (EmployeeID, Picture, FullName, JobTitle, Email, SocialLink1, SocialLink2, SocialLink3) values (4, 'https://robohash.org/exsimiliqueet.png?size=50x50&set=set1', 'Christiano Minto', 'Help Desk Operator', 'mail@mail.com', 'facebook', 'linkedin', null);
+insert into employee (EmployeeID, Picture, FullName, JobTitle, Email, SocialLink1, SocialLink2, SocialLink3) values (5, 'https://robohash.org/possimusinciduntnon.jpg?size=50x50&set=set1', 'Salomo Lothean', 'Senior Cost Accountant', 'mail@mail.com', 'facebook', 'linkedin', null);
 
 insert into textField (TextFieldID, Page, FieldName, FieldContent) values (1, 'Forside', 'Hvad er Frivilligbanken?', 'Tekst om frivilligbanken her...');
 insert into textField (TextFieldID, Page, FieldName, FieldContent) values (2, 'Forside', 'Kommer Snart', 'Tekst om app der snart kommer til både iphone og android, her...');
@@ -75,6 +78,9 @@ insert into textField (TextFieldID, Page, FieldName, FieldContent) values (28, '
 insert into textField (TextFieldID, Page, FieldName, FieldContent) values (29, 'Kontakt Os', 'Telefon', '12 34 56 78');
 insert into textField (TextFieldID, Page, FieldName, FieldContent) values (30, 'Kontakt Os', 'Telefontider', 'Mandag - Fredag: 00-00 <br> Lørdag - Søndag: 00-00');
 insert into textField (TextFieldID, Page, FieldName, FieldContent) values (31, 'Kontakt Os', 'Email', 'mail@mail.dk');
+insert into textField (TextFieldID, Page, FieldName, FieldContent) values (32, 'Footer', 'SocialLink', 'Facebook');
+insert into textField (TextFieldID, Page, FieldName, FieldContent) values (32, 'Footer', 'SocialLink', 'LinkedIn');
+insert into textField (TextFieldID, Page, FieldName, FieldContent) values (32, 'Footer', 'SocialLink', 'Instagram');
 # insert into textField (TextFieldID, Page, FieldName, FieldContent) values (0, '', '', '');
 
 insert into imageField (ImageID, Page, FieldName, Image) values (1, 'Forside', 'Hero Billede', 'https://frivilligbanken.dk/wp-content/uploads/2017/08/1088.jpg');
@@ -124,10 +130,13 @@ CREATE TABLE volunteer (
 CREATE TABLE `union` (
     UnionID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     UnionName VARCHAR(255),
+    UnionCVR INT(8),
+    UnionEmail VARCHAR(255),
     Address VARCHAR(255),
     City VARCHAR(255),
     PostalCode INT(4),
     Phone INT(8),
+    Website VARCHAR(255),
     UnionLogo VARCHAR(255),
     AreaID INT
 );
@@ -136,6 +145,7 @@ CREATE TABLE sponsor (
     SponsorID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     SponsorName VARCHAR(255),
     SponsorCVR INT(8),
+    SponsorEmail VARCHAR(255),
     Address VARCHAR(255),
     City VARCHAR(255),
     PostalCode INT(4),
@@ -209,6 +219,8 @@ CREATE TABLE usergiftcard (
     VolunteerID INT NOT NULL,
     GiftcardID INT NOT NULL,
     PurchaseDate DATE,
+    ExpirationDate DATE,
+    isExpired BIT DEFAULT 0,
     isUsed BIT DEFAULT 0,
     CONSTRAINT PK_usergiftcard PRIMARY KEY (VolunteerID, GiftcardID),
     FOREIGN KEY (VolunteerID) REFERENCES volunteer (VolunteerID),
@@ -257,17 +269,17 @@ ALTER TABLE giftcard
 /* Initial Data */
 
 insert into area (AreaID, AreaName) values (1, 'Nordjylland');
-insert into area (AreaID, AreaName) values (2, 'Vestjylland');
-insert into area (AreaID, AreaName) values (3, 'Østjylland');
+insert into area (AreaID, AreaName) values (2, 'Midtjylland Vest');
+insert into area (AreaID, AreaName) values (3, 'Midtjylland Øst');
 insert into area (AreaID, AreaName) values (4, 'Sønderjylland');
 insert into area (AreaID, AreaName) values (5, 'Fyn');
 insert into area (AreaID, AreaName) values (6, 'Vestsjælland');
-insert into area (AreaID, AreaName) values (7, 'Sydsjælland og øerne');
+insert into area (AreaID, AreaName) values (7, 'Sydsjælland og Øerne');
 insert into area (AreaID, AreaName) values (8, 'Bornholm');
 insert into area (AreaID, AreaName) values (9, 'Østsjælland');
-insert into area (AreaID, AreaName) values (10, 'Norsjælland');
+insert into area (AreaID, AreaName) values (10, 'Nordsjælland');
 insert into area (AreaID, AreaName) values (11, 'Københavns Omegn');
-insert into area (AreaID, AreaName) values (12, 'Københavns Ny');
+insert into area (AreaID, AreaName) values (12, 'Københavns By');
 
 insert into volunteer (VolunteerID, FullName, DoB, Address, City, PostalCode, Phone, Description, VolunteerPic, CV, Points, AreaID) values (1, 'Reece Sibbe', '1994-05-29 02:06:18', '38425 Mitchell Crossing', 'Nsok', 2274, 90018911, 'Extirpation of Matter from Right Shoulder Joint, Open Approach', 'https://robohash.org/cumvelitveritatis.bmp?size=50x50&set=set1', 'http://dummyimage.com/207x167.bmp/dddddd/000000', 359, 1);
 insert into volunteer (VolunteerID, FullName, DoB, Address, City, PostalCode, Phone, Description, VolunteerPic, CV, Points, AreaID) values (2, 'Kelcey Ahrens', '1982-11-11 11:45:39', '11 Thackeray Plaza', 'Mingelchaur', 2337, 22835033, 'Insertion of Infusion Device into Right Ankle Region, Open Approach', 'https://robohash.org/velcorporisest.bmp?size=50x50&set=set1', 'http://dummyimage.com/160x128.jpg/5fa2dd/ffffff', 453, 5);
@@ -275,18 +287,18 @@ insert into volunteer (VolunteerID, FullName, DoB, Address, City, PostalCode, Ph
 insert into volunteer (VolunteerID, FullName, DoB, Address, City, PostalCode, Phone, Description, VolunteerPic, CV, Points, AreaID) values (4, 'Arther Ajam', '1977-08-02 05:44:53', '177 Arapahoe Circle', 'Gaozhou', 6709, 17812844, 'Drainage of Left Tibia with Drainage Device, Percutaneous Approach', 'https://robohash.org/molestiasquiofficia.png?size=50x50&set=set1', 'http://dummyimage.com/132x103.png/cc0000/ffffff', 423, 9);
 insert into volunteer (VolunteerID, FullName, DoB, Address, City, PostalCode, Phone, Description, VolunteerPic, CV, Points, AreaID) values (5, 'Marilin Weaving', '1966-09-27 14:12:14', '20 Northland Drive', 'Azor', 8314, 38850530, 'Supplement Right Cephalic Vein with Synthetic Substitute, Percutaneous Approach', 'https://robohash.org/recusandaequismaxime.jpg?size=50x50&set=set1', 'http://dummyimage.com/116x201.jpg/dddddd/000000', 75, 4);
 
-insert into `union` (UnionID, UnionName, Address, City, PostalCode, Phone, UnionLogo, AreaID) values (1, 'Ludovika Rainbow', '5573 Holy Cross Lane', 'Paraiso', 5112, 57500087, 'https://robohash.org/doloreametoptio.jpg?size=50x50&set=set1', 10);
-insert into `union` (UnionID, UnionName, Address, City, PostalCode, Phone, UnionLogo, AreaID) values (2, 'Herculie Ziems', '457 Dryden Road', 'Aībak', 5077, 68561867, 'https://robohash.org/abullamexpedita.bmp?size=50x50&set=set1', 1);
-insert into `union` (UnionID, UnionName, Address, City, PostalCode, Phone, UnionLogo, AreaID) values (3, 'Roanne Grason', '3 Pond Crossing', 'Cimanggu', 1006, 21938011, 'https://robohash.org/porrosedpraesentium.jpg?size=50x50&set=set1', 2);
-insert into `union` (UnionID, UnionName, Address, City, PostalCode, Phone, UnionLogo, AreaID) values (4, 'Idalina Hannant', '6 Daystar Lane', 'Tours', 1009, 15838245, 'https://robohash.org/necessitatibusmaximetotam.bmp?size=50x50&set=set1', 3);
-insert into `union` (UnionID, UnionName, Address, City, PostalCode, Phone, UnionLogo, AreaID) values (5, 'Nessi Sword', '8 Ramsey Crossing', 'Tieba', 1379, 42248096, 'https://robohash.org/accusamusodittempora.bmp?size=50x50&set=set1', 4);
+insert into `union` (UnionID, UnionName, UnionCVR, UnionEmail, Address, City, PostalCode, Website, Phone, UnionLogo, AreaID) values (1, 'Ludovika Rainbow', 12345678, 'union@mail.dk' , '5573 Holy Cross Lane', 'Paraiso', 5112, 'unionweb.dk', 57500087, 'https://robohash.org/doloreametoptio.jpg?size=50x50&set=set1', 10);
+insert into `union` (UnionID, UnionName, UnionCVR, UnionEmail, Address, City, PostalCode, Website, Phone, UnionLogo, AreaID) values (2, 'Herculie Ziems', 12345678, 'union@mail.dk', '457 Dryden Road', 'Aībak', 5077, 68561867, 'unionweb.dk', 'https://robohash.org/abullamexpedita.bmp?size=50x50&set=set1', 1);
+insert into `union` (UnionID, UnionName, UnionCVR, UnionEmail, Address, City, PostalCode, Website, Phone, UnionLogo, AreaID) values (3, 'Roanne Grason', 12345678, 'union@mail.dk', '3 Pond Crossing', 'Cimanggu', 1006, 21938011, 'unionweb.dk', 'https://robohash.org/porrosedpraesentium.jpg?size=50x50&set=set1', 2);
+insert into `union` (UnionID, UnionName, UnionCVR, UnionEmail, Address, City, PostalCode, Website, Phone, UnionLogo, AreaID) values (4, 'Idalina Hannant', 12345678, 'union@mail.dk', '6 Daystar Lane', 'Tours', 1009, 15838245, 'unionweb.dk', 'https://robohash.org/necessitatibusmaximetotam.bmp?size=50x50&set=set1', 3);
+insert into `union` (UnionID, UnionName, UnionCVR, UnionEmail, Address, City, PostalCode, Website, Phone, UnionLogo, AreaID) values (5, 'Nessi Sword', 12345678, 'union@mail.dk', '8 Ramsey Crossing', 'Tieba', 1379, 42248096, 'unionweb.dk', 'https://robohash.org/accusamusodittempora.bmp?size=50x50&set=set1', 4);
 
-insert into sponsor (SponsorID, SponsorName, SponsorPic, SponsorCVR, Address, PostalCode, City, Website, AreaID) values (1, 'Vinder', 'http://dummyimage.com/249x199.jpg/ff4444/ffffff', 12345678, '9755 Oneill Parkway', 1234, 'Far‘ūn', 'www.google.dk', 2);
-insert into sponsor (SponsorID, SponsorName, SponsorPic, SponsorCVR, Address, PostalCode, City, Website, AreaID) values (2, 'Blogtags', 'http://dummyimage.com/108x134.jpg/5fa2dd/ffffff', 54862584, '7 Cambridge Center', 1520, 'Alcalá', 'www.google.dk', 5);
-insert into sponsor (SponsorID, SponsorName, SponsorPic, SponsorCVR, Address, PostalCode, City, Website, AreaID) values (3, 'Google', 'http://dummyimage.com/142x228.jpg/cc0000/ffffff', 15882521, '0 Sycamore Point', 4800, 'Samho-rodongjagu', 'www.google.dk', 2);
-insert into sponsor (SponsorID, SponsorName, SponsorPic, SponsorCVR, Address, PostalCode, City, Website, AreaID) values (4, 'Brainbox', 'http://dummyimage.com/209x233.jpg/cc0000/ffffff', 85482152, '77 Jenifer Park', 5700, 'Lebao', 'www.google.dk', 1);
-insert into sponsor (SponsorID, SponsorName, SponsorPic, SponsorCVR, Address, PostalCode, City, Website, AreaID) values (5, 'Skivee', 'http://dummyimage.com/203x106.jpg/dddddd/000000', 41002612, '3 Petterle Circle', 3050, 'Rossosh’', 'www.google.dk', 7);
-insert into sponsor (SponsorID, SponsorName, SponsorPic, SponsorCVR, Address, PostalCode, City, Website, AreaID) values (6, 'Ailane', 'http://dummyimage.com/166x160.jpg/dddddd/000000', 54750833, '36 Green Ridge Pass', 6800, 'Tippi', 'www.google.dk', 12);
+insert into sponsor (SponsorID, SponsorName, SponsorPic, SponsorCVR, SponsorEmail, Address, PostalCode, City, Website, AreaID) values (1, 'Vinder', 'http://dummyimage.com/249x199.jpg/ff4444/ffffff', 12345678, 'sponsor@mail.dk', '9755 Oneill Parkway', 1234, 'Far‘ūn', 'www.google.dk', 2);
+insert into sponsor (SponsorID, SponsorName, SponsorPic, SponsorCVR, SponsorEmail, Address, PostalCode, City, Website, AreaID) values (2, 'Blogtags', 'http://dummyimage.com/108x134.jpg/5fa2dd/ffffff', 54862584, 'sponsor@mail.dk', '7 Cambridge Center', 1520, 'Alcalá', 'www.google.dk', 5);
+insert into sponsor (SponsorID, SponsorName, SponsorPic, SponsorCVR, SponsorEmail, Address, PostalCode, City, Website, AreaID) values (3, 'Google', 'http://dummyimage.com/142x228.jpg/cc0000/ffffff', 15882521, 'sponsor@mail.dk', '0 Sycamore Point', 4800, 'Samho-rodongjagu', 'www.google.dk', 2);
+insert into sponsor (SponsorID, SponsorName, SponsorPic, SponsorCVR, SponsorEmail, Address, PostalCode, City, Website, AreaID) values (4, 'Brainbox', 'http://dummyimage.com/209x233.jpg/cc0000/ffffff', 85482152, 'sponsor@mail.dk', '77 Jenifer Park', 5700, 'Lebao', 'www.google.dk', 1);
+insert into sponsor (SponsorID, SponsorName, SponsorPic, SponsorCVR, SponsorEmail, Address, PostalCode, City, Website, AreaID) values (5, 'Skivee', 'http://dummyimage.com/203x106.jpg/dddddd/000000', 41002612, 'sponsor@mail.dk', '3 Petterle Circle', 3050, 'Rossosh’', 'www.google.dk', 7);
+insert into sponsor (SponsorID, SponsorName, SponsorPic, SponsorCVR, SponsorEmail, Address, PostalCode, City, Website, AreaID) values (6, 'Ailane', 'http://dummyimage.com/166x160.jpg/dddddd/000000', 54750833, 'sponsor@mail.dk', '36 Green Ridge Pass', 6800, 'Tippi', 'www.google.dk', 12);
 
 insert into `user` (UserID, Email, Password, VolunteerID, SponsorID, UnionID) values (1, 'hgrover0@gizmodo.com', 'lDCPQW', 1, 1, 1);
 insert into `user` (UserID, Email, Password, VolunteerID, SponsorID, UnionID) values (2, 'amiddis1@1688.com', 'EfDAIImbb9YR', NULL, 2, NULL);

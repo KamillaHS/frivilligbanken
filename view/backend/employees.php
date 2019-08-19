@@ -52,7 +52,7 @@ $getemployees = $query->fetchAll();
                            <p><b>Email:</b> <?php echo $employee['Email'] ?></p>
                        </div>
                        <div id="buttons">
-                           <form method="POST" action="/rediger_medarbejder?EmployeeID=<?php echo $employee['EmployeeID'] ?>">
+                           <form method="POST" action="/rediger_medarbejder">
                                <button id="edit"><i class="material-icons">settings</i></button>
                            </form>
                            <form method="POST" action="../../controller/EmployeeController.php?action=DeleteEmployee&employeeID=<?php echo $employee['EmployeeID'] ?>">

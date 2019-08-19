@@ -79,9 +79,9 @@ insert into textField (TextFieldID, Page, FieldName, FieldContent) values (29, '
 insert into textField (TextFieldID, Page, FieldName, FieldContent) values (30, 'Kontakt Os', 'Telefontider', 'Mandag - Fredag: 00-00 <br> Lørdag - Søndag: 00-00');
 insert into textField (TextFieldID, Page, FieldName, FieldContent) values (31, 'Kontakt Os', 'Email', 'mail@mail.dk');
 insert into textField (TextFieldID, Page, FieldName, FieldContent) values (32, 'Kontakt Os', 'Adresse', 'bla bla vej, bla bla by');
-insert into textField (TextFieldID, Page, FieldName, FieldContent) values (33, 'Footer', 'SocialLink', 'Facebook');
-insert into textField (TextFieldID, Page, FieldName, FieldContent) values (34, 'Footer', 'SocialLink', 'LinkedIn');
-insert into textField (TextFieldID, Page, FieldName, FieldContent) values (35, 'Footer', 'SocialLink', 'Instagram');
+insert into textField (TextFieldID, Page, FieldName, FieldContent) values (33, 'Footer', 'Facebook', 'Facebook.com');
+insert into textField (TextFieldID, Page, FieldName, FieldContent) values (34, 'Footer', 'LinkedIn', 'LinkedIn.com');
+insert into textField (TextFieldID, Page, FieldName, FieldContent) values (35, 'Footer', 'Instagram', 'Instagram.com');
 # insert into textField (TextFieldID, Page, FieldName, FieldContent) values (0, '', '', '');
 
 insert into imageField (ImageID, Page, FieldName, Image) values (1, 'Forside', 'Hero Billede', 'https://frivilligbanken.dk/wp-content/uploads/2017/08/1088.jpg');

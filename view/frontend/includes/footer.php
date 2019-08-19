@@ -61,9 +61,9 @@ $getsocial3 = $query->fetch();
                 <li><?php echo $getphone['FieldContent'] ?></li>
                 <li><?php echo $getmail['FieldContent'] ?></li>
                 <li>
-                    <a href="<?php echo $getsocial1['FieldContent'] ?>"><img src="../../../images/icons/facebook.svg" alt=""></a>
-                    <a href="<?php echo $getsocial2['FieldContent'] ?>"><img src="../../../images/icons/linkedin.svg" alt=""></a>
-                    <a href="<?php echo $getsocial3['FieldContent'] ?>"><img src="../../../images/icons/instagram.svg" alt=""></a>
+                    <a href="<?php echo "http://" . $getsocial1['FieldContent'] ?>"><img src="../../../images/icons/facebook.svg" alt=""></a>
+                    <a href="<?php echo "http://" . $getsocial2['FieldContent'] ?>"><img src="../../../images/icons/linkedin.svg" alt=""></a>
+                    <a href="<?php echo "http://" . $getsocial3['FieldContent'] ?>"><img src="../../../images/icons/instagram.svg" alt=""></a>
                 </li>
             </ul>
         </div>

@@ -150,6 +150,8 @@
     padding: 0;
 }
 
-/*#upload {*/
-/*    display: none;*/
-/*}*/
+/* page_contact */
+
+#social1-form img, #social2-form img, #social3-form img {
+    width: 30px;
+}

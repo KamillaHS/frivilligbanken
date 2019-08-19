@@ -130,6 +130,120 @@ if(isset($_POST['updateUnionText8'])) {
     echo "<script>location.href = '/side&for_foreninger'</script>";
 }
 
+$dbCon = dbCon($user, $pass);
+$query = $dbCon->prepare("SELECT * FROM `imageField` WHERE ImageID = 3");
+$query->execute();
+$getunionimage1 = $query->fetch();
+
+$dbCon = dbCon($user, $pass);
+$query = $dbCon->prepare("SELECT * FROM `imageField` WHERE ImageID = 4");
+$query->execute();
+$getunionimage2 = $query->fetch();
+
+$dbCon = dbCon($user, $pass);
+$query = $dbCon->prepare("SELECT * FROM `imageField` WHERE ImageID = 5");
+$query->execute();
+$getunionimage3 = $query->fetch();
+
+if(isset($_POST['uploadUnionPic1'])) {
+    if(($_FILES['imgfile']['type']=="image/jpeg" ||
+            $_FILES['imgfile']['type'] == "image/pjpeg" ||
+            $_FILES['imgfile']['type'] == "image/png" ||
+            $_FILES['imgfile']['type'] == "image/gif" ||
+            $_FILES['imgfile']['type'] == "image/jpg" ) && (
+            $_FILES['imgfile']['size'] < 50000000000 )) {
+        if ($_FILES['imgfile']['error'] > 0 ){
+            echo "Error: " . $_FILES['imgfile']['error'];
+        }else{
+            if (file_exists("images/imagefields/". preg_replace('/\s/',
+                    '', $_FILES['imgfile']['name']))){
+                echo '<script type="text/javascript">alert("Billedet eksisterer allerede i databasen");</script>';
+            }else{
+                move_uploaded_file($_FILES['imgfile']['tmp_name'],
+                    "images/imagefields/".preg_replace('/\s/',
+                        '',$_FILES['imgfile']['name']));
+
+                $dbCon = dbCon($user, $pass);
+                $filepath = "images/imagefields/";
+                $sql = "UPDATE imagefield SET Image = '". $filepath . preg_replace('/\s/', '',
+                        $_FILES['imgfile']['name'])."' WHERE ImageID = 3";
+                $query = $dbCon->prepare($sql);
+                $query->execute();
+
+                echo "<script>location.href = '/side&for_foreninger'</script>";
+            }
+        }
+    } else {
+        echo '<script type="text/javascript">alert("Filtypen understøttes ikke, eller filen er for stor");</script>';
+    }
+}
+
+if(isset($_POST['uploadUnionPic2'])) {
+    if(($_FILES['imgfile']['type']=="image/jpeg" ||
+            $_FILES['imgfile']['type'] == "image/pjpeg" ||
+            $_FILES['imgfile']['type'] == "image/png" ||
+            $_FILES['imgfile']['type'] == "image/gif" ||
+            $_FILES['imgfile']['type'] == "image/jpg" ) && (
+            $_FILES['imgfile']['size'] < 50000000000 )) {
+        if ($_FILES['imgfile']['error'] > 0 ){
+            echo "Error: " . $_FILES['imgfile']['error'];
+        }else{
+            if (file_exists("images/imagefields/". preg_replace('/\s/',
+                    '', $_FILES['imgfile']['name']))){
+                echo '<script type="text/javascript">alert("Billedet eksisterer allerede i databasen");</script>';
+            }else{
+                move_uploaded_file($_FILES['imgfile']['tmp_name'],
+                    "images/imagefields/".preg_replace('/\s/',
+                        '',$_FILES['imgfile']['name']));
+
+                $dbCon = dbCon($user, $pass);
+                $filepath = "images/imagefields/";
+                $sql = "UPDATE imagefield SET Image = '". $filepath . preg_replace('/\s/', '',
+                        $_FILES['imgfile']['name'])."' WHERE ImageID = 4";
+                $query = $dbCon->prepare($sql);
+                $query->execute();
+
+                echo "<script>location.href = '/side&for_foreninger'</script>";
+            }
+        }
+    } else {
+        echo '<script type="text/javascript">alert("Filtypen understøttes ikke, eller filen er for stor");</script>';
+    }
+}
+
+if(isset($_POST['uploadUnionPic3'])) {
+    if(($_FILES['imgfile']['type']=="image/jpeg" ||
+            $_FILES['imgfile']['type'] == "image/pjpeg" ||
+            $_FILES['imgfile']['type'] == "image/png" ||
+            $_FILES['imgfile']['type'] == "image/gif" ||
+            $_FILES['imgfile']['type'] == "image/jpg" ) && (
+            $_FILES['imgfile']['size'] < 50000000000 )) {
+        if ($_FILES['imgfile']['error'] > 0 ){
+            echo "Error: " . $_FILES['imgfile']['error'];
+        }else{
+            if (file_exists("images/imagefields/". preg_replace('/\s/',
+                    '', $_FILES['imgfile']['name']))){
+                echo '<script type="text/javascript">alert("Billedet eksisterer allerede i databasen");</script>';
+            }else{
+                move_uploaded_file($_FILES['imgfile']['tmp_name'],
+                    "images/imagefields/".preg_replace('/\s/',
+                        '',$_FILES['imgfile']['name']));
+
+                $dbCon = dbCon($user, $pass);
+                $filepath = "images/imagefields/";
+                $sql = "UPDATE imagefield SET Image = '". $filepath . preg_replace('/\s/', '',
+                        $_FILES['imgfile']['name'])."' WHERE ImageID = 5";
+                $query = $dbCon->prepare($sql);
+                $query->execute();
+
+                echo "<script>location.href = '/side&for_foreninger'</script>";
+            }
+        }
+    } else {
+        echo '<script type="text/javascript">alert("Filtypen understøttes ikke, eller filen er for stor");</script>';
+    }
+}
+
 ?>
 
     <div id="dashboard">
@@ -157,6 +271,54 @@ if(isset($_POST['updateUnionText8'])) {
                 </p>
             </div>
 
+            <h2>Billede: "<?php echo $getuniontext2['FieldName'] ?>"</h2>
+            <div id="dashboard-section1">
+                <p>
+                    Nuværende billede:
+                <div id="current-image" style="background-image: url('<?php echo $getunionimage1['Image'] ?>')"></div>
+                </p>
+                <form enctype="multipart/form-data" method="POST" action="">
+                    <div class="upload-btn-wrapper">
+                        <div id="imgUpload">Upload billede</div>
+                        <input name="imgfile" type="file" id="file1">
+                        <div id="upload-file-name1"></div>
+                    </div>
+                    <input id="upload" type="submit" Value="Godkend" name="uploadUnionPic1">
+                </form>
+                <div id="imgUpload" onclick="showImages1()">Vælg fra Uploads</div>
+                <div id="folder-images1">
+                    <?php
+                    $dirname = "images/imagefields/";
+                    $images = glob($dirname."*");
+
+                    foreach($images as $image) {
+                        ?>
+                        <div id="showImg" style="background-image: url('<?php echo $image ?>')">
+                            <form method='POST' action='../../controller/ImageController.php?action=makeUnionPic1&image=<?php echo $image ?>'>
+                                <div id='checkbox'>
+                                    Vælg billede
+                                    <label>
+                                        <input name='checkbox' type='checkbox' onchange='this.form.submit()'"
+                                        <?php
+                                        if($image == $getunionimage1['Image']) {
+                                            echo "checked='checked'";
+                                        } else {
+                                            echo "";
+                                        }
+                                        echo "'/>";
+                                        ?>
+                                        <span> </span>
+                                    </label>
+                                </div>
+                            </form>
+                        </div>
+                        <?php
+
+                    }
+                    ?>
+                </div>
+            </div>
+
             <h2>Tekstfelt: "<?php echo $getuniontext2['FieldName'] ?>"</h2>
             <div id="dashboard-section1">
                 <p>
@@ -172,6 +334,54 @@ if(isset($_POST['updateUnionText8'])) {
                 </p>
             </div>
 
+            <h2>Billede: "<?php echo $getuniontext3['FieldName'] ?>"</h2>
+            <div id="dashboard-section1">
+                <p>
+                    Nuværende billede:
+                <div id="current-image" style="background-image: url('<?php echo $getunionimage2['Image'] ?>')"></div>
+                </p>
+                <form enctype="multipart/form-data" method="POST" action="">
+                    <div class="upload-btn-wrapper">
+                        <div id="imgUpload">Upload billede</div>
+                        <input name="imgfile" type="file" id="file2">
+                        <div id="upload-file-name2"></div>
+                    </div>
+                    <input id="upload" type="submit" Value="Godkend" name="uploadUnionPic2">
+                </form>
+                <div id="imgUpload" onclick="showImages2()">Vælg fra Uploads</div>
+                <div id="folder-images2">
+                    <?php
+                    $dirname = "images/imagefields/";
+                    $images = glob($dirname."*");
+
+                    foreach($images as $image) {
+                        ?>
+                        <div id="showImg" style="background-image: url('<?php echo $image ?>')">
+                            <form method='POST' action='../../controller/ImageController.php?action=makeUnionPic2&image=<?php echo $image ?>'>
+                                <div id='checkbox'>
+                                    Vælg billede
+                                    <label>
+                                        <input name='checkbox' type='checkbox' onchange='this.form.submit()'"
+                                        <?php
+                                        if($image == $getunionimage2['Image']) {
+                                            echo "checked='checked'";
+                                        } else {
+                                            echo "";
+                                        }
+                                        echo "'/>";
+                                        ?>
+                                        <span> </span>
+                                    </label>
+                                </div>
+                            </form>
+                        </div>
+                        <?php
+
+                    }
+                    ?>
+                </div>
+            </div>
+
             <h2>Tekstfelt: "<?php echo $getuniontext3['FieldName'] ?>"</h2>
             <div id="dashboard-section1">
                 <p>
@@ -185,6 +395,54 @@ if(isset($_POST['updateUnionText8'])) {
                     <input type="submit" name="updateUnionText3" value="Gem ændringer">
                 </form>
                 </p>
+            </div>
+
+            <h2>Billede: "<?php echo $getuniontext4['FieldName'] ?>"</h2>
+            <div id="dashboard-section1">
+                <p>
+                    Nuværende billede:
+                <div id="current-image" style="background-image: url('<?php echo $getunionimage3['Image'] ?>')"></div>
+                </p>
+                <form enctype="multipart/form-data" method="POST" action="">
+                    <div class="upload-btn-wrapper">
+                        <div id="imgUpload">Upload billede</div>
+                        <input name="imgfile" type="file" id="file3">
+                        <div id="upload-file-name3"></div>
+                    </div>
+                    <input id="upload" type="submit" Value="Godkend" name="uploadUnionPic3">
+                </form>
+                <div id="imgUpload" onclick="showImages3()">Vælg fra Uploads</div>
+                <div id="folder-images3">
+                    <?php
+                    $dirname = "images/imagefields/";
+                    $images = glob($dirname."*");
+
+                    foreach($images as $image) {
+                        ?>
+                        <div id="showImg" style="background-image: url('<?php echo $image ?>')">
+                            <form method='POST' action='../../controller/ImageController.php?action=makeUnionPic3&image=<?php echo $image ?>'>
+                                <div id='checkbox'>
+                                    Vælg billede
+                                    <label>
+                                        <input name='checkbox' type='checkbox' onchange='this.form.submit()'"
+                                        <?php
+                                        if($image == $getunionimage3['Image']) {
+                                            echo "checked='checked'";
+                                        } else {
+                                            echo "";
+                                        }
+                                        echo "'/>";
+                                        ?>
+                                        <span> </span>
+                                    </label>
+                                </div>
+                            </form>
+                        </div>
+                        <?php
+
+                    }
+                    ?>
+                </div>
             </div>
 
             <h2>Tekstfelt: "<?php echo $getuniontext4['FieldName'] ?>"</h2>
@@ -249,6 +507,32 @@ if(isset($_POST['updateUnionText8'])) {
 
         </div>
     </div>
+
+    <script>
+        document.querySelector("#file1").onchange = function(){
+            document.querySelector("#upload-file-name1").textContent = this.files[0].name;
+        };
+
+        function showImages1() {
+            document.getElementById('folder-images1').style.display = "flex";
+        }
+
+        document.querySelector("#file2").onchange = function(){
+            document.querySelector("#upload-file-name2").textContent = this.files[0].name;
+        };
+
+        function showImages2() {
+            document.getElementById('folder-images2').style.display = "flex";
+        }
+
+        document.querySelector("#file3").onchange = function(){
+            document.querySelector("#upload-file-name3").textContent = this.files[0].name;
+        };
+
+        function showImages3() {
+            document.getElementById('folder-images3').style.display = "flex";
+        }
+    </script>
 
 
 <?php require_once("view/backend/includes/footer.php"); ?>

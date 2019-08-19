@@ -4,7 +4,13 @@
     <li><a href="/medarbejdere">Medarbejdere</a></li>
     <li><a href="/sponsorere">Sponsorere</a></li>
     <li><a href="/uploads">Uploads</a></li>
-    <li><a href="/rediger_admins">Administrer Admins</a></li>
+    <?php
+     if($_SESSION['admin_id'] == 1) {
+         ?>
+         <li><a href="/rediger_admins">Administrer Admins</a></li>
+        <?php
+     }
+    ?>
 </ul>
 
 <ul id="dropdown2" class="dropdown-content">

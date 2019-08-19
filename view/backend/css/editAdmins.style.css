@@ -1,0 +1,17 @@
+#admin-box {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    width: 500px;
+}
+
+#admin-box:hover {
+    background-color: #E8EEF9;
+}
+
+#passwordReset {
+    margin-top: 40px;
+    border-radius: 10px;
+    background-color: #517BBE;
+}

@@ -1,0 +1,90 @@
+#add {
+    position: relative;
+    color: white;
+    background-color: #517BBE;
+    border-radius: 8px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+#add span {
+    position: absolute;
+    margin-top: -5px;
+    padding-top: 0;
+}
+
+#add-employee {
+    display: none;
+    width: 400px;
+    background-color: #E8EEF9;
+    padding: 30px;
+    margin-top: 20px;
+    border: 1px solid #4C4C4C;
+    border-radius: 10px;
+}
+
+#add-employee p {
+    margin: 20px 0;
+}
+
+.flex-box {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#employee-box {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    width: 500px;
+}
+
+#employee-box:hover {
+    background-color: #E8EEF9;
+}
+
+#employee-pic {
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    background-color: white;
+    border: 2px solid #4C4C4C;
+    margin: 10px 0;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#employee-info {
+    margin: 25px 0 0 10px;
+}
+
+#employee-info p {
+    margin-bottom: 8px;
+}
+
+#buttons {
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+#buttons button {
+    background-color: rgba(0,0,0,0);
+    border: none;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+#buttons i {
+    font-size: 35px;
+}
+
+#edit {
+    color: #517BBE;
+}
+
+#delete {
+    color: #E84335;
+}

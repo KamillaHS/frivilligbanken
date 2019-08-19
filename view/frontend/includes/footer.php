@@ -3,6 +3,36 @@ $dbCon = dbCon($user, $pass);
 $query = $dbCon->prepare("SELECT SponsorID, SponsorName, SponsorPic, Website FROM `sponsor`");
 $query->execute();
 $getsponsors = $query->fetchAll();
+
+$dbCon = dbCon($user, $pass);
+$query = $dbCon->prepare("SELECT * FROM textField WHERE TextFieldID = 32");
+$query->execute();
+$getaddress = $query->fetch();
+
+$dbCon = dbCon($user, $pass);
+$query = $dbCon->prepare("SELECT * FROM textField WHERE TextFieldID = 29");
+$query->execute();
+$getphone = $query->fetch();
+
+$dbCon = dbCon($user, $pass);
+$query = $dbCon->prepare("SELECT * FROM textField WHERE TextFieldID = 31");
+$query->execute();
+$getmail = $query->fetch();
+
+$dbCon = dbCon($user, $pass);
+$query = $dbCon->prepare("SELECT * FROM textField WHERE TextFieldID = 33");
+$query->execute();
+$getsocial1 = $query->fetch();
+
+$dbCon = dbCon($user, $pass);
+$query = $dbCon->prepare("SELECT * FROM textField WHERE TextFieldID = 34");
+$query->execute();
+$getsocial2 = $query->fetch();
+
+$dbCon = dbCon($user, $pass);
+$query = $dbCon->prepare("SELECT * FROM textField WHERE TextFieldID = 35");
+$query->execute();
+$getsocial3 = $query->fetch();
 ?>
 
 <link rel="stylesheet" href="css/footer.style.css">
@@ -27,13 +57,13 @@ $getsponsors = $query->fetchAll();
         <div id="footer-mid">
             <h3>Kontaktoplysninger</h3>
             <ul>
-                <li>Adresse</li>
-                <li>Telefon</li>
-                <li>Mail</li>
+                <li><?php echo $getaddress['FieldContent'] ?></li>
+                <li><?php echo $getphone['FieldContent'] ?></li>
+                <li><?php echo $getmail['FieldContent'] ?></li>
                 <li>
-                    <a href=""><i class="material-icons">share</i></a>
-                    <a href=""><i class="material-icons">share</i></a>
-                    <a href=""><i class="material-icons">share</i></a>
+                    <a href="<?php echo $getsocial1['FieldContent'] ?>"><img src="../../../images/icons/facebook.svg" alt=""></a>
+                    <a href="<?php echo $getsocial2['FieldContent'] ?>"><img src="../../../images/icons/linkedin.svg" alt=""></a>
+                    <a href="<?php echo $getsocial3['FieldContent'] ?>"><img src="../../../images/icons/instagram.svg" alt=""></a>
                 </li>
             </ul>
         </div>

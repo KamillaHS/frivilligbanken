@@ -2,6 +2,11 @@
 require_once("view/frontend/includes/header.php");
 
 $dbCon = dbCon($user, $pass);
+$query = $dbCon->prepare("SELECT * FROM `imageField` WHERE ImageID = 12");
+$query->execute();
+$gethero= $query->fetch();
+
+$dbCon = dbCon($user, $pass);
 $query = $dbCon->prepare("SELECT * FROM `textField` WHERE TextFieldID = 6");
 $query->execute();
 $getabouttext1 = $query->fetch();
@@ -12,9 +17,19 @@ $query->execute();
 $getemployees = $query->fetchAll();
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `imageField` WHERE ImageID = 12");
+$query = $dbCon->prepare("SELECT * FROM `imageField` WHERE ImageID = 16");
 $query->execute();
-$gethero= $query->fetch();
+$getsocial1= $query->fetch();
+
+$dbCon = dbCon($user, $pass);
+$query = $dbCon->prepare("SELECT * FROM `imageField` WHERE ImageID = 17");
+$query->execute();
+$getsocial2= $query->fetch();
+
+$dbCon = dbCon($user, $pass);
+$query = $dbCon->prepare("SELECT * FROM `imageField` WHERE ImageID = 18");
+$query->execute();
+$getsocial3= $query->fetch();
 
 ?>
 <link rel="stylesheet" href="/view/frontend/css/about.style.css">
@@ -43,8 +58,27 @@ $gethero= $query->fetch();
                     <p id="employee-jobtitle"><?php echo $employee['JobTitle'] ?></p>
                     <p id="employee-email"><?php echo $employee['Email'] ?></p>
                     <div id="employee-social">
-                        <a href=""><i class="material-icons">share</i></a>
-                        <a href=""><i class="material-icons">share</i></a>
+                        <?php
+                        if(!empty($getsocial1['Image'])) {
+                            ?>
+                            <a href="<?php $employee['SocialLink1'] ?>"><img src="<?php echo $getsocial1['Image'] ?>" alt=""></a>
+                            <?php
+                        }
+                        ?>
+                        <?php
+                        if(!empty($getsocial2['Image'])) {
+                            ?>
+                            <a href="<?php $employee['SocialLink2'] ?>"><img src="<?php echo $getsocial2['Image'] ?>" alt=""></a>
+                            <?php
+                        }
+                        ?>
+                        <?php
+                        if(!empty($getsocial3['Image'] )) {
+                            ?>
+                            <a href="<?php $employee['SocialLink3'] ?>"><img src="<?php echo $getsocial3['Image'] ?>" alt=""></a>
+                            <?php
+                        }
+                        ?>
                     </div>
                 </div>
                 <?php

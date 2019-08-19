@@ -1,0 +1,10 @@
+#icons {
+
+}
+
+#icons {
+    width: 50px;
+    /*filter: invert(20%);*/
+    filter: invert(42%) sepia(93%) saturate(1000%) hue-rotate(200deg) brightness(100%) contrast(119%);
+    margin: 10px;
+}

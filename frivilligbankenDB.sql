@@ -78,9 +78,10 @@ insert into textField (TextFieldID, Page, FieldName, FieldContent) values (28, '
 insert into textField (TextFieldID, Page, FieldName, FieldContent) values (29, 'Kontakt Os', 'Telefon', '12 34 56 78');
 insert into textField (TextFieldID, Page, FieldName, FieldContent) values (30, 'Kontakt Os', 'Telefontider', 'Mandag - Fredag: 00-00 <br> Lørdag - Søndag: 00-00');
 insert into textField (TextFieldID, Page, FieldName, FieldContent) values (31, 'Kontakt Os', 'Email', 'mail@mail.dk');
-insert into textField (TextFieldID, Page, FieldName, FieldContent) values (32, 'Footer', 'SocialLink', 'Facebook');
-insert into textField (TextFieldID, Page, FieldName, FieldContent) values (32, 'Footer', 'SocialLink', 'LinkedIn');
-insert into textField (TextFieldID, Page, FieldName, FieldContent) values (32, 'Footer', 'SocialLink', 'Instagram');
+insert into textField (TextFieldID, Page, FieldName, FieldContent) values (32, 'Kontakt Os', 'Adresse', 'bla bla vej, bla bla by');
+insert into textField (TextFieldID, Page, FieldName, FieldContent) values (33, 'Footer', 'SocialLink', 'Facebook');
+insert into textField (TextFieldID, Page, FieldName, FieldContent) values (34, 'Footer', 'SocialLink', 'LinkedIn');
+insert into textField (TextFieldID, Page, FieldName, FieldContent) values (35, 'Footer', 'SocialLink', 'Instagram');
 # insert into textField (TextFieldID, Page, FieldName, FieldContent) values (0, '', '', '');
 
 insert into imageField (ImageID, Page, FieldName, Image) values (1, 'Forside', 'Hero Billede', 'https://frivilligbanken.dk/wp-content/uploads/2017/08/1088.jpg');
@@ -95,6 +96,12 @@ insert into imageField (ImageID, Page, FieldName, Image) values (9, 'Værd at Vi
 insert into imageField (ImageID, Page, FieldName, Image) values (10, 'Værd at Vide - For Frivillige', 'Fordel2', 'https://picsum.photos/id/237/300/200');
 insert into imageField (ImageID, Page, FieldName, Image) values (11, 'Værd at Vide - For Frivillige', 'Fordel3', 'https://picsum.photos/id/902/300/200');
 insert into imageField (ImageID, Page, FieldName, Image) values (12, 'Hvem er Vi', 'Hero Billede', 'https://frivilligbanken.dk/wp-content/uploads/2017/09/business-executives-with-hand-stacked_1170-1901.jpg');
+insert into imageField (ImageID, Page, FieldName, Image) values (13, 'Footer', 'Social Link 1', '../../../images/icons/facebook.svg');
+insert into imageField (ImageID, Page, FieldName, Image) values (14, 'Footer', 'Social Link 2', '../../../images/icons/linkedin.svg');
+insert into imageField (ImageID, Page, FieldName, Image) values (15, 'Footer', 'Social Link 3', '../../../images/icons/instagram.svg');
+insert into imageField (ImageID, Page, FieldName, Image) values (16, 'Hvem er Vi', 'Medarbejder Social Link 1', '../../images/icons/linkedin.svg');
+insert into imageField (ImageID, Page, FieldName, Image) values (17, 'Hvem er Vi', 'Medarbejder Social Link 1', '../../images/icons/facebook.svg');
+insert into imageField (ImageID, Page, FieldName, Image) values (18, 'Hvem er Vi', 'Medarbejder Social Link 1', '');
 # insert into imageField (ImageID, Page, FieldName, Image) values (1, '', '', '');
 
 insert into webadmin (WebAdminID, Username, Password) values (1, 'SuperAdmin', '1234');
@@ -152,6 +159,7 @@ CREATE TABLE sponsor (
     Phone INT(8),
     Website VARCHAR(255),
     SponsorPic VARCHAR(255),
+    Status VARCHAR(50),
     AreaID INT
 );
 
@@ -237,34 +245,42 @@ CREATE TABLE jobapplication (
     FOREIGN KEY (JobID) REFERENCES job (JobID)
 );
 
+CREATE TABLE memberofunion (
+    VolunteerID INT NOT NULL,
+    UnionID INT NOT NULL,
+    CONSTRAINT PK_memberofunion PRIMARY KEY (VolunteerID, UnionID),
+    FOREIGN KEY (VolunteerID) REFERENCES volunteer (VolunteerID),
+    FOREIGN KEY (UnionID) REFERENCES `union` (UnionID)
+);
+
 /* Add Foreign Keys to tables */
 
 ALTER TABLE `user`
-    ADD FOREIGN KEY (VolunteerID) REFERENCES volunteer (VolunteerID);
+    ADD FOREIGN KEY (VolunteerID) REFERENCES volunteer (VolunteerID) ON DELETE SET NULL;
 
 ALTER TABLE `user`
-    ADD FOREIGN KEY (SponsorID) REFERENCES sponsor (SponsorID);
+    ADD FOREIGN KEY (SponsorID) REFERENCES sponsor (SponsorID) ON DELETE SET NULL;
 
 ALTER TABLE `user`
-    ADD FOREIGN KEY (UnionID) REFERENCES `union` (UnionID);
+    ADD FOREIGN KEY (UnionID) REFERENCES `union` (UnionID) ON DELETE SET NULL;
 
 ALTER TABLE volunteer
-    ADD FOREIGN KEY (AreaID) REFERENCES area (AreaID);
+    ADD FOREIGN KEY (AreaID) REFERENCES area (AreaID) ON DELETE SET NULL;
 
 ALTER TABLE `union`
-    ADD FOREIGN KEY (AreaID) REFERENCES area (AreaID);
+    ADD FOREIGN KEY (AreaID) REFERENCES area (AreaID) ON DELETE SET NULL;
 
 ALTER TABLE sponsor
-    ADD FOREIGN KEY (AreaID) REFERENCES area (AreaID);
+    ADD FOREIGN KEY (AreaID) REFERENCES area (AreaID) ON DELETE SET NULL;
 
 ALTER TABLE job
-    ADD FOREIGN KEY (UnionID) REFERENCES `union` (UnionID);
+    ADD FOREIGN KEY (UnionID) REFERENCES `union` (UnionID) ON DELETE SET NULL;
 
 ALTER TABLE job
-    ADD FOREIGN KEY (CategoryID) REFERENCES category (CategoryID);
+    ADD FOREIGN KEY (CategoryID) REFERENCES category (CategoryID) ON DELETE SET NULL;
 
 ALTER TABLE giftcard
-    ADD FOREIGN KEY (SponsorID) REFERENCES sponsor (SponsorID);
+    ADD FOREIGN KEY (SponsorID) REFERENCES sponsor (SponsorID) ON DELETE SET NULL;
 
 /* Initial Data */
 
@@ -287,18 +303,18 @@ insert into volunteer (VolunteerID, FullName, DoB, Address, City, PostalCode, Ph
 insert into volunteer (VolunteerID, FullName, DoB, Address, City, PostalCode, Phone, Description, VolunteerPic, CV, Points, AreaID) values (4, 'Arther Ajam', '1977-08-02 05:44:53', '177 Arapahoe Circle', 'Gaozhou', 6709, 17812844, 'Drainage of Left Tibia with Drainage Device, Percutaneous Approach', 'https://robohash.org/molestiasquiofficia.png?size=50x50&set=set1', 'http://dummyimage.com/132x103.png/cc0000/ffffff', 423, 9);
 insert into volunteer (VolunteerID, FullName, DoB, Address, City, PostalCode, Phone, Description, VolunteerPic, CV, Points, AreaID) values (5, 'Marilin Weaving', '1966-09-27 14:12:14', '20 Northland Drive', 'Azor', 8314, 38850530, 'Supplement Right Cephalic Vein with Synthetic Substitute, Percutaneous Approach', 'https://robohash.org/recusandaequismaxime.jpg?size=50x50&set=set1', 'http://dummyimage.com/116x201.jpg/dddddd/000000', 75, 4);
 
-insert into `union` (UnionID, UnionName, UnionCVR, UnionEmail, Address, City, PostalCode, Website, Phone, UnionLogo, AreaID) values (1, 'Ludovika Rainbow', 12345678, 'union@mail.dk' , '5573 Holy Cross Lane', 'Paraiso', 5112, 'unionweb.dk', 57500087, 'https://robohash.org/doloreametoptio.jpg?size=50x50&set=set1', 10);
-insert into `union` (UnionID, UnionName, UnionCVR, UnionEmail, Address, City, PostalCode, Website, Phone, UnionLogo, AreaID) values (2, 'Herculie Ziems', 12345678, 'union@mail.dk', '457 Dryden Road', 'Aībak', 5077, 68561867, 'unionweb.dk', 'https://robohash.org/abullamexpedita.bmp?size=50x50&set=set1', 1);
+insert into `union` (UnionID, UnionName, UnionCVR, UnionEmail, Address, City, PostalCode, Website, Phone, UnionLogo, AreaID) values (1, 'Ludovika Rainbow', 13245678, 'union@mail.dk' , '5573 Holy Cross Lane', 'Paraiso', 5112, 'unionweb.dk', 57500087, 'https://robohash.org/doloreametoptio.jpg?size=50x50&set=set1', 10);
+insert into `union` (UnionID, UnionName, UnionCVR, UnionEmail, Address, City, PostalCode, Website, Phone, UnionLogo, AreaID) values (2, 'Herculie Ziems', 1345678, 'union@mail.dk', '457 Dryden Road', 'Aībak', 5077, 68561867, 'unionweb.dk', 'https://robohash.org/abullamexpedita.bmp?size=50x50&set=set1', 1);
 insert into `union` (UnionID, UnionName, UnionCVR, UnionEmail, Address, City, PostalCode, Website, Phone, UnionLogo, AreaID) values (3, 'Roanne Grason', 12345678, 'union@mail.dk', '3 Pond Crossing', 'Cimanggu', 1006, 21938011, 'unionweb.dk', 'https://robohash.org/porrosedpraesentium.jpg?size=50x50&set=set1', 2);
 insert into `union` (UnionID, UnionName, UnionCVR, UnionEmail, Address, City, PostalCode, Website, Phone, UnionLogo, AreaID) values (4, 'Idalina Hannant', 12345678, 'union@mail.dk', '6 Daystar Lane', 'Tours', 1009, 15838245, 'unionweb.dk', 'https://robohash.org/necessitatibusmaximetotam.bmp?size=50x50&set=set1', 3);
 insert into `union` (UnionID, UnionName, UnionCVR, UnionEmail, Address, City, PostalCode, Website, Phone, UnionLogo, AreaID) values (5, 'Nessi Sword', 12345678, 'union@mail.dk', '8 Ramsey Crossing', 'Tieba', 1379, 42248096, 'unionweb.dk', 'https://robohash.org/accusamusodittempora.bmp?size=50x50&set=set1', 4);
 
-insert into sponsor (SponsorID, SponsorName, SponsorPic, SponsorCVR, SponsorEmail, Address, PostalCode, City, Website, AreaID) values (1, 'Vinder', 'http://dummyimage.com/249x199.jpg/ff4444/ffffff', 12345678, 'sponsor@mail.dk', '9755 Oneill Parkway', 1234, 'Far‘ūn', 'www.google.dk', 2);
-insert into sponsor (SponsorID, SponsorName, SponsorPic, SponsorCVR, SponsorEmail, Address, PostalCode, City, Website, AreaID) values (2, 'Blogtags', 'http://dummyimage.com/108x134.jpg/5fa2dd/ffffff', 54862584, 'sponsor@mail.dk', '7 Cambridge Center', 1520, 'Alcalá', 'www.google.dk', 5);
-insert into sponsor (SponsorID, SponsorName, SponsorPic, SponsorCVR, SponsorEmail, Address, PostalCode, City, Website, AreaID) values (3, 'Google', 'http://dummyimage.com/142x228.jpg/cc0000/ffffff', 15882521, 'sponsor@mail.dk', '0 Sycamore Point', 4800, 'Samho-rodongjagu', 'www.google.dk', 2);
-insert into sponsor (SponsorID, SponsorName, SponsorPic, SponsorCVR, SponsorEmail, Address, PostalCode, City, Website, AreaID) values (4, 'Brainbox', 'http://dummyimage.com/209x233.jpg/cc0000/ffffff', 85482152, 'sponsor@mail.dk', '77 Jenifer Park', 5700, 'Lebao', 'www.google.dk', 1);
-insert into sponsor (SponsorID, SponsorName, SponsorPic, SponsorCVR, SponsorEmail, Address, PostalCode, City, Website, AreaID) values (5, 'Skivee', 'http://dummyimage.com/203x106.jpg/dddddd/000000', 41002612, 'sponsor@mail.dk', '3 Petterle Circle', 3050, 'Rossosh’', 'www.google.dk', 7);
-insert into sponsor (SponsorID, SponsorName, SponsorPic, SponsorCVR, SponsorEmail, Address, PostalCode, City, Website, AreaID) values (6, 'Ailane', 'http://dummyimage.com/166x160.jpg/dddddd/000000', 54750833, 'sponsor@mail.dk', '36 Green Ridge Pass', 6800, 'Tippi', 'www.google.dk', 12);
+insert into sponsor (SponsorID, SponsorName, SponsorPic, SponsorCVR, SponsorEmail, Address, PostalCode, City, Website, Status, AreaID) values (1, 'Vinder', 'http://dummyimage.com/249x199.jpg/ff4444/ffffff', 12345678, 'sponsor@mail.dk', '9755 Oneill Parkway', 1234, 'Far‘ūn', 'www.google.dk', 'Guld', 2);
+insert into sponsor (SponsorID, SponsorName, SponsorPic, SponsorCVR, SponsorEmail, Address, PostalCode, City, Website, Status, AreaID) values (2, 'Blogtags', 'http://dummyimage.com/108x134.jpg/5fa2dd/ffffff', 54862584, 'sponsor@mail.dk', '7 Cambridge Center', 1520, 'Alcalá', 'www.google.dk', 'Sølv', 5);
+insert into sponsor (SponsorID, SponsorName, SponsorPic, SponsorCVR, SponsorEmail, Address, PostalCode, City, Website, Status, AreaID) values (3, 'Google', 'http://dummyimage.com/142x228.jpg/cc0000/ffffff', 15882521, 'sponsor@mail.dk', '0 Sycamore Point', 4800, 'Samho-rodongjagu', 'www.google.dk', 'Bronze', 2);
+insert into sponsor (SponsorID, SponsorName, SponsorPic, SponsorCVR, SponsorEmail, Address, PostalCode, City, Website, Status, AreaID) values (4, 'Brainbox', 'http://dummyimage.com/209x233.jpg/cc0000/ffffff', 85482152, 'sponsor@mail.dk', '77 Jenifer Park', 5700, 'Lebao', 'www.google.dk', 'Guld', 1);
+insert into sponsor (SponsorID, SponsorName, SponsorPic, SponsorCVR, SponsorEmail, Address, PostalCode, City, Website, Status, AreaID) values (5, 'Skivee', 'http://dummyimage.com/203x106.jpg/dddddd/000000', 41002612, 'sponsor@mail.dk', '3 Petterle Circle', 3050, 'Rossosh’', 'www.google.dk', 'Guld', 7);
+insert into sponsor (SponsorID, SponsorName, SponsorPic, SponsorCVR, SponsorEmail, Address, PostalCode, City, Website, Status, AreaID) values (6, 'Ailane', 'http://dummyimage.com/166x160.jpg/dddddd/000000', 54750833, 'sponsor@mail.dk', '36 Green Ridge Pass', 6800, 'Tippi', 'www.google.dk', 'Guld', 12);
 
 insert into `user` (UserID, Email, Password, VolunteerID, SponsorID, UnionID) values (1, 'hgrover0@gizmodo.com', 'lDCPQW', 1, 1, 1);
 insert into `user` (UserID, Email, Password, VolunteerID, SponsorID, UnionID) values (2, 'amiddis1@1688.com', 'EfDAIImbb9YR', NULL, 2, NULL);

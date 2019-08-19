@@ -82,8 +82,15 @@
     margin: 5px;
 }
 
-#employee-social i {
-    font-size: 30px;
-    color: #4C4C4C;
-    margin: 5px;
+#employee-social img {
+    width: 30px;
+    /*filter: invert(20%);*/
+    filter: invert(42%) sepia(93%) saturate(1000%) hue-rotate(200deg) brightness(100%) contrast(119%);
+    margin: 10px;
 }
+
+/*#employee-social i {*/
+/*    font-size: 30px;*/
+/*    color: #4C4C4C;*/
+/*    margin: 5px;*/
+/*}*/

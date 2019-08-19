@@ -85,7 +85,7 @@
     opacity: 0;
 }
 
-#folder-images, #folder-images2 {
+#folder-images, #folder-images1, #folder-images2, #folder-images3 {
     flex-wrap: wrap;
     padding: 20px 0;
     display: none;
@@ -141,6 +141,7 @@
     max-width: 300px;
     max-height: 150px;
 }
+
 
 #hover-buttons #delete {
     background-color: #E84335;

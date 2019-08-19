@@ -42,20 +42,21 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/view/frontend" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Router" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\MAMP\htdocs\frivilligbanken\images\icons" />
       <recent name="E:\MAMP\htdocs\frivilligbanken\view\frontend" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\MAMP\htdocs\frivilligbanken\images\employeePics" />
       <recent name="E:\MAMP\htdocs\frivilligbanken\images\imagefields" />
       <recent name="E:\MAMP\htdocs\frivilligbanken\images" />
       <recent name="E:\MAMP\htdocs\frivilligbanken\view\frontend" />
       <recent name="E:\MAMP\htdocs\frivilligbanken\view\backend\css" />
-      <recent name="E:\MAMP\htdocs\frivilligbanken" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -91,7 +92,10 @@
       <workItem from="1565263834903" duration="4600000" />
       <workItem from="1565350246778" duration="2175000" />
       <workItem from="1565522394254" duration="13898000" />
-      <workItem from="1565712985798" duration="2355000" />
+      <workItem from="1565712985798" duration="2426000" />
+      <workItem from="1565866583169" duration="12943000" />
+      <workItem from="1565954022068" duration="12183000" />
+      <workItem from="1566215434705" duration="14221000" />
     </task>
     <servers />
   </component>

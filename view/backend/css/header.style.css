@@ -5,6 +5,7 @@ h1, h2, h3, h4, p {
 
 nav {
     position: fixed;
+    z-index: 5;
 }
 
 .nav-wrapper {
@@ -35,7 +36,7 @@ nav {
     background-color: #4C4C4C;
     /*position: inherit;*/
     /*margin-top: -4px;*/
-    z-index: 1;
+    z-index: 15;
     position: fixed;
     top: 64px;
 }

@@ -2,6 +2,11 @@
 require_once("view/backend/includes/header.php");
 
 $dbCon = dbCon($user, $pass);
+$query = $dbCon->prepare("SELECT * FROM sponsor");
+$query->execute();
+$getsponsors = $query->fetchAll();
+
+$dbCon = dbCon($user, $pass);
 $query = $dbCon->prepare("SELECT SponsorID, SponsorName, SponsorCVR, SponsorEmail, Address, City, PostalCode, Phone, Website, SponsorPic, `Status`, area.AreaName 
                                     FROM `sponsor`, area
                                     WHERE area.AreaID = sponsor.AreaID AND Status = 'Guld'");
@@ -85,9 +90,7 @@ $getbronzesponsors = $query->fetchAll();
                             </div>
                         </div>
                         <div id="buttons">
-                            <form method="POST" action="/rediger_sponsor?SponsorID=<?php echo $sponsor['SponsorID'] ?>">
-                                <button id="edit"><i class="material-icons">settings</i></button>
-                            </form>
+                            <a href="rediger_sponsor/<?php echo $sponsor['SponsorID'] ?>" id="edit"><i class="material-icons">settings</i></a>
                             <form method="POST" action="../../controller/SponsorController.php?action=DeleteSponsor&sponsorID=<?php echo $sponsor['SponsorID'] ?>">
                                 <button id="delete" onclick="return confirm('Er du sikker på at du vil slette sponsoren med ID <?php echo $sponsor['SponsorID'] ?>')"><i class="material-icons">delete</i></button>
                             </form>
@@ -123,9 +126,7 @@ $getbronzesponsors = $query->fetchAll();
                             </div>
                         </div>
                         <div id="buttons">
-                            <form method="POST" action="/rediger_sponsor?SponsorID=<?php echo $sponsor['SponsorID'] ?>">
-                                <button id="edit"><i class="material-icons">settings</i></button>
-                            </form>
+                            <a href="rediger_sponsor/<?php echo $sponsor['SponsorID'] ?>" id="edit"><i class="material-icons">settings</i></a>
                             <form method="POST" action="../../controller/SponsorController.php?action=DeleteSponsor&sponsorID=<?php echo $sponsor['SponsorID'] ?>">
                                 <button id="delete" onclick="return confirm('Er du sikker på at du vil slette sponsoren med ID <?php echo $sponsor['SponsorID'] ?>')"><i class="material-icons">delete</i></button>
                             </form>
@@ -161,9 +162,7 @@ $getbronzesponsors = $query->fetchAll();
                             </div>
                         </div>
                         <div id="buttons">
-                            <form method="POST" action="/rediger_sponsor?SponsorID=<?php echo $sponsor['SponsorID'] ?>">
-                                <button id="edit"><i class="material-icons">settings</i></button>
-                            </form>
+                            <a href="rediger_sponsor/<?php echo $sponsor['SponsorID'] ?>" id="edit"><i class="material-icons">settings</i></a>
                             <form method="POST" action="../../controller/SponsorController.php?action=DeleteSponsor&sponsorID=<?php echo $sponsor['SponsorID'] ?>">
                                 <button id="delete" onclick="return confirm('Er du sikker på at du vil slette sponsoren med ID <?php echo $sponsor['SponsorID'] ?>')"><i class="material-icons">delete</i></button>
                             </form>

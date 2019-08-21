@@ -20,6 +20,20 @@ class AdminDAO
         }
     }
 
+    function editAdmin($adminID) {
+        require_once '../db/dbcon.php';
+        $user = 'root';
+        $pass = 'root';
+        $dbCon = dbCon($user, $pass);
+
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+
+        $sql = "UPDATE `webadmin` SET Username = '$username', Password = '$password' WHERE WebAdminID = '$adminID'";
+        $query = $dbCon->prepare($sql);
+        $query->execute();
+    }
+
     function deleteAdmin($adminID) {
         require_once '../db/dbcon.php';
         $user = 'root';

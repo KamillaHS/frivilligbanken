@@ -14,6 +14,14 @@ if(isset($_POST['addAdmin'])) {
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $action = $_GET['action'];
 
+    if($action == 'EditAdmin') {
+        $adminID = $_GET['adminID'];
+
+        $editAdmin = new AdminDAO();
+        $editAdmin->editAdmin($adminID);
+        echo "<script>location.href = '/rediger_admins'</script>";
+    }
+
     if($action == 'DeleteAdmin') {
         $adminID = $_GET['adminID'];
 

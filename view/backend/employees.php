@@ -31,8 +31,9 @@ $getemployees = $query->fetchAll();
                     <input type="text" name="fullName" placeholder="Fulde Navn" required>
                     <input type="text" name="jobTitle" placeholder="Job Titel" required>
                     <input type="email" name="email" placeholder="Email" required>
+                    <label>Email vises ikke på hjemmesiden. Det er udelukkende til brug for email omdirigering til kontaktformular.</label>
 
-                    <p>Sociale links kan tilføjes ved at klikke på tandhjulet for medarbejderen, når han/hun er oprettet.</p>
+                    <br><br>
 
                     <input type="submit" name="addEmployee">
                 </form>
@@ -53,7 +54,7 @@ $getemployees = $query->fetchAll();
                        </div>
                        <div id="buttons">
 
-                           <a href="rediger_medarbejder?id=<?php echo $employee['EmployeeID'] ?>" id="edit"><i class="material-icons">settings</i></a>
+                           <a href="rediger_medarbejder/<?php echo $employee['EmployeeID'] ?>" id="edit"><i class="material-icons">settings</i></a>
 
                            <form method="POST" action="../../controller/EmployeeController.php?action=DeleteEmployee&employeeID=<?php echo $employee['EmployeeID'] ?>">
                                <button id="delete" onclick="return confirm('Er du sikker på at du vil slette medarbejderen med ID <?php echo $employee['EmployeeID'] ?>')"><i class="material-icons">delete</i></button>

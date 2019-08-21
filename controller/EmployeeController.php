@@ -16,6 +16,20 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo "<script>location.href = '/medarbejdere'</script>";
     }
 
+    if ($action == "EditEmployeeInfo") {
+        $employeeID = $_GET['employeeID'];
+        $editEmployeeInfo = new EmployeeDAO();
+        $editEmployeeInfo->editEmployeeInfo($employeeID);
+        echo "<script>location.href = '/medarbejdere'</script>";
+    }
+
+    if ($action == "EditEmployeePic") {
+        $employeeID = $_GET['employeeID'];
+        $editEmployeePic = new EmployeeDAO();
+        $editEmployeePic->editEmployeePic($employeeID);
+        echo "<script>location.href = '/medarbejdere'</script>";
+    }
+
     if ($action == "DeleteEmployee") {
         $employeeID = $_GET['employeeID'];
         $deleteEmployee = new EmployeeDAO();

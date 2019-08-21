@@ -49,9 +49,7 @@ $getadmins = $query->fetchAll();
                                 </form>
                             </div>
                             <div id="buttons">
-                                <form method="POST" action="">
-                                    <button id="edit"><i class="material-icons">settings</i></button>
-                                </form>
+                                <a href="rediger_admin/<?php echo $admin['WebAdminID'] ?>" id="edit"><i class="material-icons">settings</i></a>
                                 <?php
                                 if($admin['WebAdminID'] != 1) {
                                     ?>

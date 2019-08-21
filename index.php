@@ -53,7 +53,8 @@ $router->get('sponsorere', 'view/backend/sponsors');
 $router->get('uploads', 'view/backend/uploads');
 $router->get('rediger_admins', 'view/backend/editAdmins');
 $router->get('rediger_medarbejder', 'view/backend/includes/editEmployee');
-
+$router->get('rediger_sponsor', 'view/backend/includes/editSponsor');
+$router->get('rediger_admin', 'view/backend/includes/editAdmin');
 
 
 //switch ($request) {

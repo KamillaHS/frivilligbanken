@@ -52,7 +52,7 @@ $router->get('medarbejdere', 'view/backend/employees');
 $router->get('sponsorere', 'view/backend/sponsors');
 $router->get('uploads', 'view/backend/uploads');
 $router->get('rediger_admins', 'view/backend/editAdmins');
-$router->get('', '');
+$router->get('rediger_medarbejder', 'view/backend/includes/editEmployee');
 
 
 

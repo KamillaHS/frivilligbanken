@@ -56,30 +56,30 @@ $getsocial3= $query->fetch();
                     <div id="employee-image" style="background-image: url('<?php echo $employee['Picture'] ?>')"></div>
                     <p id="employee-name"><?php echo $employee['FullName'] ?></p>
                     <p id="employee-jobtitle"><?php echo $employee['JobTitle'] ?></p>
-                    <p id="employee-email"><?php echo $employee['Email'] ?></p>
-                    <div id="employee-social">
-                        <?php
-                        if(!empty($getsocial1['Image'])) {
-                            ?>
-                            <a href="<?php $employee['SocialLink1'] ?>"><img src="<?php echo $getsocial1['Image'] ?>" alt=""></a>
-                            <?php
-                        }
-                        ?>
-                        <?php
-                        if(!empty($getsocial2['Image'])) {
-                            ?>
-                            <a href="<?php $employee['SocialLink2'] ?>"><img src="<?php echo $getsocial2['Image'] ?>" alt=""></a>
-                            <?php
-                        }
-                        ?>
-                        <?php
-                        if(!empty($getsocial3['Image'] )) {
-                            ?>
-                            <a href="<?php $employee['SocialLink3'] ?>"><img src="<?php echo $getsocial3['Image'] ?>" alt=""></a>
-                            <?php
-                        }
-                        ?>
-                    </div>
+<!--                    <p id="employee-email">--><?php //echo $employee['Email'] ?><!--</p>-->
+<!--                    <div id="employee-social">-->
+<!--                        --><?php
+//                        if(!empty($getsocial1['Image'])) {
+//                            ?>
+<!--                            <a href="--><?php //$employee['SocialLink1'] ?><!--"><img src="--><?php //echo $getsocial1['Image'] ?><!--" alt=""></a>-->
+<!--                            --><?php
+//                        }
+//                        ?>
+<!--                        --><?php
+//                        if(!empty($getsocial2['Image'])) {
+//                            ?>
+<!--                            <a href="--><?php //$employee['SocialLink2'] ?><!--"><img src="--><?php //echo $getsocial2['Image'] ?><!--" alt=""></a>-->
+<!--                            --><?php
+//                        }
+//                        ?>
+<!--                        --><?php
+//                        if(!empty($getsocial3['Image'] )) {
+//                            ?>
+<!--                            <a href="--><?php //$employee['SocialLink3'] ?><!--"><img src="--><?php //echo $getsocial3['Image'] ?><!--" alt=""></a>-->
+<!--                            --><?php
+//                        }
+//                        ?>
+<!--                    </div>-->
                 </div>
                 <?php
             }

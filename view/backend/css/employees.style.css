@@ -83,6 +83,10 @@
 
 #edit {
     color: #517BBE;
+    background-color: rgba(0,0,0,0);
+    border: none;
+    cursor: pointer;
+    margin: 10px 7px;
 }
 
 #delete {

@@ -52,9 +52,9 @@ $getemployees = $query->fetchAll();
                            <p><b>Email:</b> <?php echo $employee['Email'] ?></p>
                        </div>
                        <div id="buttons">
-                           <form method="POST" action="/rediger_medarbejder">
-                               <button id="edit"><i class="material-icons">settings</i></button>
-                           </form>
+
+                           <a href="rediger_medarbejder?id=<?php echo $employee['EmployeeID'] ?>" id="edit"><i class="material-icons">settings</i></a>
+
                            <form method="POST" action="../../controller/EmployeeController.php?action=DeleteEmployee&employeeID=<?php echo $employee['EmployeeID'] ?>">
                                <button id="delete" onclick="return confirm('Er du sikker på at du vil slette medarbejderen med ID <?php echo $employee['EmployeeID'] ?>')"><i class="material-icons">delete</i></button>
                            </form>

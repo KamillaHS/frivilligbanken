@@ -27,6 +27,11 @@ $query = $dbCon->prepare("SELECT SponsorID, SponsorName, SponsorCVR, SponsorEmai
 $query->execute();
 $getbronzesponsors = $query->fetchAll();
 
+$dbCon = dbCon($user, $pass);
+$query = $dbCon->prepare("SELECT `PostalCode`, `CityName` FROM denmarkcities");
+$query->execute();
+$getpostalcodes = $query->fetchAll();
+
 ?>
     <link rel="stylesheet" href="view/backend/css/employees.style.css">
     <link rel="stylesheet" href="view/backend/css/sponsors.style.css">
@@ -55,15 +60,28 @@ $getbronzesponsors = $query->fetchAll();
                     <br>
                     <label>Du kan altid ændre billedet senere, ved at redigere den oprettede sponsor.</label>
                     <br><br>
+
                     <input type="text" name="sponsorName" placeholder="Sponsor Navn/Firma" required>
                     <input type="text" name="sponsorCVR" placeholder="CVR nummer" required>
                     <input type="email" name="sponsorEmail" placeholder="Email" required>
                     <input type="text" name="address" placeholder="Adresse" required>
-                    <input type="text" name="city" placeholder="By" required>
-                    <input type="text" name="postalCode" placeholder="Postnummer" required>
+                    <select class="browser-default" name="postalCode">
+                        <option value="0" selected disabled>Postnummer, By</option>
+                        <?php
+                        foreach ($getpostalcodes as $postalCode) {
+                            ?>
+                            <option value="<?php echo $postalCode['PostalCode'] ?>">
+                                <?php echo $postalCode['PostalCode'] . ", " . $postalCode['CityName'] ?>
+                            </option>
+                            <?php
+                        }
+                        ?>
+                    </select>
+<!--                    <input type="text" name="postalCode" id="postalCode" placeholder="Postnummer" required>-->
+<!--                    <input type="text" name="city" id="city" placeholder="By">-->
                     <input type="text" name="phone" placeholder="Telefon" required>
                     <input type="text" name="website" placeholder="Hjemmeside" >
-                    <input type="text" name="area" placeholder="Område" >
+<!--                    <input type="text" name="area" placeholder="Område" >-->
 
                     <input type="submit" name="addSponsor">
                 </form>
@@ -183,6 +201,10 @@ $getbronzesponsors = $query->fetchAll();
     <script>
         document.querySelector("#file").onchange = function(){
             document.querySelector("#upload-file-name").textContent = this.files[0].name;
+        };
+
+        document.querySelector("#postalCode").onchange = function(){
+            document.querySelector("#city").style.display = "block";
         };
 
         function showForm() {

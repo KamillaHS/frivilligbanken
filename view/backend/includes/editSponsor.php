@@ -9,7 +9,10 @@ $query = $dbCon->prepare("SELECT * FROM `sponsor` WHERE SponsorID = '$sponsorID'
 $query->execute();
 $getsponsor = $query->fetch();
 
-
+$dbCon = dbCon($user, $pass);
+$query = $dbCon->prepare("SELECT `PostalCode`, `CityName` FROM denmarkcities");
+$query->execute();
+$getpostalcodes = $query->fetchAll();
 
 ?>
 <link rel="stylesheet" href="view/backend/css/employees.style.css">
@@ -41,8 +44,20 @@ $getsponsor = $query->fetch();
                 <input type="email" placeholder="Sponsor Email" name="email" value="<?php echo $getsponsor['SponsorEmail'] ?>">
 
                 <input type="text" placeholder="Adresse" name="address" value="<?php echo $getsponsor['Address'] ?>">
-                <input type="text" placeholder="By" name="city" value="<?php echo $getsponsor['City'] ?>">
-                <input type="text" placeholder="Postnummer" name="postalCode" value="<?php echo $getsponsor['PostalCode'] ?>">
+                <select class="browser-default" name="postalCode">
+                    <option value="0" disabled>Postnummer, By</option>
+                    <?php
+                    foreach ($getpostalcodes as $postalCode) {
+                        ?>
+                        <option value="<?php echo $postalCode['PostalCode'] ?>" <?php if($postalCode['PostalCode'] == $getsponsor['PostalCode']) { echo "selected='selected'"; } ?> >
+                            <?php echo $postalCode['PostalCode'] . ", " . $postalCode['CityName'] ?>
+                        </option>
+                        <?php
+                    }
+                    ?>
+                </select>
+<!--                <input type="text" placeholder="By" name="city" value="--><?php //echo $getsponsor['City'] ?><!--">-->
+<!--                <input type="text" placeholder="Postnummer" name="postalCode" value="--><?php //echo $getsponsor['PostalCode'] ?><!--">-->
                 <input type="text" placeholder="Telefon" name="phone" value="<?php echo $getsponsor['Phone'] ?>">
                 <input type="text" placeholder="Hjemmside" name="webpage" value="<?php echo $getsponsor['Website'] ?>">
                 <div class="input-field col s12">

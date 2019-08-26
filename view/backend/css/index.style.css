@@ -27,12 +27,90 @@
     margin: 20px;
     padding: 20px;
     border-radius: 10px;
-    border: 2px solid rgba(0,0,0,0.2)
+    border: 2px solid rgba(0,0,0,0.2);
+
+    display: flex;
+    flex-wrap: wrap;
 }
 
 #dashboard-section1 p {
     margin: -8px 0;
 }
+
+/* dashboard */
+
+#map-info {
+    float: right;
+}
+
+#color1, #color2, #color3, #color4 {
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    border: 2px solid white;
+    margin: 15px 15px 0 0;
+}
+
+#color1 {
+    background-color: #517BBE;
+}
+
+#color2 {
+    background-color: #E84335;
+}
+
+#color3 {
+    background-color: #FBBC09;
+}
+
+#color4 {
+    background-color: #31A853;
+}
+
+#map-info p {
+    margin: -22px 20px 0 25px;
+}
+
+#denmark-map {
+    width: 28%;
+    height: 700px;
+    margin-left: auto;
+    margin-right: 2%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#map-numbers {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.map-area {
+    border: 2px solid #4C4C4C;
+    border-radius: 10px;
+    width: 285px;
+    padding: 0 20px 20px 20px;
+    margin: 20px;
+}
+
+.map-area:hover {
+    background-color: #E8EEF9;
+}
+
+.flex-class {
+    display: flex;
+}
+
+.map-area p {
+    padding: 20px 0 0 0;
+}
+
+#area1 {
+    /*margin: 50px 50%;*/
+}
+
 
 /* page_frontpage */
 

@@ -52,11 +52,17 @@ $getcontactemail = $query->fetch();
         <div id="contact-form-box">
             <form id="contact-form" method="POST">
                 <h3>KONTAKT OS</h3>
-                <input id="input" type="text" placeholder="Navn">
-                <input id="input" type="text" placeholder="Email">
-                <input id="input" type="text" placeholder="Emne">
-                <textarea placeholder="Besked"></textarea>
-                <input id="submit-form" type="submit" value="Send">
+                <input id="input" name="fullName" type="text" placeholder="Fulde navn" required>
+                <input id="input" name="email" type="text" placeholder="Email" required>
+                <select name="topic" id="input" class="browser-default topic">
+                    <option value="0" disabled selected>Vælg Emne</option>
+                    <option value="1">Salg</option>
+                    <option value="2">Support</option>
+                    <option value="3">Administration</option>
+                </select>
+                <textarea name="message" class="materialize-textarea" placeholder="Besked"></textarea>
+
+                <input name="submit-form" id="submit-form" type="submit" value="Send">
             </form>
         </div>
     </div>

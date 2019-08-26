@@ -47,16 +47,16 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\MAMP\htdocs\frivilligbanken\images\icons" />
-      <recent name="E:\MAMP\htdocs\frivilligbanken\view\frontend" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\MAMP\htdocs\frivilligbanken\images\backend" />
       <recent name="E:\MAMP\htdocs\frivilligbanken\images\employeePics" />
       <recent name="E:\MAMP\htdocs\frivilligbanken\images\imagefields" />
       <recent name="E:\MAMP\htdocs\frivilligbanken\images" />
       <recent name="E:\MAMP\htdocs\frivilligbanken\view\frontend" />
-      <recent name="E:\MAMP\htdocs\frivilligbanken\view\backend\css" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\MAMP\htdocs\frivilligbanken\images\icons" />
+      <recent name="E:\MAMP\htdocs\frivilligbanken\view\frontend" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -99,6 +99,9 @@
       <workItem from="1566391515884" duration="1647000" />
       <workItem from="1566394096380" duration="9502000" />
       <workItem from="1566472128070" duration="13146000" />
+      <workItem from="1566573993113" duration="697000" />
+      <workItem from="1566734756531" duration="1309000" />
+      <workItem from="1566819728511" duration="10579000" />
     </task>
     <servers />
   </component>

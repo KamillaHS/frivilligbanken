@@ -1,6 +1,6 @@
 <?php
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT SponsorID, SponsorName, SponsorPic, Website FROM `sponsor`");
+$query = $dbCon->prepare("SELECT SponsorID, SponsorName, SponsorPic, Website FROM `sponsor` WHERE Status = 'Guld' LIMIT 6");
 $query->execute();
 $getsponsors = $query->fetchAll();
 

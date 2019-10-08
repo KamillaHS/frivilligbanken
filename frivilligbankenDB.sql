@@ -11,10 +11,7 @@ CREATE TABLE employee (
     Picture VARCHAR(255),
     FullName VARCHAR (255),
     JobTitle VARCHAR(255),
-    Email VARCHAR(255),
-    SocialLink1 VARCHAR(255),
-    SocialLink2 VARCHAR(255),
-    SocialLink3 VARCHAR(255)
+    Email VARCHAR(255)
 );
 
 CREATE TABLE textfield (
@@ -41,68 +38,66 @@ CREATE TABLE webadmin (
 
 /* Initial Data */
 
-insert into employee (EmployeeID, Picture, FullName, JobTitle, Email, SocialLink1, SocialLink2, SocialLink3) values (1, 'https://robohash.org/utpossimusautem.png?size=50x50&set=set1', 'Halli Housecroft', 'Physical Therapy Assistant', 'mail@mail.com', 'facebook', 'linkedin', null);
-insert into employee (EmployeeID, Picture, FullName, JobTitle, Email, SocialLink1, SocialLink2, SocialLink3) values (2, 'https://robohash.org/debitiseaquaerat.png?size=50x50&set=set1', 'Costa Nilges', 'Registered Nurse', 'mail@mail.com', 'facebook', 'linkedin', null);
-insert into employee (EmployeeID, Picture, FullName, JobTitle, Email, SocialLink1, SocialLink2, SocialLink3) values (3, 'https://robohash.org/consequaturvelitenim.png?size=50x50&set=set1', 'Fiona Cosslett', 'Pharmacist', 'mail@mail.com', 'facebook', 'linkedin', null);
-insert into employee (EmployeeID, Picture, FullName, JobTitle, Email, SocialLink1, SocialLink2, SocialLink3) values (4, 'https://robohash.org/exsimiliqueet.png?size=50x50&set=set1', 'Christiano Minto', 'Help Desk Operator', 'mail@mail.com', 'facebook', 'linkedin', null);
-insert into employee (EmployeeID, Picture, FullName, JobTitle, Email, SocialLink1, SocialLink2, SocialLink3) values (5, 'https://robohash.org/possimusinciduntnon.jpg?size=50x50&set=set1', 'Salomo Lothean', 'Senior Cost Accountant', 'mail@mail.com', 'facebook', 'linkedin', null);
+insert into employee (EmployeeID, Picture, FullName, JobTitle, Email) values (1, 'https://robohash.org/utpossimusautem.png?size=50x50&set=set1', 'Halli Housecroft', 'Physical Therapy Assistant', 'mail@mail.com');
+insert into employee (EmployeeID, Picture, FullName, JobTitle, Email) values (2, 'https://robohash.org/debitiseaquaerat.png?size=50x50&set=set1', 'Costa Nilges', 'Registered Nurse', 'mail@mail.com');
+insert into employee (EmployeeID, Picture, FullName, JobTitle, Email) values (3, 'https://robohash.org/consequaturvelitenim.png?size=50x50&set=set1', 'Fiona Cosslett', 'Pharmacist', 'mail@mail.com');
+insert into employee (EmployeeID, Picture, FullName, JobTitle, Email) values (4, 'https://robohash.org/exsimiliqueet.png?size=50x50&set=set1', 'Christiano Minto', 'Help Desk Operator', 'mail@mail.com');
+insert into employee (EmployeeID, Picture, FullName, JobTitle, Email) values (5, 'https://robohash.org/possimusinciduntnon.jpg?size=50x50&set=set1', 'Salomo Lothean', 'Senior Cost Accountant', 'mail@mail.com');
 
-insert into textField (TextFieldID, Page, FieldName, FieldContent) values (1, 'Forside', 'Hvad er Frivilligbanken?', 'Tekst om frivilligbanken her...');
-insert into textField (TextFieldID, Page, FieldName, FieldContent) values (2, 'Forside', 'Kommer Snart', 'Tekst om app der snart kommer til både iphone og android, her...');
-insert into textField (TextFieldID, Page, FieldName, FieldContent) values (3, 'Værd at Vide', 'For Foreninger', 'Tekst om foreninger her...');
-insert into textField (TextFieldID, Page, FieldName, FieldContent) values (4, 'Værd at Vide', 'For Sponsorere', 'Tekst om sponsorere her...');
-insert into textField (TextFieldID, Page, FieldName, FieldContent) values (5, 'Værd at Vide', 'For Frivillige', 'Tekst om frivillige her...');
-insert into textField (TextFieldID, Page, FieldName, FieldContent) values (6, 'Hvem er Vi', 'Frivilligbanken', 'Tekst om hvem folkene bag frivilligbanken er osv...');
-insert into textField (TextFieldID, Page, FieldName, FieldContent) values (7, 'Sponsorer', 'Sponsorere', 'Generel tekst om sponsorere her... (præsentation af nuværende sponsorer fx...)');
-insert into textField (TextFieldID, Page, FieldName, FieldContent) values (8, 'Værd at Vide - For Foreninger', 'Fordel1', 'Tekst her... kan redigeres...');
-insert into textField (TextFieldID, Page, FieldName, FieldContent) values (9, 'Værd at Vide - For Foreninger', 'Fordel2', 'Tekst her... kan redigeres...');
-insert into textField (TextFieldID, Page, FieldName, FieldContent) values (10, 'Værd at Vide - For Foreninger', 'Fordel3', 'Tekst her... kan redigeres...');
-insert into textField (TextFieldID, Page, FieldName, FieldContent) values (11, 'Værd at Vide - For Foreninger', 'Hvordan tilmelder man sig?', 'Tekst her kan redigeres');
-insert into textField (TextFieldID, Page, FieldName, FieldContent) values (12, 'Værd at Vide - For Foreninger', 'Tilmeld Punkt 1', 'Tekst her kan redigeres...');
-insert into textField (TextFieldID, Page, FieldName, FieldContent) values (13, 'Værd at Vide - For Foreninger', 'Tilmeld Punkt 2', 'Tekst her kan redigeres...');
-insert into textField (TextFieldID, Page, FieldName, FieldContent) values (14, 'Værd at Vide - For Foreninger', 'Tilmeld Punkt 3', 'Tekst her kan redigeres...');
-insert into textField (TextFieldID, Page, FieldName, FieldContent) values (15, 'Værd at Vide - For Sponsorere', 'Fordel1', 'Tekst her... kan redigeres...');
-insert into textField (TextFieldID, Page, FieldName, FieldContent) values (16, 'Værd at Vide - For Sponsorere', 'Fordel2', 'Tekst her... kan redigeres...');
-insert into textField (TextFieldID, Page, FieldName, FieldContent) values (17, 'Værd at Vide - For Sponsorere', 'Fordel3', 'Tekst her... kan redigeres...');
-insert into textField (TextFieldID, Page, FieldName, FieldContent) values (18, 'Værd at Vide - For Sponsorere', 'Hvordan tilmelder man sig?', 'Tekst her kan redigeres');
-insert into textField (TextFieldID, Page, FieldName, FieldContent) values (19, 'Værd at Vide - For Sponsorere', 'Tilmeld Punkt 1', 'Tekst her kan redigeres...');
-insert into textField (TextFieldID, Page, FieldName, FieldContent) values (20, 'Værd at Vide - For Sponsorere', 'Tilmeld Punkt 2', 'Tekst her kan redigeres...');
-insert into textField (TextFieldID, Page, FieldName, FieldContent) values (21, 'Værd at Vide - For Sponsorere', 'Tilmeld Punkt 3', 'Tekst her kan redigeres...');
-insert into textField (TextFieldID, Page, FieldName, FieldContent) values (22, 'Værd at Vide - For Frivillige', 'Fordel1', 'Tekst her... kan redigeres...');
-insert into textField (TextFieldID, Page, FieldName, FieldContent) values (23, 'Værd at Vide - For Frivillige', 'Fordel2', 'Tekst her... kan redigeres...');
-insert into textField (TextFieldID, Page, FieldName, FieldContent) values (24, 'Værd at Vide - For Frivillige', 'Fordel3', 'Tekst her... kan redigeres...');
-insert into textField (TextFieldID, Page, FieldName, FieldContent) values (25, 'Værd at Vide - For Frivillige', 'Hvordan tilmelder man sig?', 'Tekst her kan redigeres');
-insert into textField (TextFieldID, Page, FieldName, FieldContent) values (26, 'Værd at Vide - For Frivillige', 'Tilmeld Punkt 1', 'Tekst her kan redigeres...');
-insert into textField (TextFieldID, Page, FieldName, FieldContent) values (27, 'Værd at Vide - For Frivillige', 'Tilmeld Punkt 2', 'Tekst her kan redigeres...');
-insert into textField (TextFieldID, Page, FieldName, FieldContent) values (28, 'Værd at Vide - For Frivillige', 'Tilmeld Punkt 3', 'Tekst her kan redigeres...');
-insert into textField (TextFieldID, Page, FieldName, FieldContent) values (29, 'Kontakt Os', 'Telefon', '12 34 56 78');
-insert into textField (TextFieldID, Page, FieldName, FieldContent) values (30, 'Kontakt Os', 'Telefontider', 'Mandag - Fredag: 00-00 <br> Lørdag - Søndag: 00-00');
-insert into textField (TextFieldID, Page, FieldName, FieldContent) values (31, 'Kontakt Os', 'Email', 'mail@mail.dk');
-insert into textField (TextFieldID, Page, FieldName, FieldContent) values (32, 'Kontakt Os', 'Adresse', 'bla bla vej, bla bla by');
-insert into textField (TextFieldID, Page, FieldName, FieldContent) values (33, 'Footer', 'Facebook', 'Facebook.com');
-insert into textField (TextFieldID, Page, FieldName, FieldContent) values (34, 'Footer', 'LinkedIn', 'LinkedIn.com');
-insert into textField (TextFieldID, Page, FieldName, FieldContent) values (35, 'Footer', 'Instagram', 'Instagram.com');
-# insert into textField (TextFieldID, Page, FieldName, FieldContent) values (0, '', '', '');
+insert into textfield (TextFieldID, Page, FieldName, FieldContent) values (1, 'Forside', 'Hvad er Frivilligbanken?', 'Tekst om frivilligbanken her...');
+insert into textfield (TextFieldID, Page, FieldName, FieldContent) values (2, 'Forside', 'Kommer Snart', 'Tekst om app der snart kommer til både iphone og android, her...');
+insert into textfield (TextFieldID, Page, FieldName, FieldContent) values (3, 'Værd at Vide', 'For Foreninger', 'Tekst om foreninger her...');
+insert into textfield (TextFieldID, Page, FieldName, FieldContent) values (4, 'Værd at Vide', 'For Sponsorere', 'Tekst om sponsorere her...');
+insert into textfield (TextFieldID, Page, FieldName, FieldContent) values (5, 'Værd at Vide', 'For Frivillige', 'Tekst om frivillige her...');
+insert into textfield (TextFieldID, Page, FieldName, FieldContent) values (6, 'Hvem er Vi', 'Frivilligbanken', 'Tekst om hvem folkene bag frivilligbanken er osv...');
+insert into textfield (TextFieldID, Page, FieldName, FieldContent) values (7, 'Sponsorer', 'Sponsorere', 'Generel tekst om sponsorere her... (præsentation af nuværende sponsorer fx...)');
+insert into textfield (TextFieldID, Page, FieldName, FieldContent) values (8, 'Værd at Vide - For Foreninger', 'Fordel1', 'Tekst her... kan redigeres...');
+insert into textfield (TextFieldID, Page, FieldName, FieldContent) values (9, 'Værd at Vide - For Foreninger', 'Fordel2', 'Tekst her... kan redigeres...');
+insert into textfield (TextFieldID, Page, FieldName, FieldContent) values (10, 'Værd at Vide - For Foreninger', 'Fordel3', 'Tekst her... kan redigeres...');
+insert into textfield (TextFieldID, Page, FieldName, FieldContent) values (11, 'Værd at Vide - For Foreninger', 'Hvordan tilmelder man sig?', 'Tekst her kan redigeres');
+insert into textfield (TextFieldID, Page, FieldName, FieldContent) values (12, 'Værd at Vide - For Foreninger', 'Tilmeld Punkt 1', 'Tekst her kan redigeres...');
+insert into textfield (TextFieldID, Page, FieldName, FieldContent) values (13, 'Værd at Vide - For Foreninger', 'Tilmeld Punkt 2', 'Tekst her kan redigeres...');
+insert into textfield (TextFieldID, Page, FieldName, FieldContent) values (14, 'Værd at Vide - For Foreninger', 'Tilmeld Punkt 3', 'Tekst her kan redigeres...');
+insert into textfield (TextFieldID, Page, FieldName, FieldContent) values (15, 'Værd at Vide - For Sponsorere', 'Fordel1', 'Tekst her... kan redigeres...');
+insert into textfield (TextFieldID, Page, FieldName, FieldContent) values (16, 'Værd at Vide - For Sponsorere', 'Fordel2', 'Tekst her... kan redigeres...');
+insert into textfield (TextFieldID, Page, FieldName, FieldContent) values (17, 'Værd at Vide - For Sponsorere', 'Fordel3', 'Tekst her... kan redigeres...');
+insert into textfield (TextFieldID, Page, FieldName, FieldContent) values (18, 'Værd at Vide - For Sponsorere', 'Hvordan tilmelder man sig?', 'Tekst her kan redigeres');
+insert into textfield (TextFieldID, Page, FieldName, FieldContent) values (19, 'Værd at Vide - For Sponsorere', 'Tilmeld Punkt 1', 'Tekst her kan redigeres...');
+insert into textfield (TextFieldID, Page, FieldName, FieldContent) values (20, 'Værd at Vide - For Sponsorere', 'Tilmeld Punkt 2', 'Tekst her kan redigeres...');
+insert into textfield (TextFieldID, Page, FieldName, FieldContent) values (21, 'Værd at Vide - For Sponsorere', 'Tilmeld Punkt 3', 'Tekst her kan redigeres...');
+insert into textfield (TextFieldID, Page, FieldName, FieldContent) values (22, 'Værd at Vide - For Frivillige', 'Fordel1', 'Tekst her... kan redigeres...');
+insert into textfield (TextFieldID, Page, FieldName, FieldContent) values (23, 'Værd at Vide - For Frivillige', 'Fordel2', 'Tekst her... kan redigeres...');
+insert into textfield (TextFieldID, Page, FieldName, FieldContent) values (24, 'Værd at Vide - For Frivillige', 'Fordel3', 'Tekst her... kan redigeres...');
+insert into textfield (TextFieldID, Page, FieldName, FieldContent) values (25, 'Værd at Vide - For Frivillige', 'Hvordan tilmelder man sig?', 'Tekst her kan redigeres');
+insert into textfield (TextFieldID, Page, FieldName, FieldContent) values (26, 'Værd at Vide - For Frivillige', 'Tilmeld Punkt 1', 'Tekst her kan redigeres...');
+insert into textfield (TextFieldID, Page, FieldName, FieldContent) values (27, 'Værd at Vide - For Frivillige', 'Tilmeld Punkt 2', 'Tekst her kan redigeres...');
+insert into textfield (TextFieldID, Page, FieldName, FieldContent) values (28, 'Værd at Vide - For Frivillige', 'Tilmeld Punkt 3', 'Tekst her kan redigeres...');
+insert into textfield (TextFieldID, Page, FieldName, FieldContent) values (29, 'Kontakt Os', 'Telefon', '12 34 56 78');
+insert into textfield (TextFieldID, Page, FieldName, FieldContent) values (30, 'Kontakt Os', 'Telefontider', 'Mandag - Fredag: 00-00 <br> Lørdag - Søndag: 00-00');
+insert into textfield (TextFieldID, Page, FieldName, FieldContent) values (31, 'Kontakt Os', 'Email', 'mail@mail.dk');
+insert into textfield (TextFieldID, Page, FieldName, FieldContent) values (32, 'Kontakt Os', 'Adresse', 'bla bla vej, bla bla by');
+insert into textfield (TextFieldID, Page, FieldName, FieldContent) values (33, 'Footer', 'Facebook', 'Facebook.com');
+insert into textfield (TextFieldID, Page, FieldName, FieldContent) values (34, 'Footer', 'LinkedIn', 'LinkedIn.com');
+insert into textfield (TextFieldID, Page, FieldName, FieldContent) values (35, 'Footer', 'Instagram', 'Instagram.com');
 
-insert into imageField (ImageID, Page, FieldName, Image) values (1, 'Forside', 'Hero Billede', 'https://frivilligbanken.dk/wp-content/uploads/2017/08/1088.jpg');
-insert into imageField (ImageID, Page, FieldName, Image) values (2, 'Forside', 'Kommer Snart', 'images/imagefields/IphoneAndAndroid.png');
-insert into imageField (ImageID, Page, FieldName, Image) values (3, 'Værd at Vide - For Foreninger', 'Fordel1', 'https://picsum.photos/id/524/300/200');
-insert into imageField (ImageID, Page, FieldName, Image) values (4, 'Værd at Vide - For Foreninger', 'Fordel2', 'https://picsum.photos/id/237/300/200');
-insert into imageField (ImageID, Page, FieldName, Image) values (5, 'Værd at Vide - For Foreninger', 'Fordel3', 'https://picsum.photos/id/902/300/200');
-insert into imageField (ImageID, Page, FieldName, Image) values (6, 'Værd at Vide - For Sponsorere', 'Fordel1', 'https://picsum.photos/id/524/300/200');
-insert into imageField (ImageID, Page, FieldName, Image) values (7, 'Værd at Vide - For Sponsorere', 'Fordel2', 'https://picsum.photos/id/237/300/200');
-insert into imageField (ImageID, Page, FieldName, Image) values (8, 'Værd at Vide - For Sponsorere', 'Fordel3', 'https://picsum.photos/id/902/300/200');
-insert into imageField (ImageID, Page, FieldName, Image) values (9, 'Værd at Vide - For Frivillige', 'Fordel1', 'https://picsum.photos/id/524/300/200');
-insert into imageField (ImageID, Page, FieldName, Image) values (10, 'Værd at Vide - For Frivillige', 'Fordel2', 'https://picsum.photos/id/237/300/200');
-insert into imageField (ImageID, Page, FieldName, Image) values (11, 'Værd at Vide - For Frivillige', 'Fordel3', 'https://picsum.photos/id/902/300/200');
-insert into imageField (ImageID, Page, FieldName, Image) values (12, 'Hvem er Vi', 'Hero Billede', 'https://frivilligbanken.dk/wp-content/uploads/2017/09/business-executives-with-hand-stacked_1170-1901.jpg');
-insert into imageField (ImageID, Page, FieldName, Image) values (13, 'Footer', 'Social Link 1', '../../../images/icons/facebook.svg');
-insert into imageField (ImageID, Page, FieldName, Image) values (14, 'Footer', 'Social Link 2', '../../../images/icons/linkedin.svg');
-insert into imageField (ImageID, Page, FieldName, Image) values (15, 'Footer', 'Social Link 3', '../../../images/icons/instagram.svg');
-insert into imageField (ImageID, Page, FieldName, Image) values (16, 'Hvem er Vi', 'Medarbejder Social Link 1', '../../images/icons/linkedin.svg');
-insert into imageField (ImageID, Page, FieldName, Image) values (17, 'Hvem er Vi', 'Medarbejder Social Link 1', '../../images/icons/facebook.svg');
-insert into imageField (ImageID, Page, FieldName, Image) values (18, 'Hvem er Vi', 'Medarbejder Social Link 1', '');
-# insert into imageField (ImageID, Page, FieldName, Image) values (1, '', '', '');
+insert into imagefield (ImageID, Page, FieldName, Image) values (1, 'Forside', 'Hero Billede', 'https://frivilligbanken.dk/wp-content/uploads/2017/08/1088.jpg');
+insert into imagefield (ImageID, Page, FieldName, Image) values (2, 'Forside', 'Kommer Snart', 'images/imagefields/IphoneAndAndroid.png');
+insert into imagefield (ImageID, Page, FieldName, Image) values (3, 'Værd at Vide - For Foreninger', 'Fordel1', 'https://picsum.photos/id/524/300/200');
+insert into imagefield (ImageID, Page, FieldName, Image) values (4, 'Værd at Vide - For Foreninger', 'Fordel2', 'https://picsum.photos/id/237/300/200');
+insert into imagefield (ImageID, Page, FieldName, Image) values (5, 'Værd at Vide - For Foreninger', 'Fordel3', 'https://picsum.photos/id/902/300/200');
+insert into imagefield (ImageID, Page, FieldName, Image) values (6, 'Værd at Vide - For Sponsorere', 'Fordel1', 'https://picsum.photos/id/524/300/200');
+insert into imagefield (ImageID, Page, FieldName, Image) values (7, 'Værd at Vide - For Sponsorere', 'Fordel2', 'https://picsum.photos/id/237/300/200');
+insert into imagefield (ImageID, Page, FieldName, Image) values (8, 'Værd at Vide - For Sponsorere', 'Fordel3', 'https://picsum.photos/id/902/300/200');
+insert into imagefield (ImageID, Page, FieldName, Image) values (9, 'Værd at Vide - For Frivillige', 'Fordel1', 'https://picsum.photos/id/524/300/200');
+insert into imagefield (ImageID, Page, FieldName, Image) values (10, 'Værd at Vide - For Frivillige', 'Fordel2', 'https://picsum.photos/id/237/300/200');
+insert into imagefield (ImageID, Page, FieldName, Image) values (11, 'Værd at Vide - For Frivillige', 'Fordel3', 'https://picsum.photos/id/902/300/200');
+insert into imagefield (ImageID, Page, FieldName, Image) values (12, 'Hvem er Vi', 'Hero Billede', 'https://frivilligbanken.dk/wp-content/uploads/2017/09/business-executives-with-hand-stacked_1170-1901.jpg');
+insert into imagefield (ImageID, Page, FieldName, Image) values (13, 'Footer', 'Social Link 1', '../../../images/icons/facebook.svg');
+insert into imagefield (ImageID, Page, FieldName, Image) values (14, 'Footer', 'Social Link 2', '../../../images/icons/linkedin.svg');
+insert into imagefield (ImageID, Page, FieldName, Image) values (15, 'Footer', 'Social Link 3', '../../../images/icons/instagram.svg');
+insert into imagefield (ImageID, Page, FieldName, Image) values (16, 'Hvem er Vi', 'Medarbejder Social Link 1', '../../images/icons/linkedin.svg');
+insert into imagefield (ImageID, Page, FieldName, Image) values (17, 'Hvem er Vi', 'Medarbejder Social Link 1', '../../images/icons/facebook.svg');
+insert into imagefield (ImageID, Page, FieldName, Image) values (18, 'Hvem er Vi', 'Medarbejder Social Link 1', '');
 
 insert into webadmin (WebAdminID, Username, Password) values (1, 'SuperAdmin', '1234');
 
@@ -125,8 +120,8 @@ CREATE TABLE volunteer (
     DoB DATE,
     Address VARCHAR(255),
     City VARCHAR(255),
-    PostalCode INT(4),
-    Phone INT(8),
+    PostalCode VARCHAR(4),
+    Phone VARCHAR(8),
     Description VARCHAR(255),
     VolunteerPic VARCHAR(255),
     CV VARCHAR(255),
@@ -137,12 +132,13 @@ CREATE TABLE volunteer (
 CREATE TABLE `union` (
     UnionID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     UnionName VARCHAR(255),
-    UnionCVR INT(8),
+    UnionCVR VARCHAR(8),
     UnionEmail VARCHAR(255),
+    Description VARCHAR(800),
     Address VARCHAR(255),
     City VARCHAR(255),
-    PostalCode INT(4),
-    Phone INT(8),
+    PostalCode VARCHAR(4),
+    Phone VARCHAR(8),
     Website VARCHAR(255),
     UnionLogo VARCHAR(255),
     AreaID INT
@@ -151,12 +147,12 @@ CREATE TABLE `union` (
 CREATE TABLE sponsor (
     SponsorID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     SponsorName VARCHAR(255),
-    SponsorCVR INT(8),
+    SponsorCVR VARCHAR(8),
     SponsorEmail VARCHAR(255),
     Address VARCHAR(255),
     City VARCHAR(255),
-    PostalCode INT(4),
-    Phone INT(8),
+    PostalCode VARCHAR(4),
+    Phone VARCHAR(8),
     Website VARCHAR(255),
     SponsorPic VARCHAR(255),
     Status VARCHAR(50),
@@ -166,7 +162,7 @@ CREATE TABLE sponsor (
 CREATE TABLE `user` (
     UserID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     Email VARCHAR(255),
-    Password INT,
+    Password VARCHAR(255),
     VolunteerID INT,
     SponsorID INT,
     UnionID INT
@@ -196,13 +192,21 @@ CREATE TABLE job (
 CREATE TABLE giftcard (
     GiftcardID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     Title VARCHAR(255),
+    Description VARCHAR(800),
+    Requirements VARCHAR(800),
     Amount INT,
     Value INT,
+    isConfirmed BIT DEFAULT 0,
     SponsorID INT
 );
 
 /* Tables Backend */
 
+CREATE TABLE appadmin (
+  AppAdminID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  Username VARCHAR(255),
+  Password VARCHAR(255)
+);
 
 /* Many to Many tables */
 
@@ -224,13 +228,13 @@ CREATE TABLE giftcardinterest (
 );
 
 CREATE TABLE usergiftcard (
+    PurchaseID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     VolunteerID INT NOT NULL,
     GiftcardID INT NOT NULL,
     PurchaseDate DATE,
     ExpirationDate DATE,
     isExpired BIT DEFAULT 0,
     isUsed BIT DEFAULT 0,
-    CONSTRAINT PK_usergiftcard PRIMARY KEY (VolunteerID, GiftcardID),
     FOREIGN KEY (VolunteerID) REFERENCES volunteer (VolunteerID),
     FOREIGN KEY (GiftcardID) REFERENCES giftcard (GiftcardID)
 );
@@ -248,6 +252,8 @@ CREATE TABLE jobapplication (
 CREATE TABLE memberofunion (
     VolunteerID INT NOT NULL,
     UnionID INT NOT NULL,
+    isConfirmed BIT DEFAULT 0,
+    MemberSince DATE,
     CONSTRAINT PK_memberofunion PRIMARY KEY (VolunteerID, UnionID),
     FOREIGN KEY (VolunteerID) REFERENCES volunteer (VolunteerID),
     FOREIGN KEY (UnionID) REFERENCES `union` (UnionID)
@@ -297,42 +303,99 @@ insert into area (AreaID, AreaName) values (10, 'Nordsjælland');
 insert into area (AreaID, AreaName) values (11, 'Københavns Omegn');
 insert into area (AreaID, AreaName) values (12, 'Københavns By');
 
-insert into volunteer (VolunteerID, FullName, DoB, Address, City, PostalCode, Phone, Description, VolunteerPic, CV, Points, AreaID) values (1, 'Reece Sibbe', '1994-05-29 02:06:18', '38425 Mitchell Crossing', 'Nsok', 2274, 90018911, 'Extirpation of Matter from Right Shoulder Joint, Open Approach', 'https://robohash.org/cumvelitveritatis.bmp?size=50x50&set=set1', 'http://dummyimage.com/207x167.bmp/dddddd/000000', 359, 1);
-insert into volunteer (VolunteerID, FullName, DoB, Address, City, PostalCode, Phone, Description, VolunteerPic, CV, Points, AreaID) values (2, 'Kelcey Ahrens', '1982-11-11 11:45:39', '11 Thackeray Plaza', 'Mingelchaur', 2337, 22835033, 'Insertion of Infusion Device into Right Ankle Region, Open Approach', 'https://robohash.org/velcorporisest.bmp?size=50x50&set=set1', 'http://dummyimage.com/160x128.jpg/5fa2dd/ffffff', 453, 5);
-insert into volunteer (VolunteerID, FullName, DoB, Address, City, PostalCode, Phone, Description, VolunteerPic, CV, Points, AreaID) values (3, 'Ricoriki Abbatt', '1995-03-03 10:27:52', '93 Prairieview Plaza', 'Ahmadpur Siāl', 4422, 4755623, 'Replacement of Bilateral External Ear with Autologous Tissue Substitute, Open Approach', 'https://robohash.org/explicabotemporeaspernatur.bmp?size=50x50&set=set1', 'http://dummyimage.com/237x134.jpg/ff4444/ffffff', 134, 1);
-insert into volunteer (VolunteerID, FullName, DoB, Address, City, PostalCode, Phone, Description, VolunteerPic, CV, Points, AreaID) values (4, 'Arther Ajam', '1977-08-02 05:44:53', '177 Arapahoe Circle', 'Gaozhou', 6709, 17812844, 'Drainage of Left Tibia with Drainage Device, Percutaneous Approach', 'https://robohash.org/molestiasquiofficia.png?size=50x50&set=set1', 'http://dummyimage.com/132x103.png/cc0000/ffffff', 423, 9);
-insert into volunteer (VolunteerID, FullName, DoB, Address, City, PostalCode, Phone, Description, VolunteerPic, CV, Points, AreaID) values (5, 'Marilin Weaving', '1966-09-27 14:12:14', '20 Northland Drive', 'Azor', 8314, 38850530, 'Supplement Right Cephalic Vein with Synthetic Substitute, Percutaneous Approach', 'https://robohash.org/recusandaequismaxime.jpg?size=50x50&set=set1', 'http://dummyimage.com/116x201.jpg/dddddd/000000', 75, 4);
+insert into volunteer (VolunteerID, FullName, DoB, Address, City, PostalCode, Phone, Description, VolunteerPic, CV, Points, AreaID) values (1, 'Navn Navnsen', '1994-05-29 02:06:18', 'Randomvej 11', 'Esbjerg', '6700', '90018911', 'Extirpation of Matter from Right Shoulder Joint, Open Approach', 'https://robohash.org/cumvelitveritatis.bmp?size=50x50&set=set1', 'http://dummyimage.com/207x167.bmp/dddddd/000000', 359, 4);
+insert into volunteer (VolunteerID, FullName, DoB, Address, City, PostalCode, Phone, Description, VolunteerPic, CV, Points, AreaID) values (2, 'Søren Sørensen', '1982-11-11 11:45:39', 'Randomvej 28', 'Holbæk', '4300', '22835033', 'Insertion of Infusion Device into Right Ankle Region, Open Approach', 'https://robohash.org/velcorporisest.bmp?size=50x50&set=set1', 'http://dummyimage.com/160x128.jpg/5fa2dd/ffffff', 453, 10);
+insert into volunteer (VolunteerID, FullName, DoB, Address, City, PostalCode, Phone, Description, VolunteerPic, CV, Points, AreaID) values (3, 'Pia Nørgaard', '1995-03-03 10:27:52', 'Randomvej 45', '4330', 'Hvalsø', '47556230', 'Replacement of Bilateral External Ear with Autologous Tissue Substitute, Open Approach', 'https://robohash.org/explicabotemporeaspernatur.bmp?size=50x50&set=set1', 'http://dummyimage.com/237x134.jpg/ff4444/ffffff', 134, 10);
+insert into volunteer (VolunteerID, FullName, DoB, Address, City, PostalCode, Phone, Description, VolunteerPic, CV, Points, AreaID) values (4, 'Flemming Flemmingsen', '1977-08-02 05:44:53', 'Randomvej 9', 'Nykøbing Falster', '4800', '17812844', 'Drainage of Left Tibia with Drainage Device, Percutaneous Approach', 'https://robohash.org/molestiasquiofficia.png?size=50x50&set=set1', 'http://dummyimage.com/132x103.png/cc0000/ffffff', 423, 7);
+insert into volunteer (VolunteerID, FullName, DoB, Address, City, PostalCode, Phone, Description, VolunteerPic, CV, Points, AreaID) values (5, 'Julie Jepsen', '1966-09-27 14:12:14', 'Randomvej 46', 'Nykøbing Falster', '4800', '38850530', 'Supplement Right Cephalic Vein with Synthetic Substitute, Percutaneous Approach', 'https://robohash.org/recusandaequismaxime.jpg?size=50x50&set=set1', 'http://dummyimage.com/116x201.jpg/dddddd/000000', 75, 7);
 
-insert into `union` (UnionID, UnionName, UnionCVR, UnionEmail, Address, City, PostalCode, Website, Phone, UnionLogo, AreaID) values (1, 'Ludovika Rainbow', 13245678, 'union@mail.dk' , '5573 Holy Cross Lane', 'Paraiso', 5112, 'unionweb.dk', 57500087, 'https://robohash.org/doloreametoptio.jpg?size=50x50&set=set1', 10);
-insert into `union` (UnionID, UnionName, UnionCVR, UnionEmail, Address, City, PostalCode, Website, Phone, UnionLogo, AreaID) values (2, 'Herculie Ziems', 1345678, 'union@mail.dk', '457 Dryden Road', 'Aībak', 5077, 68561867, 'unionweb.dk', 'https://robohash.org/abullamexpedita.bmp?size=50x50&set=set1', 1);
-insert into `union` (UnionID, UnionName, UnionCVR, UnionEmail, Address, City, PostalCode, Website, Phone, UnionLogo, AreaID) values (3, 'Roanne Grason', 12345678, 'union@mail.dk', '3 Pond Crossing', 'Cimanggu', 1006, 21938011, 'unionweb.dk', 'https://robohash.org/porrosedpraesentium.jpg?size=50x50&set=set1', 2);
-insert into `union` (UnionID, UnionName, UnionCVR, UnionEmail, Address, City, PostalCode, Website, Phone, UnionLogo, AreaID) values (4, 'Idalina Hannant', 12345678, 'union@mail.dk', '6 Daystar Lane', 'Tours', 1009, 15838245, 'unionweb.dk', 'https://robohash.org/necessitatibusmaximetotam.bmp?size=50x50&set=set1', 3);
-insert into `union` (UnionID, UnionName, UnionCVR, UnionEmail, Address, City, PostalCode, Website, Phone, UnionLogo, AreaID) values (5, 'Nessi Sword', 12345678, 'union@mail.dk', '8 Ramsey Crossing', 'Tieba', 1379, 42248096, 'unionweb.dk', 'https://robohash.org/accusamusodittempora.bmp?size=50x50&set=set1', 4);
+insert into `union` (UnionID, UnionName, UnionCVR, UnionEmail, Description, Address, City, PostalCode, Website, Phone, UnionLogo, AreaID) values (1, 'Brydeklubben Thor', '13245678', 'union@mail.dk', 'Beskrivelse af foreningen Brydeklubben Thor.', 'Randomvej 1', 'Nykøbing Falster', '4800', 'unionweb.dk', '57500087', 'https://robohash.org/doloreametoptio.jpg?size=50x50&set=set1', 7);
+insert into `union` (UnionID, UnionName, UnionCVR, UnionEmail, Description, Address, City, PostalCode, Website, Phone, UnionLogo, AreaID) values (2, 'Nykøbing Falster Petanque Klub', '1345678', 'union@mail.dk', 'Beskrivelse af foreningen Nykøbing Falster Petanque Klub', 'Randomvej 53', 'Nykøbing Falster', '4800', 'unionweb.dk', '68561867', 'https://robohash.org/abullamexpedita.bmp?size=50x50&set=set1', 7);
+insert into `union` (UnionID, UnionName, UnionCVR, UnionEmail, Description, Address, City, PostalCode, Website, Phone, UnionLogo, AreaID) values (3, 'Esbjerg FC', '12345678', 'union@mail.dk', 'Beskrivelse af foreningen Esbjerg FC', 'Randomvej 3', 'Esbjerg', '6700', 'unionweb.dk', '21938011', 'https://robohash.org/porrosedpraesentium.jpg?size=50x50&set=set1', 4);
 
-insert into sponsor (SponsorID, SponsorName, SponsorPic, SponsorCVR, SponsorEmail, Address, PostalCode, City, Website, Status, AreaID) values (1, 'Vinder', 'http://dummyimage.com/249x199.jpg/ff4444/ffffff', 12345678, 'sponsor@mail.dk', '9755 Oneill Parkway', 1234, 'Far‘ūn', 'www.google.dk', 'Guld', 2);
-insert into sponsor (SponsorID, SponsorName, SponsorPic, SponsorCVR, SponsorEmail, Address, PostalCode, City, Website, Status, AreaID) values (2, 'Blogtags', 'http://dummyimage.com/108x134.jpg/5fa2dd/ffffff', 54862584, 'sponsor@mail.dk', '7 Cambridge Center', 1520, 'Alcalá', 'www.google.dk', 'Sølv', 5);
-insert into sponsor (SponsorID, SponsorName, SponsorPic, SponsorCVR, SponsorEmail, Address, PostalCode, City, Website, Status, AreaID) values (3, 'Google', 'http://dummyimage.com/142x228.jpg/cc0000/ffffff', 15882521, 'sponsor@mail.dk', '0 Sycamore Point', 4800, 'Samho-rodongjagu', 'www.google.dk', 'Bronze', 2);
-insert into sponsor (SponsorID, SponsorName, SponsorPic, SponsorCVR, SponsorEmail, Address, PostalCode, City, Website, Status, AreaID) values (4, 'Brainbox', 'http://dummyimage.com/209x233.jpg/cc0000/ffffff', 85482152, 'sponsor@mail.dk', '77 Jenifer Park', 5700, 'Lebao', 'www.google.dk', 'Guld', 1);
-insert into sponsor (SponsorID, SponsorName, SponsorPic, SponsorCVR, SponsorEmail, Address, PostalCode, City, Website, Status, AreaID) values (5, 'Skivee', 'http://dummyimage.com/203x106.jpg/dddddd/000000', 41002612, 'sponsor@mail.dk', '3 Petterle Circle', 3050, 'Rossosh’', 'www.google.dk', 'Guld', 7);
-insert into sponsor (SponsorID, SponsorName, SponsorPic, SponsorCVR, SponsorEmail, Address, PostalCode, City, Website, Status, AreaID) values (6, 'Ailane', 'http://dummyimage.com/166x160.jpg/dddddd/000000', 54750833, 'sponsor@mail.dk', '36 Green Ridge Pass', 6800, 'Tippi', 'www.google.dk', 'Guld', 12);
+insert into sponsor (SponsorID, SponsorName, SponsorPic, SponsorCVR, SponsorEmail, Address, PostalCode, City, Website, Status, AreaID) values (1, 'Keis Guld & Sølv', 'https://www.naestvedcity.dk/images/citymedlemmer/Logoer/F-K/Keis-guld-og-soelv_Logo.png', '12345678', 'sponsor@mail.dk', '9755 Oneill Parkway', '1234', 'Far‘ūn', 'www.keis.dk', 'Guld', 2);
+insert into sponsor (SponsorID, SponsorName, SponsorPic, SponsorCVR, SponsorEmail, Address, PostalCode, City, Website, Status, AreaID) values (2, 'H&M', 'http://www.hm.com/entrance/assets/bundle/img/HM-Share-Image.jpg', '54862584', 'sponsor@mail.dk', '7 Cambridge Center', '1520', 'Alcalá', 'www2.hm.com', 'Sølv', 5);
+insert into sponsor (SponsorID, SponsorName, SponsorPic, SponsorCVR, SponsorEmail, Address, PostalCode, City, Website, Status, AreaID) values (3, 'Google', 'https://www.festisite.com/static/partylogo/img/logos/google.png', '15882521', 'sponsor@mail.dk', '0 Sycamore Point', '4800', 'Samho-rodongjagu', 'www.google.com', 'Bronze', 2);
+insert into sponsor (SponsorID, SponsorName, SponsorPic, SponsorCVR, SponsorEmail, Address, PostalCode, City, Website, Status, AreaID) values (4, 'Apple', 'https://image.flaticon.com/icons/png/512/23/23656.png', '85482152', 'sponsor@mail.dk', '77 Jenifer Park', '5700', 'Lebao', 'www.apple.com', 'Guld', 1);
+insert into sponsor (SponsorID, SponsorName, SponsorPic, SponsorCVR, SponsorEmail, Address, PostalCode, City, Website, Status, AreaID) values (5, 'Dansk Outlet', 'https://sw7577.smartweb-static.com/upload_dir/templates/shopoutlet2016/assets/images/danskoutlet-logo.png', '41002612', 'sponsor@mail.dk', '3 Petterle Circle', '3050', 'Rossosh’', 'www.danskoutlet.dk', 'Guld', 7);
+insert into sponsor (SponsorID, SponsorName, SponsorPic, SponsorCVR, SponsorEmail, Address, PostalCode, City, Website, Status, AreaID) values (6, 'Føtex', 'https://via.ritzau.dk/data/images/00843/7bd3bb38-962f-4f68-aab4-df59d3f8a81d.png', '54750833', 'sponsor@mail.dk', '36 Green Ridge Pass', '6800', 'Tippi', 'www.foetex.dk', 'Guld', 12);
 
-insert into `user` (UserID, Email, Password, VolunteerID, SponsorID, UnionID) values (1, 'hgrover0@gizmodo.com', 'lDCPQW', 1, 1, 1);
-insert into `user` (UserID, Email, Password, VolunteerID, SponsorID, UnionID) values (2, 'amiddis1@1688.com', 'EfDAIImbb9YR', NULL, 2, NULL);
-insert into `user` (UserID, Email, Password, VolunteerID, SponsorID, UnionID) values (3, 'lmcmennum2@comcast.net', '1BsKpq', NULL, NULL, 2);
-insert into `user` (UserID, Email, Password, VolunteerID, SponsorID, UnionID) values (4, 'snorthall3@is.gd', '7gM6nP8', NULL, 3, 3);
-insert into `user` (UserID, Email, Password, VolunteerID, SponsorID, UnionID) values (5, 'icoppen4@opensource.org', 'SsOFZftCdmk', 2, NULL, NULL);
-insert into `user` (UserID, Email, Password, VolunteerID, SponsorID, UnionID) values (6, 'dpickavance5@imageshack.us', 'Pa4oo20aXa', 3, 4, NULL);
-insert into `user` (UserID, Email, Password, VolunteerID, SponsorID, UnionID) values (7, 'hteas6@psu.edu', 'fJcevnl', NULL, NULL, 4);
-insert into `user` (UserID, Email, Password, VolunteerID, SponsorID, UnionID) values (8, 'epeltzer7@prweb.com', 'l2xnM65', 4, NULL, NULL);
-insert into `user` (UserID, Email, Password, VolunteerID, SponsorID, UnionID) values (9, 'emcgillivrie8@over-blog.com', 'DLw3xX', 5, 5, NULL);
-insert into `user` (UserID, Email, Password, VolunteerID, SponsorID, UnionID) values (10, 'sstrathdee9@spotify.com', 'RJWGktguqMy', NULL, 6, 5);
+insert into `user` (UserID, Email, Password, VolunteerID, SponsorID, UnionID) values (1, 'mail@mail.com', '1234', 1, 1, 1);
+insert into `user` (UserID, Email, Password, VolunteerID, SponsorID, UnionID) values (2, 'mail2@mail.com', 'qwerty', 2, NULL, NULL);
+insert into `user` (UserID, Email, Password, VolunteerID, SponsorID, UnionID) values (3, 'mail3@mail.com', 'w1234', 3, 2, NULL);
+insert into `user` (UserID, Email, Password, VolunteerID, SponsorID, UnionID) values (4, 'mail4@mail.com', 'qwerty1234', 4, NULL, 2);
+insert into `user` (UserID, Email, Password, VolunteerID, SponsorID, UnionID) values (5, 'icoppen4@opensource.org', 'SsOFZftCdmk', 5, 3, 3);
 
-insert into giftcard (GiftcardID, Title, Amount, SponsorID) values (1, 'Eye, The', 3, 2);
-insert into giftcard (GiftcardID, Title, Amount, SponsorID) values (2, 'Carry on Cabby', 6, 5);
-insert into giftcard (GiftcardID, Title, Amount, SponsorID) values (3, 'Chicago 8, The', 5, 5);
-insert into giftcard (GiftcardID, Title, Amount, SponsorID) values (4, 'Love Letters', 1, 1);
-insert into giftcard (GiftcardID, Title, Amount, SponsorID) values (5, 'Get Over It', 3, 3);
+insert into interest (InterestID, InterestName) values (1, 'Fodbold');
+insert into interest (InterestID, InterestName) values (2, 'Kunst');
+insert into interest (InterestID, InterestName) values (3, 'Kultur');
+insert into interest (InterestID, InterestName) values (4, 'Natur');
+insert into interest (InterestID, InterestName) values (5, 'Film');
+insert into interest (InterestID, InterestName) values (6, 'Fotografi');
+insert into interest (InterestID, InterestName) values (7, 'Religion');
+insert into interest (InterestID, InterestName) values (8, 'Esport');
+insert into interest (InterestID, InterestName) values (9, 'Økologi');
+insert into interest (InterestID, InterestName) values (10, 'Tøj');
+insert into interest (InterestID, InterestName) values (11, 'Smykker');
+insert into interest (InterestID, InterestName) values (12, 'Brydning');
+insert into interest (InterestID, InterestName) values (13, 'Heste');
+insert into interest (InterestID, InterestName) values (14, 'Hunde');
+insert into interest (InterestID, InterestName) values (15, 'Katte');
 
+insert into category (CategoryID, CategoryName) values (1, 'Sport');
+insert into category (CategoryID, CategoryName) values (2, 'Børn og Unge');
+insert into category (CategoryID, CategoryName) values (3, 'Dyr');
+insert into category (CategoryID, CategoryName) values (4, 'Udsatte');
+insert into category (CategoryID, CategoryName) values (5, 'Stillinger');
+
+insert into job (JobID, Title, Description, Requirements, StartDate, EndDate, UnionID, CategoryID) values (1, 'Brydedommer', 'Beskrivelse om jobbet som brydedommer her', 'Erfaring med brydning og reglerne indenfor brydning.', '2019-10-26 02:06:18', '2019-10-26 02:06:18', 1, 1);
+insert into job (JobID, Title, Description, Requirements, StartDate, EndDate, UnionID, CategoryID) values (2, 'Opstilling til Brydestævne', 'Beskrivelse om jobbet som opstilling til brydestævne her', 'Ingen krav.', '2019-10-26 02:06:18', '2019-10-26 02:06:18', 1, 1);
+insert into job (JobID, Title, Description, Requirements, StartDate, EndDate, UnionID, CategoryID) values (3, 'Stensamling', 'Beskrivelse om jobbet som stensamler her', 'Ingen krav.', '2019-11-12 02:06:18', '2019-11-12 02:06:18', 2, 1);
+insert into job (JobID, Title, Description, Requirements, StartDate, EndDate, UnionID, CategoryID) values (4, 'Junior Træner', 'Beskrivelse om jobbet som junior træner her', '18+<br>Erfaring som fodboldspiller.<br>Ren børneattest.', '2020-01-01 02:06:18', '2020-07-01 02:06:18', 3, 1);
+insert into job (JobID, Title, Description, Requirements, StartDate, EndDate, UnionID, CategoryID) values (5, 'Miniput Træner', 'Beskrivelse om jobbet som miniput træner her', '16+<br>Erfaring som fodboldspiller.<br>Ren børneattest.', '2020-01-01 02:06:18', '2020-07-01 02:06:18', 3, 1);
+
+insert into giftcard (GiftcardID, Title, Description, Requirements, Amount, Value, isConfirmed, SponsorID) values (1, '100kr til H&M', 'Gavekortet kan bruges i alle H&M butikker i Danmark.', 'Gavekortet kan kun benyttes ved køb for over 200kr. Gavekortet kan ikke bruges sammen med andre gavekort.', 10, 50, 1, 2);
+insert into giftcard (GiftcardID, Title, Description, Requirements, Amount, Value, isConfirmed, SponsorID) values (2, '100kr til Keis Guld & Sølv', 'Gavekortet kan bruges i vores butik i Nykøbing Falster.', 'Gavekortet kan kun benyttes ved køb for over 500kr. Gavekortet kan ikke bruges sammen med andre gavekort.', 5, 50, 1, 1);
+insert into giftcard (GiftcardID, Title, Description, Requirements, Amount, Value, isConfirmed, SponsorID) values (3, '200kr til H&M', 'Gavekortet kan bruges i alle H&M butikker i Danmark.', 'Gavekortet kan kun benyttes ved køb for over 500kr. Gavekortet kan ikke bruges sammen med andre gavekort.', 5, 100, 1, 2);
+insert into giftcard (GiftcardID, Title, Description, Requirements, Amount, Value, isConfirmed, SponsorID) values (4, '50kr til Delikatessen', 'Gavekortet kan bruges i alle Føtex butikker i Danmark.', 'Gavekortet kan kun bruges på varer fra delikatessen i vores Føtex butikker. Gavekortet kan godt bruges sammen med andre gavekort.', 1, 25, 0, 6);
+insert into giftcard (GiftcardID, Title, Description, Requirements, Amount, Value, isConfirmed, SponsorID) values (5, '500kr til Dansk Outlet', 'Gavekortet kan kun bruges i Dansk Outlet Nykøbing Falster', 'Gavekortet kan ikke bruges sammen med andre gavekort.', 3, 250, 0, 5);
+
+insert into userinterest (InterestID, VolunteerID, isInterest) values (1, 1, 1);
+insert into userinterest (InterestID, VolunteerID, isInterest) values (12, 1, 1);
+insert into userinterest (InterestID, VolunteerID, isInterest) values (11, 1, 1);
+insert into userinterest (InterestID, VolunteerID, isInterest) values (9, 1, 0);
+insert into userinterest (InterestID, VolunteerID, isInterest) values (12, 3, 1);
+insert into userinterest (InterestID, VolunteerID, isInterest) values (12, 4, 1);
+insert into userinterest (InterestID, VolunteerID, isInterest) values (12, 5, 1);
+
+insert into giftcardinterest (GiftcardID, InterestID) values (1, 10);
+insert into giftcardinterest (GiftcardID, InterestID) values (2, 11);
+insert into giftcardinterest (GiftcardID, InterestID) values (3, 10);
+insert into giftcardinterest (GiftcardID, InterestID) values (4, 9);
+insert into giftcardinterest (GiftcardID, InterestID) values (5, 10);
+
+insert into usergiftcard (PurchaseID, VolunteerID, GiftcardID, PurchaseDate, ExpirationDate, isExpired, isUsed) values (1, 1, 1, '2019-09-05 02:06:18', '2020-09-05 02:06:18', 0, 0);
+insert into usergiftcard (PurchaseID, VolunteerID, GiftcardID, PurchaseDate, ExpirationDate, isExpired, isUsed) values (2, 1, 2, '2019-09-05 02:06:18', '2020-09-05 02:06:18', 0, 0);
+insert into usergiftcard (PurchaseID, VolunteerID, GiftcardID, PurchaseDate, ExpirationDate, isExpired, isUsed) values (3, 1, 3, '2019-09-05 02:06:18', '2020-09-05 02:06:18', 0, 0);
+insert into usergiftcard (PurchaseID, VolunteerID, GiftcardID, PurchaseDate, ExpirationDate, isExpired, isUsed) values (4, 1, 1, '2018-09-05 02:06:18', '2029-09-05 02:06:18', 1, 0);
+insert into usergiftcard (PurchaseID, VolunteerID, GiftcardID, PurchaseDate, ExpirationDate, isExpired, isUsed) values (5, 1, 3, '2018-09-05 02:06:18', '2029-09-05 02:06:18', 0, 1);
+
+insert into jobapplication (VolunteerID, JobID, Status, Hours) values (1, 1, 'Godkendt', 10);
+insert into jobapplication (VolunteerID, JobID, Status, Hours) values (1, 2, 'Afventer', 0);
+insert into jobapplication (VolunteerID, JobID, Status, Hours) values (1, 3, 'Afventer', 0);
+insert into jobapplication (VolunteerID, JobID, Status, Hours) values (1, 4, 'Afvist', 0);
+insert into jobapplication (VolunteerID, JobID, Status, Hours) values (1, 5, 'Afsluttet', 20);
+
+insert into memberofunion (VolunteerID, UnionID, isConfirmed, MemberSince) values (1, 1, 1, '2019-01-01 02:06:18');
+insert into memberofunion (VolunteerID, UnionID, isConfirmed, MemberSince) values (1, 2, 1, '2019-01-01 02:06:18');
+insert into memberofunion (VolunteerID, UnionID, isConfirmed, MemberSince) values (1, 3, 0, NULL);
+insert into memberofunion (VolunteerID, UnionID, isConfirmed, MemberSince) values (4, 2, 1, '2019-01-01 02:06:18');
+insert into memberofunion (VolunteerID, UnionID, isConfirmed, MemberSince) values (5, 3, 1, '2019-01-01 02:06:18');
+
+
+/* App Backend Data */
+
+insert into appadmin (AppAdminID, Username, Password) values (1, 'SuperAdmin', 'app1234');
 
 
 /* Cities of Denmark */

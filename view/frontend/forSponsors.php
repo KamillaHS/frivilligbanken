@@ -2,57 +2,57 @@
 require_once("view/frontend/includes/header.php");
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `textField` WHERE TextFieldID = 4");
+$query = $dbCon->prepare("SELECT * FROM `textfield` WHERE TextFieldID = 4");
 $query->execute();
 $getsponsortext = $query->fetch();
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `textField` WHERE TextFieldID = 15");
+$query = $dbCon->prepare("SELECT * FROM `textfield` WHERE TextFieldID = 15");
 $query->execute();
 $getsponsortext2 = $query->fetch();
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `textField` WHERE TextFieldID = 16");
+$query = $dbCon->prepare("SELECT * FROM `textfield` WHERE TextFieldID = 16");
 $query->execute();
 $getsponsortext3 = $query->fetch();
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `textField` WHERE TextFieldID = 17");
+$query = $dbCon->prepare("SELECT * FROM `textfield` WHERE TextFieldID = 17");
 $query->execute();
 $getsponsortext4 = $query->fetch();
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `textField` WHERE TextFieldID = 18");
+$query = $dbCon->prepare("SELECT * FROM `textfield` WHERE TextFieldID = 18");
 $query->execute();
 $getsponsortext5 = $query->fetch();
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `textField` WHERE TextFieldID = 19");
+$query = $dbCon->prepare("SELECT * FROM `textfield` WHERE TextFieldID = 19");
 $query->execute();
 $getsponsortext6 = $query->fetch();
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `textField` WHERE TextFieldID = 20");
+$query = $dbCon->prepare("SELECT * FROM `textfield` WHERE TextFieldID = 20");
 $query->execute();
 $getsponsortext7 = $query->fetch();
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `textField` WHERE TextFieldID = 21");
+$query = $dbCon->prepare("SELECT * FROM `textfield` WHERE TextFieldID = 21");
 $query->execute();
 $getsponsortext8 = $query->fetch();
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `imageField` WHERE ImageID = 6");
+$query = $dbCon->prepare("SELECT * FROM `imagefield` WHERE ImageID = 6");
 $query->execute();
 $getimage1 = $query->fetch();
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `imageField` WHERE ImageID = 7");
+$query = $dbCon->prepare("SELECT * FROM `imagefield` WHERE ImageID = 7");
 $query->execute();
 $getimage2 = $query->fetch();
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `imageField` WHERE ImageID = 8");
+$query = $dbCon->prepare("SELECT * FROM `imagefield` WHERE ImageID = 8");
 $query->execute();
 $getimage3 = $query->fetch();
 ?>

@@ -2,7 +2,7 @@
 require_once("view/backend/includes/header.php");
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `textField` WHERE TextFieldID = 7");
+$query = $dbCon->prepare("SELECT * FROM `textfield` WHERE TextFieldID = 7");
 $query->execute();
 $getsponsorlisttext1 = $query->fetch();
 

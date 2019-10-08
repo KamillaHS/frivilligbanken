@@ -5,32 +5,32 @@ $query->execute();
 $getsponsors = $query->fetchAll();
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM textField WHERE TextFieldID = 32");
+$query = $dbCon->prepare("SELECT * FROM textfield WHERE TextFieldID = 32");
 $query->execute();
 $getaddress = $query->fetch();
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM textField WHERE TextFieldID = 29");
+$query = $dbCon->prepare("SELECT * FROM textfield WHERE TextFieldID = 29");
 $query->execute();
 $getphone = $query->fetch();
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM textField WHERE TextFieldID = 31");
+$query = $dbCon->prepare("SELECT * FROM textfield WHERE TextFieldID = 31");
 $query->execute();
 $getmail = $query->fetch();
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM textField WHERE TextFieldID = 33");
+$query = $dbCon->prepare("SELECT * FROM textfield WHERE TextFieldID = 33");
 $query->execute();
 $getsocial1 = $query->fetch();
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM textField WHERE TextFieldID = 34");
+$query = $dbCon->prepare("SELECT * FROM textfield WHERE TextFieldID = 34");
 $query->execute();
 $getsocial2 = $query->fetch();
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM textField WHERE TextFieldID = 35");
+$query = $dbCon->prepare("SELECT * FROM textfield WHERE TextFieldID = 35");
 $query->execute();
 $getsocial3 = $query->fetch();
 ?>

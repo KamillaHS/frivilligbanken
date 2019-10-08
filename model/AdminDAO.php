@@ -13,7 +13,7 @@ class AdminDAO
         $password = $_POST['password'];
 
         if(!empty($username) && !empty($password)) {
-            $sql = "INSERT INTO webadmin (WebAdminID, Username, Password)
+            $sql = "INSERT INTO `webadmin` (WebAdminID, Username, Password)
                     VALUES (NULL, '$username', '$password')";
             $query = $dbCon->prepare($sql);
             $query->execute();
@@ -40,7 +40,7 @@ class AdminDAO
         $pass = 'root';
         $dbCon = dbCon($user, $pass);
 
-        $sql = "DELETE FROM webadmin WHERE WebAdminID = '$adminID'";
+        $sql = "DELETE FROM `webadmin` WHERE WebAdminID = '$adminID'";
         $query = $dbCon->prepare($sql);
         $query->execute();
     }

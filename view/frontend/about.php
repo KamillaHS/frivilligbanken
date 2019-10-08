@@ -2,12 +2,12 @@
 require_once("view/frontend/includes/header.php");
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `imageField` WHERE ImageID = 12");
+$query = $dbCon->prepare("SELECT * FROM `imagefield` WHERE ImageID = 12");
 $query->execute();
 $gethero= $query->fetch();
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `textField` WHERE TextFieldID = 6");
+$query = $dbCon->prepare("SELECT * FROM `textfield` WHERE TextFieldID = 6");
 $query->execute();
 $getabouttext1 = $query->fetch();
 
@@ -17,17 +17,17 @@ $query->execute();
 $getemployees = $query->fetchAll();
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `imageField` WHERE ImageID = 16");
+$query = $dbCon->prepare("SELECT * FROM `imagefield` WHERE ImageID = 16");
 $query->execute();
 $getsocial1= $query->fetch();
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `imageField` WHERE ImageID = 17");
+$query = $dbCon->prepare("SELECT * FROM `imagefield` WHERE ImageID = 17");
 $query->execute();
 $getsocial2= $query->fetch();
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `imageField` WHERE ImageID = 18");
+$query = $dbCon->prepare("SELECT * FROM `imagefield` WHERE ImageID = 18");
 $query->execute();
 $getsocial3= $query->fetch();
 

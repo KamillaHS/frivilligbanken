@@ -2,22 +2,22 @@
 require_once("view/frontend/includes/header.php");
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `imageField` WHERE ImageID = 1");
+$query = $dbCon->prepare("SELECT * FROM `imagefield` WHERE ImageID = 1");
 $query->execute();
 $getheroimg = $query->fetch();
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `imageField` WHERE ImageID = 2");
+$query = $dbCon->prepare("SELECT * FROM `imagefield` WHERE ImageID = 2");
 $query->execute();
 $getphoneimg = $query->fetch();
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `textField` WHERE TextFieldID = 1");
+$query = $dbCon->prepare("SELECT * FROM `textfield` WHERE TextFieldID = 1");
 $query->execute();
 $getfronttext1 = $query->fetch();
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `textField` WHERE TextFieldID = 2");
+$query = $dbCon->prepare("SELECT * FROM `textfield` WHERE TextFieldID = 2");
 $query->execute();
 $getfronttext2 = $query->fetch();
 
@@ -47,7 +47,7 @@ $getnumgiftcards = $query->fetch();
     <div id="section1-content">
 
         <div id="frontpage-logo">
-            <img src="../../images/logo/logoEdit.png" alt="Frivilligbanken logo">
+            <img src="../../images/logo/LogoEdit.png" alt="Frivilligbanken logo">
             <p>Vi gør det sjovere at være frivillig</p>
         </div>
 

@@ -2,27 +2,27 @@
 require_once("view/backend/includes/header.php");
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `textField` WHERE TextFieldID = 1");
+$query = $dbCon->prepare("SELECT * FROM `textfield` WHERE TextFieldID = 1");
 $query->execute();
 $getfronttext1 = $query->fetch();
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `textField` WHERE TextFieldID = 2");
+$query = $dbCon->prepare("SELECT * FROM `textfield` WHERE TextFieldID = 2");
 $query->execute();
 $getfronttext2 = $query->fetch();
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `imageField`");
+$query = $dbCon->prepare("SELECT * FROM `imagefield`");
 $query->execute();
 $getimages = $query->fetchAll();
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `imageField` WHERE ImageID = 1");
+$query = $dbCon->prepare("SELECT * FROM `imagefield` WHERE ImageID = 1");
 $query->execute();
 $getfrontimage1 = $query->fetch();
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `imageField` WHERE ImageID = 2");
+$query = $dbCon->prepare("SELECT * FROM `imagefield` WHERE ImageID = 2");
 $query->execute();
 $getfrontimage2 = $query->fetch();
 

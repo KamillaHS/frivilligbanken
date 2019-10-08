@@ -2,7 +2,7 @@
 require_once("view/backend/includes/header.php");
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `imageField` WHERE ImageID = 12");
+$query = $dbCon->prepare("SELECT * FROM `imagefield` WHERE ImageID = 12");
 $query->execute();
 $getfrontimage1 = $query->fetch();
 
@@ -42,7 +42,7 @@ if(isset($_POST['uploadHero'])) {
 }
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `textField` WHERE TextFieldID = 6");
+$query = $dbCon->prepare("SELECT * FROM `textfield` WHERE TextFieldID = 6");
 $query->execute();
 $getabouttext1 = $query->fetch();
 

@@ -2,17 +2,17 @@
 require_once("view/frontend/includes/header.php");
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `textField` WHERE TextFieldID = 29");
+$query = $dbCon->prepare("SELECT * FROM `textField` WHERE TextfieldID = 29");
 $query->execute();
 $getcontactnum = $query->fetch();
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `textField` WHERE TextFieldID = 30");
+$query = $dbCon->prepare("SELECT * FROM `textField` WHERE TextfieldID = 30");
 $query->execute();
 $getcontactnumtimes = $query->fetch();
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `textField` WHERE TextFieldID = 31");
+$query = $dbCon->prepare("SELECT * FROM `textField` WHERE TextfieldID = 31");
 $query->execute();
 $getcontactemail = $query->fetch();
 ?>

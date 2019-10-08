@@ -2,52 +2,52 @@
 require_once("view/backend/includes/header.php");
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `textField` WHERE TextFieldID = 29");
+$query = $dbCon->prepare("SELECT * FROM `textfield` WHERE TextFieldID = 29");
 $query->execute();
 $getcontactnum = $query->fetch();
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `textField` WHERE TextFieldID = 30");
+$query = $dbCon->prepare("SELECT * FROM `textfield` WHERE TextFieldID = 30");
 $query->execute();
 $getcontactnumtime = $query->fetch();
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `textField` WHERE TextFieldID = 31");
+$query = $dbCon->prepare("SELECT * FROM `textfield` WHERE TextFieldID = 31");
 $query->execute();
 $getcontactemail = $query->fetch();
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `textField` WHERE TextFieldID = 32");
+$query = $dbCon->prepare("SELECT * FROM `textfield` WHERE TextFieldID = 32");
 $query->execute();
 $getcontactaddress = $query->fetch();
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `textField` WHERE TextFieldID = 33");
+$query = $dbCon->prepare("SELECT * FROM `textfield` WHERE TextFieldID = 33");
 $query->execute();
 $getsocial1 = $query->fetch();
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `textField` WHERE TextFieldID = 34");
+$query = $dbCon->prepare("SELECT * FROM `textfield` WHERE TextFieldID = 34");
 $query->execute();
 $getsocial2 = $query->fetch();
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `textField` WHERE TextFieldID = 35");
+$query = $dbCon->prepare("SELECT * FROM `textfield` WHERE TextFieldID = 35");
 $query->execute();
 $getsocial3 = $query->fetch();
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `imageField` WHERE ImageID = 13");
+$query = $dbCon->prepare("SELECT * FROM `imagefield` WHERE ImageID = 13");
 $query->execute();
 $getsocialimg1 = $query->fetch();
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `imageField` WHERE ImageID = 14");
+$query = $dbCon->prepare("SELECT * FROM `imagefield` WHERE ImageID = 14");
 $query->execute();
 $getsocialimg2 = $query->fetch();
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `imageField` WHERE ImageID = 15");
+$query = $dbCon->prepare("SELECT * FROM `imagefield` WHERE ImageID = 15");
 $query->execute();
 $getsocialimg3 = $query->fetch();
 

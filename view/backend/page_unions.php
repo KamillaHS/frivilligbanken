@@ -2,42 +2,42 @@
 require_once("view/backend/includes/header.php");
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `textField` WHERE TextFieldID = 3");
+$query = $dbCon->prepare("SELECT * FROM `textfield` WHERE TextFieldID = 3");
 $query->execute();
 $getuniontext1 = $query->fetch();
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `textField` WHERE TextFieldID = 8");
+$query = $dbCon->prepare("SELECT * FROM `textfield` WHERE TextFieldID = 8");
 $query->execute();
 $getuniontext2 = $query->fetch();
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `textField` WHERE TextFieldID = 9");
+$query = $dbCon->prepare("SELECT * FROM `textfield` WHERE TextFieldID = 9");
 $query->execute();
 $getuniontext3 = $query->fetch();
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `textField` WHERE TextFieldID = 10");
+$query = $dbCon->prepare("SELECT * FROM `textfield` WHERE TextFieldID = 10");
 $query->execute();
 $getuniontext4 = $query->fetch();
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `textField` WHERE TextFieldID = 11");
+$query = $dbCon->prepare("SELECT * FROM `textfield` WHERE TextFieldID = 11");
 $query->execute();
 $getuniontext5 = $query->fetch();
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `textField` WHERE TextFieldID = 12");
+$query = $dbCon->prepare("SELECT * FROM `textfield` WHERE TextFieldID = 12");
 $query->execute();
 $getuniontext6 = $query->fetch();
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `textField` WHERE TextFieldID = 13");
+$query = $dbCon->prepare("SELECT * FROM `textfield` WHERE TextFieldID = 13");
 $query->execute();
 $getuniontext7 = $query->fetch();
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `textField` WHERE TextFieldID = 14");
+$query = $dbCon->prepare("SELECT * FROM `textfield` WHERE TextFieldID = 14");
 $query->execute();
 $getuniontext8 = $query->fetch();
 
@@ -131,17 +131,17 @@ if(isset($_POST['updateUnionText8'])) {
 }
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `imageField` WHERE ImageID = 3");
+$query = $dbCon->prepare("SELECT * FROM `imagefield` WHERE ImageID = 3");
 $query->execute();
 $getunionimage1 = $query->fetch();
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `imageField` WHERE ImageID = 4");
+$query = $dbCon->prepare("SELECT * FROM `imagefield` WHERE ImageID = 4");
 $query->execute();
 $getunionimage2 = $query->fetch();
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `imageField` WHERE ImageID = 5");
+$query = $dbCon->prepare("SELECT * FROM `imagefield` WHERE ImageID = 5");
 $query->execute();
 $getunionimage3 = $query->fetch();
 

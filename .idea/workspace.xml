@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6e951be0-8be4-46c6-b64c-418670ff23b8" name="Default Changelist" comment="" />
+    <list default="true" id="6e951be0-8be4-46c6-b64c-418670ff23b8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frivilligbankenDB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/frivilligbankenDB.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/AdminDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/AdminDAO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/ImageDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/ImageDAO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/backend/page_about.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/backend/page_about.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/backend/page_contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/backend/page_contact.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/backend/page_frontpage.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/backend/page_frontpage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/backend/page_sponsorList.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/backend/page_sponsorList.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/backend/page_sponsors.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/backend/page_sponsors.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/backend/page_unions.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/backend/page_unions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/backend/page_volunteers.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/backend/page_volunteers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/frontend/about.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/frontend/about.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/frontend/comingSoon.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/frontend/comingSoon.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/frontend/contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/frontend/contact.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/frontend/forSponsors.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/frontend/forSponsors.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/frontend/forUnions.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/frontend/forUnions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/frontend/forVolunteers.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/frontend/forVolunteers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/frontend/includes/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/frontend/includes/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/frontend/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/frontend/index.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +121,10 @@
       <workItem from="1566472128070" duration="13146000" />
       <workItem from="1566573993113" duration="697000" />
       <workItem from="1566734756531" duration="1309000" />
-      <workItem from="1566819728511" duration="10579000" />
+      <workItem from="1566819728511" duration="11179000" />
+      <workItem from="1566903703409" duration="9495000" />
+      <workItem from="1567600437132" duration="1510000" />
+      <workItem from="1568062392431" duration="11658000" />
     </task>
     <servers />
   </component>

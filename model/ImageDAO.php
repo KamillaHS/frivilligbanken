@@ -8,7 +8,7 @@ class ImageDAO
         $user = 'root';
         $pass = 'root';
         $dbCon = dbCon($user, $pass);
-        $sql = "UPDATE imageField SET image = '$image' WHERE ImageID = 1";
+        $sql = "UPDATE imagefield SET image = '$image' WHERE ImageID = 1";
         $query = $dbCon->prepare($sql);
         $query->execute();
     }
@@ -18,7 +18,7 @@ class ImageDAO
         $user = 'root';
         $pass = 'root';
         $dbCon = dbCon($user, $pass);
-        $sql = "UPDATE imageField SET image = '$image' WHERE ImageID = 2";
+        $sql = "UPDATE imagefield SET image = '$image' WHERE ImageID = 2";
         $query = $dbCon->prepare($sql);
         $query->execute();
     }
@@ -28,7 +28,7 @@ class ImageDAO
         $user = 'root';
         $pass = 'root';
         $dbCon = dbCon($user, $pass);
-        $sql = "UPDATE imageField SET image = '$image' WHERE ImageID = 3";
+        $sql = "UPDATE imagefield SET image = '$image' WHERE ImageID = 3";
         $query = $dbCon->prepare($sql);
         $query->execute();
     }
@@ -38,7 +38,7 @@ class ImageDAO
         $user = 'root';
         $pass = 'root';
         $dbCon = dbCon($user, $pass);
-        $sql = "UPDATE imageField SET image = '$image' WHERE ImageID = 4";
+        $sql = "UPDATE imagefield SET image = '$image' WHERE ImageID = 4";
         $query = $dbCon->prepare($sql);
         $query->execute();
     }
@@ -48,7 +48,7 @@ class ImageDAO
         $user = 'root';
         $pass = 'root';
         $dbCon = dbCon($user, $pass);
-        $sql = "UPDATE imageField SET image = '$image' WHERE ImageID = 5";
+        $sql = "UPDATE imagefield SET image = '$image' WHERE ImageID = 5";
         $query = $dbCon->prepare($sql);
         $query->execute();
     }
@@ -58,7 +58,7 @@ class ImageDAO
         $user = 'root';
         $pass = 'root';
         $dbCon = dbCon($user, $pass);
-        $sql = "UPDATE imageField SET image = '$image' WHERE ImageID = 6";
+        $sql = "UPDATE imagefield SET image = '$image' WHERE ImageID = 6";
         $query = $dbCon->prepare($sql);
         $query->execute();
     }
@@ -68,7 +68,7 @@ class ImageDAO
         $user = 'root';
         $pass = 'root';
         $dbCon = dbCon($user, $pass);
-        $sql = "UPDATE imageField SET image = '$image' WHERE ImageID = 7";
+        $sql = "UPDATE imagefield SET image = '$image' WHERE ImageID = 7";
         $query = $dbCon->prepare($sql);
         $query->execute();
     }
@@ -78,7 +78,7 @@ class ImageDAO
         $user = 'root';
         $pass = 'root';
         $dbCon = dbCon($user, $pass);
-        $sql = "UPDATE imageField SET image = '$image' WHERE ImageID = 8";
+        $sql = "UPDATE imagefield SET image = '$image' WHERE ImageID = 8";
         $query = $dbCon->prepare($sql);
         $query->execute();
     }
@@ -88,7 +88,7 @@ class ImageDAO
         $user = 'root';
         $pass = 'root';
         $dbCon = dbCon($user, $pass);
-        $sql = "UPDATE imageField SET image = '$image' WHERE ImageID = 9";
+        $sql = "UPDATE imagefield SET image = '$image' WHERE ImageID = 9";
         $query = $dbCon->prepare($sql);
         $query->execute();
     }
@@ -98,7 +98,7 @@ class ImageDAO
         $user = 'root';
         $pass = 'root';
         $dbCon = dbCon($user, $pass);
-        $sql = "UPDATE imageField SET image = '$image' WHERE ImageID = 10";
+        $sql = "UPDATE imagefield SET image = '$image' WHERE ImageID = 10";
         $query = $dbCon->prepare($sql);
         $query->execute();
     }
@@ -108,7 +108,7 @@ class ImageDAO
         $user = 'root';
         $pass = 'root';
         $dbCon = dbCon($user, $pass);
-        $sql = "UPDATE imageField SET image = '$image' WHERE ImageID = 11";
+        $sql = "UPDATE imagefield SET image = '$image' WHERE ImageID = 11";
         $query = $dbCon->prepare($sql);
         $query->execute();
     }
@@ -118,7 +118,7 @@ class ImageDAO
         $user = 'root';
         $pass = 'root';
         $dbCon = dbCon($user, $pass);
-        $sql = "UPDATE imageField SET image = '$image' WHERE ImageID = 12";
+        $sql = "UPDATE imagefield SET image = '$image' WHERE ImageID = 12";
         $query = $dbCon->prepare($sql);
         $query->execute();
     }

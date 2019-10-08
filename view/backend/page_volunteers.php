@@ -2,42 +2,42 @@
 require_once("view/backend/includes/header.php");
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `textField` WHERE TextFieldID = 5");
+$query = $dbCon->prepare("SELECT * FROM `textfield` WHERE TextFieldID = 5");
 $query->execute();
 $getvolunteertext1 = $query->fetch();
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `textField` WHERE TextFieldID = 22");
+$query = $dbCon->prepare("SELECT * FROM `textfield` WHERE TextFieldID = 22");
 $query->execute();
 $getvolunteertext2 = $query->fetch();
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `textField` WHERE TextFieldID = 23");
+$query = $dbCon->prepare("SELECT * FROM `textfield` WHERE TextFieldID = 23");
 $query->execute();
 $getvolunteertext3 = $query->fetch();
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `textField` WHERE TextFieldID = 24");
+$query = $dbCon->prepare("SELECT * FROM `textfield` WHERE TextFieldID = 24");
 $query->execute();
 $getvolunteertext4 = $query->fetch();
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `textField` WHERE TextFieldID = 25");
+$query = $dbCon->prepare("SELECT * FROM `textfield` WHERE TextFieldID = 25");
 $query->execute();
 $getvolunteertext5 = $query->fetch();
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `textField` WHERE TextFieldID = 26");
+$query = $dbCon->prepare("SELECT * FROM `textfield` WHERE TextFieldID = 26");
 $query->execute();
 $getvolunteertext6 = $query->fetch();
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `textField` WHERE TextFieldID = 27");
+$query = $dbCon->prepare("SELECT * FROM `textfield` WHERE TextFieldID = 27");
 $query->execute();
 $getvolunteertext7 = $query->fetch();
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `textField` WHERE TextFieldID = 27");
+$query = $dbCon->prepare("SELECT * FROM `textfield` WHERE TextFieldID = 27");
 $query->execute();
 $getvolunteertext8 = $query->fetch();
 
@@ -130,17 +130,17 @@ if(isset($_POST['updateVolunteerText8'])) {
 }
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `imageField` WHERE ImageID = 9");
+$query = $dbCon->prepare("SELECT * FROM `imagefield` WHERE ImageID = 9");
 $query->execute();
 $getvolunteerimage1 = $query->fetch();
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `imageField` WHERE ImageID = 10");
+$query = $dbCon->prepare("SELECT * FROM `imagefield` WHERE ImageID = 10");
 $query->execute();
 $getvolunteerimage2 = $query->fetch();
 
 $dbCon = dbCon($user, $pass);
-$query = $dbCon->prepare("SELECT * FROM `imageField` WHERE ImageID = 11");
+$query = $dbCon->prepare("SELECT * FROM `imagefield` WHERE ImageID = 11");
 $query->execute();
 $getvolunteerimage3 = $query->fetch();
 

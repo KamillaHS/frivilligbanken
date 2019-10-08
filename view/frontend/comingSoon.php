@@ -19,7 +19,7 @@
     <div id="comingSoon">
         <div id="comingSoon-content">
             <div id="back-button">
-                <a href="history.back()">Tilbage til Frivilligbanken</a>
+                <a href="/">Tilbage til Frivilligbanken</a>
             </div>
             <h1>KOMMER SNART</h1>
             <p>

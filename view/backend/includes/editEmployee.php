@@ -19,7 +19,7 @@ $getemployee = $query->fetch();
     <?php require_once ("view/backend/includes/sidenav.php")?>
     <div id="dashboard-content">
         <h1>Rediger medarbejder <?php echo $getemployee['EmployeeID'] ?>'s billede</h1>
-        <div id="dashboard-section1">
+        <div id="dashboard-section1" class="edit-employee-pic">
             Medarbejder nummer: <?php echo $getemployee['EmployeeID'] ?>
 
             <div id="employee-pic" style="background-image: url('<?php echo $getemployee['Picture'] ?>')"></div>

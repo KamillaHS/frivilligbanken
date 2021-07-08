@@ -55,6 +55,11 @@ $router->get('rediger_admins', 'view/backend/editAdmins');
 $router->get('rediger_medarbejder', 'view/backend/includes/editEmployee');
 $router->get('rediger_sponsor', 'view/backend/includes/editSponsor');
 $router->get('rediger_admin', 'view/backend/includes/editAdmin');
+$router->get('admin_profil', 'view/backend/adminProfile');
+$router->get('brugere', 'view/backend/users');
+$router->get('frivillig_profiler', 'view/backend/volunteer_profiles');
+$router->get('forening_profiler', 'view/backend/union_profiles');
+$router->get('sponsor_profiler', 'view/backend/sponsor_profiles');
 
 
 //switch ($request) {

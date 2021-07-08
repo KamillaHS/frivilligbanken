@@ -1,6 +1,6 @@
 <?php
 $user = 'root';
-$pass = 'root';
+$pass = '123456';
 $cxn = dbCon($user, $pass);
 
 function dbCon($user, $pass){

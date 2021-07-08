@@ -5,10 +5,12 @@
 }
 
 #dashboard-content {
-    height: 100%;
-    width: 90%;
+    /*height: 100%;*/
+    min-height: 90vh;
+    width: 100%;
+    padding-left: 190px;
     background-color: #E8EEF9;
-    margin: 64px 0 0 190px;
+    margin-top: 64px;
 }
 
 #dashboard-content h1 {
@@ -31,6 +33,10 @@
 
     display: flex;
     flex-wrap: wrap;
+}
+
+.edit-frontend #dashboard-section1 {
+    flex-direction: column;
 }
 
 #dashboard-section1 p {

@@ -43,7 +43,7 @@ $getadmins = $query->fetchAll();
                             <div id="admin-info">
                                 <p><b>ID:</b> <?php echo $admin['WebAdminID'] ?></p>
                                 <p><b>Brugernavn:</b> <?php echo $admin['Username'] ?></p>
-                                <p><b>Brugernavn:</b> <?php echo $admin['Password'] ?></p>
+                                <p><b>Password:</b> <?php echo $admin['Password'] ?></p>
                                 <form method="POST" action="">
                                     <button class="waves-effect waves-light btn" id="passwordReset">Send email til reset af password</button>
                                 </form>

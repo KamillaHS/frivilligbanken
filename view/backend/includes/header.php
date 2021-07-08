@@ -18,6 +18,9 @@ if (!logged_in()) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
 
+    <!-- Import Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/698b065db8.js" crossorigin="anonymous"></script
+
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta charset="utf-8">

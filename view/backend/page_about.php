@@ -59,7 +59,7 @@ if(isset($_POST['updateAboutText1'])) {
 
 ?>
 
-    <div id="dashboard">
+    <div id="dashboard" class="edit-frontend">
         <?php require_once ("view/backend/includes/sidenav.php")?>
         <div id="dashboard-content">
             <h1>Side: Hvem er Vi</h1>

@@ -246,7 +246,7 @@ if(isset($_POST['uploadUnionPic3'])) {
 
 ?>
 
-    <div id="dashboard">
+    <div id="dashboard" class="edit-frontend">
         <?php require_once ("view/backend/includes/sidenav.php")?>
         <div id="dashboard-content">
             <h1>Side: Værd at vide - Foreninger</h1>

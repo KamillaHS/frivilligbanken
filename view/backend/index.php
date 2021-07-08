@@ -89,7 +89,7 @@ $getsponsor1 = $query->fetch();
                 }
                 ?>
             </div>
-
+            
             <div id="denmark-map" style="background-image: url('../../images/backend/Danmark-områder.png')">
                 <div id="map-info">
                     <div id="color1"></div><p id="color1-text">Frivillige</p>
@@ -98,10 +98,13 @@ $getsponsor1 = $query->fetch();
                     <div id="color4"></div><p id="color4-text">Gavekort</p>
                 </div>
             </div>
+                
+
 
         </div>
     </div>
 </div>
+
 
 
 <?php require_once("view/backend/includes/footer.php"); ?>

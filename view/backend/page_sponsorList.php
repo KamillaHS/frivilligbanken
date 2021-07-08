@@ -19,7 +19,7 @@ if(isset($_POST['updateSponsorListText1'])) {
 
 ?>
 
-    <div id="dashboard">
+    <div id="dashboard" class="edit-frontend">
         <?php require_once ("view/backend/includes/sidenav.php")?>
         <div id="dashboard-content">
             <h1>Side: Sponsorere</h1>

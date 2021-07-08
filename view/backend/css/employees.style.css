@@ -95,4 +95,8 @@
 
 /* edit employee */
 
+.edit-employee-pic {
+    display: flex;
+    flex-direction: column !important;
+}
 
